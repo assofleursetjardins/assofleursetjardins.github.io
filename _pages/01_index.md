@@ -10,7 +10,7 @@ sections:
   
 # L’Association Fleurs et Jardins du Vaudreuil organise cette année un Marché Floral
 
-Dans la continuité du Salon Fleurs et Jardins dont la 25ème Edition en 2020 n’a pu avoir lieu en raison du Covid19 et en raison de la
+Dans la continuité du Salon Fleurs et Jardins dont les 25ème et 26ème Editions en 2020 et 2021 n’ont pu avoir lieu en raison du Covid19 et en raison de la
 crise sanitaire actuelle, l’Association a décidé d’organiser un Marché Floral dans les rues du Vaudreuil en respectant les contraintes sanitaires et
 sécuritaires en vigueur à ce jour.
 
