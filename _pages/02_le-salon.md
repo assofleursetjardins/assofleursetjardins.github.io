@@ -11,7 +11,7 @@ sections:
 # À propos du Marché Floral du Vaudreuil
 
 C’est avec une certaine fierté que nous sommes heureux de vous présenter cette première edition du Marché Floral du Vaudreuil.
-Fort de notre expérience acquise au cours des 25 dernières années avec la création du Salon Fleurs et Jardins, nous avons souhaité continuer l’ aventure malgré les contraintes sanitaires et sécuritaires en vigueur actuellement en vous proposant ce concept plus souple mais néanmoins qualitatif.
+Fort de notre expérience acquise au cours des 26 dernières années avec la création du Salon Fleurs et Jardins, nous avons souhaité continuer l’ aventure malgré les contraintes sanitaires et sécuritaires en vigueur actuellement en vous proposant ce concept plus souple mais néanmoins qualitatif.
 
 Des exposants renommés sont à nouveau au Rendez vous venus de toute la France et feront le succès des journées proposées à tous les amoureux de la nature et des plantes .
 
