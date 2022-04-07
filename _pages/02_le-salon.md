@@ -27,13 +27,7 @@ Ce Marché Floral ambitionne de présenter au Public les dernières créations d
 
 Retrouvez le programme jour par jour...
 
-### Samedi 24 avril 2021
+### Samedi 23 avril 2021
 
 - 10h : Ouverture du marché floral
-- 18h : Fermeture
-
-### Dimanche 25 avril 2021
-
-- 10h : Ouverture du marché floral
-- 18h : Fermeture
-
+- 19h : Fermeture
