@@ -2,225 +2,67 @@
 
 - categorie: "LE VÉGÉTAL"
   exposants:
-  - name: Agathe Fortin Paysage
-    description: Hortensias et plantes de bruyère
+  - name: "Les Rosiers Belmontais"
+    description: "Rosiers, plantes grimpantes"
     url:
-  - name: Alexandre Rambert
-    description: Arbustes à fleurs
+  - name: "L.Piccoli pro"
+    description: "Ail des ours, Pommes bio"
     url:
-  - name: André Rapmund
-    description: Pivoines, agapanzhus, bulbes
+  - name: "Culture Florale"
+    description: "Vivaces, sauvage, couvre-sol"
     url:
-  - name: Arome de Jardin
-    description: Racines de vétiver
-    url: 
-  - name: Au Jardin d'Espérance
-    description: Compositions florales, plantes à massif
+  - name: "Rapmund"
+    description: "Bulbes et plantes"
     url:
-  - name: Cactus Family
-    description: Cactées et plantes grasses
+  - name: "Les serres de la Garenne"
+    description: "Plantes Vivaces Annuelles"
     url:
-  - name: Canville Germain
-    description: Producteur d'orties
+  - name: "Les bioplants du potager"
+    description: "Plants de légumes, aromatiques, petits fruits bio"
     url:
-  - name: Carré Vert Pépinière
-    description: Erables du Japon,bambous, agapanthes
-    url: 
-  - name: Catty Horticulteur
-    description: Plantes vivaces, médicinales, aromatiques
+  - name: "Madame Cactus"
+    description: "Collection de cactus, plantes grasses"
     url:
-  - name: Culture Florale
-    description: Sédums, sempervivums, délospermas
+  - name: "Nathalie Lerouge"
+    description: "Vivaces"
     url:
-  - name: Dame Vivaces
-    description: Plantes vivaces, aromatiques, plants potagers
+  - name: "Végét'Eure"
+    description: "Vivaces, sauges"
     url:
-  - name: Doucet
-    description: Plantes vivaces
+  - name: "Au jardin d'espérance"
+    description: "Plants de Fleurs et de légumes"
     url:
-  - name: EBSalvia's
-    description: Création et collection de sauges vivaces et arbustives
-    url:
-  - name: Eden Carnivore
-    description: Producteur de plantes carnivores
-    url:
-  - name: Faut pas qu’on se plante
-    description: Collection arbres et arbustes
-    url:
-  - name: Jardins du Val d'Allier
-    description: Collection de géraniums vivaces,
-    url:
-  - name: Jardins et Pays Sages
-    description: Plante à parfum, aromatiques, arbustes nains
-    url:
-  - name: La P.A.L.M
-    description: Vivaces, plantes grasses d'extérieur
-    url:
-  - name: Le Jardin de Jean
-    description: Vivaces rares, astro exotique, hosta, astroemeria
-    url:
-  - name: Le Jardin de Louna
-    description: Végétaux à allure exotique
-    url:
-  - name: Le Jardin d'Eaurus
-    description: Plantes aquatiques,vivaces, 
-    url:
-  - name: Le Jardin des Senteurs
-    description: Végétaux à floraison parfumée et savoureux
-    url:
-  - name: Lerouge Nathalie
-    description: Vivaces
-    url:
-  - name: Les Bioplants du Potager
-    description: Légumes, aromatiques,fraisiers
-    url:  
-  - name: Les Rosiers Belmontais
-    description: Rosiers en pots
-    url:
-  - name: Les Serres de la Garenne
-    description: Vivaces
-    url:  
-  - name: Les Tillandsias
-    description: Tillandsias
-    url:
-  - name: Mordret Horticulture
-    description: Aromatiques,vivaces, plants de légumes
-    url:
-  - name: Pépinière Duthoo
-    description: Graminées, fruitiers, petits fruits
-    url:
-  - name: Pépinières Cailleau
-    description: Rosiériste, rosiers en pots
-    url: 
-  - name: Pépinières du Clos Normand
-    description: Erables japonais, azalées, arbustes
-    url:  
-  - name: Pépinières Javoy
-    description: Plantes grimpantes, petits fruits
-    url:  
-  - name: Pépinières Nativelle
-    description: Arbres et arbustes de haies
-    url: 
-  - name: Pépinières Oriot 
-    description: Producteur rosiers parfumés, rosiers lianes
-    url:
-  - name: Pépinières Ravazé
-    description: Arbustes, arbres fruitiers, conifères, palmiers
-    url:  
-  - name: Pépinières Tricot
-    description: Pivoinse, iris
+  - name: "La pepinière d'Amfreville la Mivoie"
+    description: "Vivaces, plantes grasse" 
     url:
   
-- categorie : PAYSAGISTES
+- categorie: "AUTOUR DU JARDIN"
   exposants:
-  - name: JCEV
-    description: Paysagiste
+  - name: "Les folies de Flodi"
+    description: "Décoration de jardin, plantes"
     url:
-  
-- categorie: AUTOUR DU JARDIN
-  exposants:
-  - name: Au Jardin Facile
-    description: Outillage de coupe, silo à composter
+  - name: "Creabois"
+    description: "Menuiserie, décoration de jardin"
     url:
-  - name: Barks
-    description: Fabricant de barbecues
-    url: 
-  - name: Chaleur design
-    description: Brasero mexicain, chauffage de terrasse, barbecue extérieur
+  - name: "Le jardin de Jean"
+    description: "à visiter"
     url:
-  - name: Confort'Gom
-    description: Revêtement pour allées
+  - name: "In's Garden"
+    description: "Décoration de jardin"
     url:
-  - name: JCEV
-    description: Elagage
+  - name: "Bouton d'Eure"
+    description: "Micro-ateliers de jardinage"
     url:
-  - name: L’Aquarium
-    description: Bassins et fournitures, carpes koï
+  - name: "Barks Barbecue"
+    description: 
     url:
-  - name: L’Atelier du Bien-Etre
-    description: Spas, saunas
-    url:
-  - name: Loojabry Tonnerre d'Engrais
-    description: Fertilisant artisanal 100 % naturel
-    url:
-  - name: Miroiterie Franconville
-    description: Véranda, pergola,portail, stores
-    url:
-  - name: Normandie Couteaux
-    description: Couteaux de jardin
-    url:
-  - name: Point Jardin
-    description: Matériaux Professionnels et décoration
-    url:
-  - name: RM Habitat
-    description: Protection solaire, portails, pergolas,
-    url:
-  - name: Saint-Etienne
-    description: Motoculture, matériel de jardin
-    url:
-  - name: Tricheur et Fils
-    description: Robots tondeuses
-    url:
-  - name: Veragrow
-    description: Lombricomposteur
-    url:
+   
 
-- categorie: ENVIRONNEMENT
+- categorie: "PRODUITS NATURELS"
   exposants:
-  - name: Agglomération Seine-Eure
-    description: Réduction des déchets, compostage
+  - name: "LorTea"
+    description: "Thé à l'ortie"
     url:
-  - name: Conservatoire d'Espaces Naturels Normandie Seine
-    description: Gestion et préservation des espaces naturels
-    url:
-
-- categorie: DÉCORATION DE JARDIN
-  exposants:
-  - name: Agathe Fortin
-    description: Poterie, décoration céramique de jardin
-    url:
-  - name: Céramique Trémoureux
-    description: Poterie, terre de grès, émaux de cendres
-    url:
-  - name: Créabois
-    description: Ameublement, décoration de jardin
-    url:
-  - name: DCO Caméléon
-    description: Décoration artisanale en métal
-    url:
-  - name: Filentroc
-    description: Mobilier de jardin en fer forgé
-    url:
-  - name: Grosoeuvre
-    description: Cadrans solaires, animaux métalliques
-    url:
-  - name: Jardin Décor
-    description: Décorations de jardins
-    url:
-  - name: Jerlcreazinc
-    description: Décoration en zinc
-    url:
-  - name: Les Folies de Flodi
-    description: Fontaines en pierre pour extérieur, statues de Bali
-    url:
-
-- categorie: PRODUITS NATURELS
-  exposants:
-  - name: Huilerie Hunte
-    description: Fabricant d'huile de lin
-    url:
-
-- categorie: ASSOCIATIONS
-  exposants:
-  - name: Bonsaï Club du Manoir
-    description: Conseils bonsaï
-    url:
-  - name: Bouton d’Eure
-    description: Conférences diverses, micro-ateliers
-    url:
-  - name: L.P.O. 
-    description: Ligue de protection des oiseaux
-    url:
-  - name: Vaudreuil Folies
-    description: Brocante de jardin
+  - name: "O Flor et Sens"
+    description: "Plantes parfumées, aromatiques médicinales"
     url:
