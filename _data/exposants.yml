@@ -2,9 +2,6 @@
 
 - categorie: "LE VÉGÉTAL"
   exposants:
-  - name: "Les Rosiers Belmontais"
-    description: "Rosiers, plantes grimpantes"
-    url:
   - name: "L.Piccoli pro"
     description: "Ail des ours, Pommes bio"
     url:
@@ -16,9 +13,6 @@
     url:
   - name: "Les serres de la Garenne"
     description: "Plantes Vivaces Annuelles"
-    url:
-  - name: "Les bioplants du potager"
-    description: "Plants de légumes, aromatiques, petits fruits bio"
     url:
   - name: "Madame Cactus"
     description: "Collection de cactus, plantes grasses"
@@ -32,37 +26,36 @@
   - name: "Au jardin d'espérance"
     description: "Plants de Fleurs et de légumes"
     url:
-  - name: "La pepinière d'Amfreville la Mivoie"
-    description: "Vivaces, plantes grasse" 
+  - name: Le Champ des Saules
+    description:
     url:
-  
+  - name: "Doucet Vivaces"
+    description: "Vivaces"
+    url:
+  - name: "Saveur Sauvage"
+    description:
+    url:
+
 - categorie: "AUTOUR DU JARDIN"
   exposants:
-  - name: "Les folies de Flodi"
-    description: "Décoration de jardin, plantes"
-    url:
-  - name: "Creabois"
-    description: "Menuiserie, décoration de jardin"
-    url:
   - name: "Le jardin de Jean"
     description: "à visiter"
     url:
-  - name: "In's Garden"
-    description: "Décoration de jardin"
-    url:
-  - name: "Bouton d'Eure"
-    description: "Micro-ateliers de jardinage"
-    url:
   - name: "Barks Barbecue"
-    description: 
+    description:
     url:
-   
+  - name: "Bougies Faites main Florales"
+    description:
+    url:
+  - name: "Passionnaterre Céramiste"
+    description:
+    url:
+  - name: "Saperline"
+    description:
+    url:
 
 - categorie: "PRODUITS NATURELS"
   exposants:
   - name: "LorTea"
     description: "Thé à l'ortie"
-    url:
-  - name: "O Flor et Sens"
-    description: "Plantes parfumées, aromatiques médicinales"
     url:
