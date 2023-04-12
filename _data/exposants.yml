@@ -27,24 +27,18 @@
     description: "Plants de Fleurs et de légumes"
     url:
   - name: Le Champ des Saules
-    description:
+    description: "Plantes aromatiques et légumes"
     url:
   - name: "Doucet Vivaces"
     description: "Vivaces"
     url:
-  - name: "Saveur Sauvage"
-    description:
+  - name: "Pépinière Leclerc"
+    description: "Plants potager, aromatiques et fraises"
     url:
 
 - categorie: "AUTOUR DU JARDIN"
   exposants:
-  - name: "Le jardin de Jean"
-    description: "à visiter"
-    url:
   - name: "Barks Barbecue"
-    description:
-    url:
-  - name: "Bougies Faites main Florales"
     description:
     url:
   - name: "Passionnaterre Céramiste"
@@ -53,9 +47,21 @@
   - name: "Saperline"
     description:
     url:
+  - name: "Le Quellec"
+    description: "Bougies végétales"
+    url:
+  - name: "Saperline"
+    description: "Bijoux et déco fleurs"
+    url:
+  - name: "Le jardin de Jean"
+    description: "à visiter"
+    url:
 
 - categorie: "PRODUITS NATURELS"
   exposants:
   - name: "LorTea"
     description: "Thé à l'ortie"
+    url:
+  - name: "Saveur Sauvage"
+    description:
     url:
