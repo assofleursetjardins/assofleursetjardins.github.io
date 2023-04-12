@@ -18,7 +18,7 @@
     description: "Collection de cactus, plantes grasses"
     url:
   - name: "Nathalie Lerouge"
-    description: "Vivaces"
+    description: "Plantes annuelles, Vivaces"
     url:
   - name: "Végét'Eure"
     description: "Vivaces, sauges"
@@ -26,25 +26,25 @@
   - name: "Au jardin d'espérance"
     description: "Plants de Fleurs et de légumes"
     url:
-  - name: Le Champ des Saules
+  - name: "Le Champ des Saules"
     description: "Plantes aromatiques et légumes"
     url:
   - name: "Doucet Vivaces"
-    description: "Vivaces"
+    description: "Vivaces, Plants potagers"
     url:
   - name: "Pépinière Leclerc"
     description: "Plants potager, aromatiques et fraises"
+    url:
+  - name: "Le jardin de Jean"
+    description: "à visiter"
     url:
 
 - categorie: "AUTOUR DU JARDIN"
   exposants:
   - name: "Barks Barbecue"
-    description:
+    description: "Fabricant"
     url:
   - name: "Passionnaterre Céramiste"
-    description:
-    url:
-  - name: "Saperline"
     description:
     url:
   - name: "Le Quellec"
@@ -53,9 +53,6 @@
   - name: "Saperline"
     description: "Bijoux et déco fleurs"
     url:
-  - name: "Le jardin de Jean"
-    description: "à visiter"
-    url:
 
 - categorie: "PRODUITS NATURELS"
   exposants:
@@ -63,5 +60,5 @@
     description: "Thé à l'ortie"
     url:
   - name: "Saveur Sauvage"
-    description:
+    description: "Plantes et fruits sauvages en sirop et pestos"
     url:
