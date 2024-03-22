@@ -1,5 +1,8 @@
 - categorie: "LE VÉGÉTAL"
   exposants:
+    - name: "LEMIRE"
+      description: "horticulteur"
+      url:
     - name: "L.Piccoli pro"
       description: "Ail des ours, Pommes bio"
       url:
@@ -33,6 +36,9 @@
 
 - categorie: "AUTOUR DU JARDIN"
   exposants:
+    - name: "SANTERRE Sarah"
+      description: "aquareliste botanique"
+      url:
     - name: "Miroiterie Franconville"
       description: "Portail - Stores - Fermeture"
       url:
