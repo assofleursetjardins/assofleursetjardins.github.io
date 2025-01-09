@@ -2,52 +2,54 @@
 layout: default
 ---
 
-
 <header id="cover" class="hero-banner">
-
   <div class="hero-banner__content">
     {{content}}
     <p class="hero-banner__dates"><span>{{site.date}}</span></p>
   </div>
 
   <figure class="hero-banner__image">
-    <img src="/assets/medias/affiche-2024.jpg" alt="Visuel 2023 de la 28ème édition du salon fleurs et jardins">
+    <img
+      src="/assets/images/hero-banner-2020.jpg"
+      alt="Visuel édition du salon fleurs et jardins"
+    />
   </figure>
 </header>
 
 <main id="main" aria-label="Content">
-
   <div id="content">
-
-    <hr>
+    <hr />
 
     <article>
       <h2>Le programme</h2>
       <h3>Riche en découvertes</h3>
-      <p>Actualités, animations, ateliers, interventions... Retrouvez le programme jour par jour...</p>
+      <p>
+        Actualités, animations, ateliers, interventions... Retrouvez le
+        programme jour par jour...
+      </p>
       <a class="button" href="/le-salon/#le-programme">Découvrir</a>
     </article>
 
-    <hr>
+    <hr />
 
     <article>
       <h2>Les exposants</h2>
       <h3>De nombreux professionnels seront présents</h3>
-      <p>Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs, Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur savoir-faire et présenter leurs produits  dans les rues du  Vaudreuil</p>
+      <p>
+        Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
+        Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer
+        leur savoir-faire et présenter leurs produits dans les rues du Vaudreuil
+      </p>
       <a class="button" href="/exposants">Découvrez tous nos exposants</a>
     </article>
-
   </div>
 
   <aside id="aside">
-  {% for section in site.pages-sections %}
-    {% for p-section in page.sections %}
-    {% if section.id contains p-section %}
+    {% for section in site.pages-sections %} {% for p-section in page.sections
+    %} {% if section.id contains p-section %}
     <section id="section-{{ section.title | slugify: latin }}">
       {{ section.content | markdownify }}
     </section>
-    {% endif %}
-    {% endfor %}
-  {% endfor %}
+    {% endif %} {% endfor %} {% endfor %}
   </aside>
 </main>

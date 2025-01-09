@@ -27,7 +27,7 @@ Ce Marché Floral ambitionne de présenter au Public les dernières créations d
 
 Retrouvez le programme jour par jour...
 
-### Samedi 27 avril 2024
+### Samedi 26 avril 2025
 
 - 10h : Ouverture du marché floral
 - 19h : Fermeture
