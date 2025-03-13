@@ -1,7 +1,0 @@
-{% comment %}
-Sélectionne les sections de la page courante
-{% endcomment %}
-
-{% assign size = page.id | size %}
-{% assign page_section_id = page.id | slice: 1, size | split: "/" | first | append: "/" %}
-{% assign sections = site.pages | where_exp: "section", "section.id contains page_section_id" %}
