@@ -1,0 +1,21 @@
+---
+// Banner message viendra d'un fichie de config
+// TODO: Créer la config pour banner message
+const BannerMessage = "⚠️ Le marché floral 2025 est Annulé"
+---
+
+<!-- SI banner message exist et non empty -->
+{BannerMessage && (
+    // ALORS on affiche:
+    <div class="top-banner py-4 text-lg text-center bg-[var(--bg-color)] text-white">
+        ⚠️ Le marché floral 2025 est Annulé
+    </div>
+)}
+
+
+<!-- 
+Ex ternary operator :
+
+{BannerMessage ? "Il y a message" : "Pas de message" } 
+
+-->

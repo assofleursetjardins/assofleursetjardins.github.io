@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --color-title: #262623;
+    --bg-color: #141412;
+    --color-text: #545450;
+    --bg-components: #0268A2;
+    --bg-button: #76B201;
+    --text-button: #FFFFFF;
+    --bg-hover: #5B8901;
+    --hover-button: #E8EAEA;
+    --color-border: #A1ACAD;
+}
