@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+
+// Define the type of the props
+type LinkFooterType = {
+    url: string,
+    label: string,
+}
+
+// Define the props
+const { link } = Astro.props;
+---
+
+<div class="px-3 mb-11 box-border w-full">
+    <h4 class="text-title text-base font-bold my-4">Navigation</h4>
+    {link.map((item: LinkFooterType ) => {
+        return (
+            <a class="block cursor-pointer underline hover:bg-color text-base color-text leading-7" href={item.url}>
+                {item.label}
+            </a>
+        )
+    })}
+</div>

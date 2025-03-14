@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
@@ -22,6 +23,7 @@ const {
 	<body class="bg-background text-foreground">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 

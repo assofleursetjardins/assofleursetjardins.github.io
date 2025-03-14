@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Revenir en haut de la page",
+    "url": "/back"
+  },
+  {
+    "label": "Accueil",
+    "url": "/"
+  },
+  {
+    "label": "A propos",
+    "url": "/about"
+  },
+  {
+    "label": "Exposants",
+    "url": "/exposants"
+  },
+  {
+    "label": "Média & Presse",
+    "url": "/media"
+  },
+  {
+    "label": "Mentions légales",
+    "url": "/mentions"
+  }
+]

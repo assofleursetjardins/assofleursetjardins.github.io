@@ -1,0 +1,17 @@
+---
+import LinkFooter from './LinkFooter.astro';
+import InfoFooter from './InfoFooter.astro';
+import SupportFooter from './SupportFooter.astro';
+import CopyrightFooter from './CopyrightFooter.astro';
+
+import LinkDatas from '../data/link.json';
+
+---
+<footer class="block max-w-7xl w-auto p-3">
+    <div class="w-auto flex">
+        <LinkFooter link={LinkDatas} />
+        <InfoFooter />
+        <SupportFooter />
+    </div>
+    <CopyrightFooter/>
+</footer>
