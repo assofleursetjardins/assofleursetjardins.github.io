@@ -1,8 +1,18 @@
 ---
 import TopBanner from "./TopBanner.astro";
+import Burger from "./Burger.astro";
 import Navigation from "./Navigation.astro";
+import Logo from "./Logo.astro";
 ---
-<header >
-    <TopBanner />
+
+<TopBanner />
+<header
+    id="main-header"
+    class="flex items-center justify-between gap-10 px-2 py-4"
+>
+    <a href="/">
+        <Logo />
+    </a>
     <Navigation />
+    <Burger />
 </header>
