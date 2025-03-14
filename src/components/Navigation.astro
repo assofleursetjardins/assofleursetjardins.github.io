@@ -1,0 +1,22 @@
+---
+import Logo from "./Logo.astro";
+import NavigationLink from "./NavigationLink.astro";
+
+// TODO: La navigation devra venir d'un fichier de config
+// see: https://app.clickup.com/t/86c2jg3th
+
+// Moke de donnée
+//const MainMenu = []
+---
+
+<nav class="flex items-center justify-between px-6 py-4 w-full mt-2 ml-10 max-w-60">
+  <a href="/">
+    <Logo />
+  </a>
+  <div class="flex gap-6 w-">
+    <!-- Map sur le menu -->
+    <NavigationLink url="/about" title="À propos" description="Programme et animation" />
+    <NavigationLink url="/exposants" title="Exposants" description="Des professionnels à l'écoute" />
+    <NavigationLink url="/infos" title="Infos Pratiques" description="Restauration, hébergement,..." />
+  </div>
+</nav>

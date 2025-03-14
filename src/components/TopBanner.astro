@@ -1,0 +1,12 @@
+---
+import { siteConfig } from "../config";
+
+const BannerMessage = siteConfig.bannerMessage;
+---
+
+{BannerMessage && (
+    <div class="top-banner text-background bg-foreground py-4 text-lg text-center w-full">
+        {BannerMessage}
+    </div>
+)}
+
