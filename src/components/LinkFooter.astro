@@ -12,10 +12,10 @@ const { link } = Astro.props;
 ---
 
 <div class="px-3 mb-11 box-border w-full">
-    <h4 class="text-title text-base font-bold my-4">Navigation</h4>
+    <h4 class="text-text text-base font-bold my-4">Navigation</h4>
     {link.map((item: LinkFooterType ) => {
         return (
-            <a class="block cursor-pointer underline hover:bg-color text-base color-text leading-7" href={item.url}>
+            <a class="block cursor-pointer underline hover:text-bg text-primary text-base leading-7" href={item.url}>
                 {item.label}
             </a>
         )
