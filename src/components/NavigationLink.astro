@@ -1,0 +1,8 @@
+---
+const { url, title, description } = Astro.props;
+---
+
+<a href={url} class="group flex flex-col items-center border-transparent border-2 hover:border-gray-300 border-solid w-60 ml-12 h-2/3 inset-0">
+  <span class="text-2xl font-extrabold group-active:text-green-600">{title}</span>
+  <span class="text-sm font-light">{description}</span>
+</a>

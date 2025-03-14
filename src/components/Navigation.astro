@@ -1,0 +1,16 @@
+---
+import Logo from "./Logo.astro";
+import NavigationLink from "./NavigationLink.astro";
+import { siteConfig } from "../config";
+---
+
+<nav class="flex items-center justify-between px-6 py-4 w-full mt-2 ml-10 max-w-60">
+  <a href="/">
+    <Logo />
+  </a>
+  <div class="flex gap-6 w-">
+    {siteConfig.mainMenu.map((link) => (
+      <NavigationLink url={link.url} title={link.title} description={link.description} />
+    ))}
+  </div>
+</nav>
