@@ -2,7 +2,7 @@
 
 @theme {
     /* Fonts */
-    --font-heading:serif;
+    --font-heading:'Abril Fatface', serif;
     --font-base: system-ui, sans-serif;
 
     /* Colors */
@@ -14,6 +14,7 @@
     --bg-hover: #5B8901; /*background hover*/
     --hover-button: #E8EAEA; /*hover button*/
     --color-border: #A1ACAD; /*border*/
+    --color-background-inscription: #0268A2;
     
     --color-accent: #76B201; /*background component*/
     --color-background: #fff;
