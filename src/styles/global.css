@@ -11,12 +11,23 @@
     --color-text: #545450; /*text*/
     --color-detail: #76B201; /*background button*/
     --color-: #FFFFFF; /*text button*/
-    --bg-hover: #5B8901; /*background hover*/
-    --hover-button: #E8EAEA; /*hover button*/
+    --color-hover-button: #5B8901; /*background hover bouton*/
+    --color-hover-button-incription: #E8EAEA; /*hover button inscription*/
     --color-border: #A1ACAD; /*border*/
     --color-background-inscription: #0268A2;
     
     --color-accent: #76B201; /*background component*/
     --color-background: #fff;
     --color-foreground: #111;
+}
+
+@layer utilities {
+    .has-separator::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: var(--separator-size, 2px);
+        background-color: var(--separator-color, var(--color-accent));
+        margin-top: 1em;
+    }
 }
