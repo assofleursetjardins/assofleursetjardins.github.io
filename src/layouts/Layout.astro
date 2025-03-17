@@ -3,10 +3,8 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
-const {
-	title = "Association Fleurs & Jardins",
-	description = "Salon floral du Vaudreuil",
-} = Astro.props;
+const { pageTitle = "", pageDescription = "Salon floral du Vaudreuil" } =
+	Astro.props;
 ---
 
 <!doctype html>
@@ -16,11 +14,12 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
 	</head>
 	<body class="bg-background text-foreground">
 		<Header />
+		<h1>{pageTitle}</h1>
 		<slot />
 		<Footer />
 	</body>

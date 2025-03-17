@@ -8,11 +8,23 @@ import Logo from "./Logo.astro";
 <TopBanner />
 <header
     id="main-header"
-    class="flex items-center justify-between gap-10 px-2 py-4 relative"
+    class="flex items-center justify-between px-2 py-4 relative"
 >
     <a href="/">
         <Logo />
     </a>
-    <Navigation />
-    <Burger />
+    <Navigation id="main-nav-container" />
+    <Burger id="main-burger-menu" />
+
+    <script>
+        const burgerMenu = document.querySelector("#main-burger-menu");
+        const navContainer = document.querySelector("#main-nav-container");
+
+        if (burgerMenu && navContainer) {
+            burgerMenu.addEventListener("click", () => {
+                navContainer.classList.toggle("flex");
+                navContainer.classList.toggle("hidden");
+            });
+        }
+    </script>
 </header>
