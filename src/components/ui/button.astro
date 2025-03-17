@@ -1,0 +1,41 @@
+---
+import { cn } from "../../lib/utils";
+
+// Types
+export type ButtonProps = {
+  default?: string;
+  variant?: "default" | "primary" | "secondary";
+  size?: "small" | "medium" | "large";
+  class?: string;
+};
+
+// Récupération des props
+const {
+  variant = "primary",
+  size = "medium",
+  class: className,
+}: ButtonProps = Astro.props;
+
+// Styles de base
+const baseStyles = "py-2 px-4 rounded-md cursor-pointer";
+
+// Styles des variantes
+const variants = {
+  default: "p-4 rounded-md",
+  primary: "bg-accent text-white hover:bg-accent/90",
+  secondary: "bg-indigo-500 text-white hover:bg-indigo-500/90",
+  outline:
+    "border border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent",
+};
+
+// Styles des tailles
+const sizes = {
+  small: "py-1 px-2 text-sm",
+  medium: "py-2 px-4 text-base",
+  large: "py-3 px-6 text-lg",
+};
+---
+
+<button class={cn(baseStyles, variants[variant], sizes[size], className)}>
+  <slot />
+</button>
