@@ -1,16 +1,22 @@
 ---
-import Logo from "./Logo.astro";
 import NavigationLink from "./NavigationLink.astro";
-import { siteConfig } from "../config";
+import { SiteConfig } from "../site-config";
+const { id } = Astro.props;
 ---
 
-<nav class="flex items-center justify-between px-6 py-4 w-full mt-2 ml-10 max-w-60">
-  <a href="/">
-    <Logo />
-  </a>
-  <div class="flex gap-6 w-">
-    {siteConfig.mainMenu.map((link) => (
-      <NavigationLink url={link.url} title={link.title} description={link.description} />
-    ))}
+<nav class="absolute lg:static lg:w-auto w-full top-full z-2 px-2 py-4">
+  <div
+    id={id}
+    class="hidden flex-col lg:flex lg:flex-row top-10 lg:gap-10 px-2 py-4 text-center gap-10 bg-white lg:border-none border border-gray-300 rounded-2xl"
+  >
+    {
+      SiteConfig.mainMenu.map((link) => (
+        <NavigationLink
+          url={link.url}
+          title={link.title}
+          description={link.description}
+        />
+      ))
+    }
   </div>
 </nav>
