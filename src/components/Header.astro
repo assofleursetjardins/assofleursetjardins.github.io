@@ -7,12 +7,29 @@ import Logo from "./Logo.astro";
 
 <TopBanner />
 <header
-    id="main-header"
-    class="flex items-center justify-between gap-10 px-2 py-4 relative"
+  id="main-header"
+  class="flex items-center justify-between gap-10 px-2 py-4 relative"
 >
-    <a href="/">
-        <Logo />
-    </a>
-    <Navigation />
-    <Burger />
+  <a href="/">
+    <Logo />
+  </a>
+  <Navigation id="main-nav-container" />
+  <Burger id="main-burger-menu" />
 </header>
+
+<script>
+  // TODO: Read, understand, and remove comments
+  // Get the burger menu and the navigation container
+  const burgerMenu = document.querySelector("#main-burger-menu");
+  const navContainer = document.querySelector("#main-nav-container");
+
+  // Check if the burger menu and the navigation container exist
+  if (burgerMenu && navContainer) {
+    // Add an event listener to the burger menu
+    burgerMenu.addEventListener("click", () => {
+      // Toggle the visibility of the navigation container
+      navContainer.classList.toggle("hidden");
+      navContainer.classList.toggle("flex");
+    });
+  }
+</script>

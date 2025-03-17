@@ -1,15 +1,12 @@
 ---
-import Logo from "./Logo.astro";
 import NavigationLink from "./NavigationLink.astro";
 import { SiteConfig } from "../site-config";
-import Burger from "./Burger.astro";
+
+const { id } = Astro.props;
 ---
 
 <nav class="flex">
-  <div
-    id="nav-container"
-    class="hidden md:flex text-center justify-items-end gap-10"
-  >
+  <div id={id} class="hidden md:flex text-center justify-items-end gap-10">
     {
       SiteConfig.mainMenu.map((link) => (
         <NavigationLink
