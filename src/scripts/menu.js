@@ -1,3 +1,3 @@
-document.querySelector('.burger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('expanded');
+document.querySelector('.burger-menu').addEventListener('click', () => {
+    document.querySelector('.nav-container').classList.toggle('expanded');
 });
