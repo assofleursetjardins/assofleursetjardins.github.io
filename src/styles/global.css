@@ -2,20 +2,31 @@
 
 @theme {
     /* Fonts */
-    --font-heading:serif;
+    --font-heading:'Abril Fatface', serif;
     --font-base: system-ui, sans-serif;
 
     /* Colors */
-    --color-primary: #262623; /*title*/
-    --color-bg: #141412; /*background*/
-    --color-text: #545450; /*text*/
-    --color-detail: #76B201; /*background button*/
-    --color-: #FFFFFF; /*text button*/
-    --bg-hover: #5B8901; /*background hover*/
-    --hover-button: #E8EAEA; /*hover button*/
-    --color-border: #A1ACAD; /*border*/
-    
-    --color-accent: #76B201; /*background component*/
-    --color-background: #fff;
-    --color-foreground: #111;
+    --color-primary: #76B201;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #0268A2;
+    --color-secondary-foreground: #FFFFFF;
+        
+    --color-background: var(--color-neutral-50);
+    --color-background-accent: var(--color-neutral-900);
+
+    --color-foreground: #262623;
+    --color-foreground-light: #A1ACAD;
+    --color-foreground-contrast: #545450; 
+
+}
+
+@layer utilities {
+    .has-separator::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: var(--separator-size, 2px);
+        background-color: var(--separator-color, var(--color-accent));
+        margin-top: 1em;
+    }
 }
