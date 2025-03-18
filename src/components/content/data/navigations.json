@@ -1,0 +1,36 @@
+{
+    "navigations": {
+        "retour": {
+            "label": "Retour en haut de la page",
+            "url": "#main-header"
+        },
+        "primary": {
+            "accueil": {
+                "label": "Accueil",
+                "url": "/"
+            },
+            "aPropos": {
+                "label": "A propos",
+                "url": "/about"
+            },
+            "exposants": {
+                "label": "Exposants",
+                "url": "/exposants"
+            },
+            "infoPratiques": {
+                "label": "Infos Pratiques",
+                "url": "/infos"
+            }
+        },
+        "footer": {
+            "medias": {
+                "label": "Média & Presse",
+                "url": "/media"
+            },
+            "mentions": {
+                "label": "Mentions légales",
+                "url": "/mentions"
+            }
+        }
+    }
+}

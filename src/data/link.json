@@ -16,6 +16,10 @@
     "url": "/exposants"
   },
   {
+    "label": "Infos Pratiques",
+    "url": "/infos"
+  },
+  {
     "label": "Média & Presse",
     "url": "/media"
   },

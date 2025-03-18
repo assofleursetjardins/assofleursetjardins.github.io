@@ -5,4 +5,4 @@ export const siteConfig = {
     { url: "/exposants", title: "Exposants", description: "Des professionnels à l'écoute" },
     { url: "/infos", title: "Infos Pratiques", description: "Restauration, hébergement,..." },
   ],
-};
+}; 
