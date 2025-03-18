@@ -10,9 +10,10 @@ const {
 } = Astro.props;
 ---
 
-<Layout title={metaTitle} />
-<header>
-  <h1>{pageTitle}</h1>
-  {pageDescription && <p>{pageDescription}</p>}
-</header>
-<Inscription />
+<Layout title={metaTitle}>
+  <header>
+    <h1>{pageTitle}</h1>
+    {pageDescription && <p>{pageDescription}</p>}
+  </header>
+  <Inscription />
+</Layout>
