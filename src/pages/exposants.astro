@@ -1,5 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+const {
+  metaTitle = "Exposants",
+  metaDescription = "",
+  pageTitle = "Exposants",
+  pageDescription = "",
+} = Astro.props;
 ---
-<Header />
+
+<Layout title={metaTitle}>
+  <header>
+    <h1>{pageTitle}</h1>
+    {pageDescription && <p>{pageDescription}</p>}
+  </header>
+</Layout>

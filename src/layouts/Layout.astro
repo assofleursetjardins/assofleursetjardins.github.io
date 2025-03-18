@@ -2,30 +2,31 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
-import '@fontsource/abril-fatface';
+import "@fontsource/abril-fatface";
 
 const {
-	title = "Association Fleurs & Jardins", 
-	description = "Salon floral du Vaudreuil" 
-} = Astro.props
+  metaTitle = "",
+  metaDescription = "",
+  pageTitle = "",
+  pageDescription = "",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description}>
-		
-	</head>
-	<body class="bg-background text-foreground">
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{metaTitle || "Salon fleurs & Jardins"}</title>
+    {metaDescription && <meta name="description" content={metaDescription} />}
+  </head>
+  <body class="bg-background text-foreground">
+    <Header />
+    <main class="max-w-7xl mx-auto">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
-
-
