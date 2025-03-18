@@ -6,7 +6,7 @@ export type ButtonType = "button" | "a";
 
 export type ButtonPropsType = {
   default?: string;
-  variant?: "default" | "primary" | "secondary" | "white" | "outline";
+  variant?: "default" | "primary" | "secondary" ;
   size?: "small" | "medium" | "large";
   class?: string;
   href?: string;
@@ -14,7 +14,7 @@ export type ButtonPropsType = {
 
 // Récupération des props
 const {
-  variant = "primary",
+  variant = "default",
   size = "medium",
   class: className,
   href,
@@ -25,19 +25,17 @@ const baseStyles = "cursor-pointer font-base text-xl block text-center w-full";
 
 // Styles des variantes
 const variants = {
-  default: "bg-accent text-white hover:bg-hover-button mb-4", /*style pour les boutons verts*/
-  primary: "bg-background text-background-inscription hover:bg-background/90", /*style pour le bouton dans composant inscription*/
-  secondary: "",
-  white: "bg-background text-foreground hover:bg-background/90", /*style pour le bouton blanc*/
-  outline:
-    "border border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent",
+  default: "bg-foreground text-background hover:bg-foreground/90", 
+  primary: "bg-primary text-primary-foreground hover:bg-primary/90 mb-4", 
+  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
 };
+
 
 // Styles des tailles
 const sizes = {
   small: "px-5 py-2.5", /* dimensions pour les boutons de style default/verts*/
-  medium: "",
-  large: "p-5",
+  medium: "p-5",
+  large: "",
 };
 
 // Définition du composant en fonction du type de lien
