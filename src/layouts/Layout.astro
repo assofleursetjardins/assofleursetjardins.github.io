@@ -4,24 +4,26 @@ import Header from "../components/Header.astro";
 import "../styles/global.css";
 import "@fontsource/abril-fatface";
 
-const { pageTitle = "", pageDescription = "Salon floral du Vaudreuil" } =
-  Astro.props;
+const {
+  metaTitle = "",
+  metaDescription = "",
+  pageTitle = "",
+  pageDescription = "",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <meta name="description" content={pageDescription} />
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
   </head>
   <body class="bg-background text-foreground">
     <Header />
-    <h1>{pageTitle}</h1>
-    <h2>{pageDescription}</h2>
     <main class="max-w-7xl mx-auto">
       <slot />
     </main>

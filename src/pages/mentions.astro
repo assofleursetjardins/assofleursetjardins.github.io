@@ -1,6 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const { pageTitle = "Mentions légales", pageDescription = "" } = Astro.props;
+const {
+    metaTitle = "",
+    metaDescription = "",
+    pageTitle = "Mentions légales",
+    pageDescription = "",
+} = Astro.props;
 ---
 
-<Layout title={pageTitle} />
+<Layout title={metaTitle} />
+<header>
+    <h1>{pageTitle}</h1>
+    {pageDescription && <p>{pageDescription}</p>}
+</header>
