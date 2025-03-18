@@ -21,7 +21,10 @@ const { pageTitle = "", pageDescription = "Salon floral du Vaudreuil" } =
   <body class="bg-background text-foreground">
     <Header />
     <h1>{pageTitle}</h1>
-    <slot />
+    <h2>{pageDescription}</h2>
+    <main class="max-w-7xl mx-auto">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

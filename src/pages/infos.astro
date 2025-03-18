@@ -1,4 +1,7 @@
 ---
-const title = "Informations Pratiques";
-const description = "Restaurations, Hébergement, ...";
+import Layout from "../layouts/Layout.astro";
+const { pageTitle = "Informations pratiques", pageDescription = "" } =
+    Astro.props;
 ---
+
+<Layout title={pageTitle} />

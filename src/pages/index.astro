@@ -1,9 +1,9 @@
 ---
 import Inscription from "../components/Inscription.astro";
 import Layout from "../layouts/Layout.astro";
+const { pageTitle = "Page d'accueil", pageDescription = "" } = Astro.props;
 ---
 
-<Layout title="Acceuil">
-  <h1>Home Page</h1>
+<Layout title={pageTitle}>
   <Inscription />
 </Layout>
