@@ -6,7 +6,7 @@ export type ButtonType = "button" | "a";
 
 export type ButtonPropsType = {
   default?: string;
-  variant?: "default" | "primary" | "secondary" ;
+  variant?: "default" | "primary" | "secondary";
   size?: "small" | "medium" | "large";
   class?: string;
   href?: string;
@@ -25,23 +25,27 @@ const baseStyles = "cursor-pointer font-base text-xl block text-center w-full";
 
 // Styles des variantes
 const variants = {
-  default: "bg-foreground text-background hover:bg-foreground/90", 
-  primary: "bg-primary text-primary-foreground hover:bg-primary/90 mb-4", 
-  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
+  default: "bg-foreground text-background hover:bg-foreground/90 rounded",
+  primary:
+    "bg-primary text-primary-foreground hover:bg-primary/90 mb-4 rounded",
+  secondary:
+    "bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded",
 };
-
 
 // Styles des tailles
 const sizes = {
-  small: "px-5 py-2.5", /* dimensions pour les boutons de style default/verts*/
+  small: "px-5 py-2.5" /* dimensions pour les boutons de style default/verts*/,
   medium: "p-5",
   large: "",
 };
 
 // Définition du composant en fonction du type de lien
-const Component: ButtonType = href ? "a": "button";
+const Component: ButtonType = href ? "a" : "button";
 ---
 
-<Component class={cn(baseStyles, variants[variant], sizes[size], className)} {href}>
+<Component
+  class={cn(baseStyles, variants[variant], sizes[size], className)}
+  {href}
+>
   <slot />
 </Component>
