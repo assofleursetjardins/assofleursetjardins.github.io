@@ -2,10 +2,14 @@
 import Inscription from "../components/Inscription.astro";
 import Layout from "../layouts/Layout.astro";
 import Tarifs from "../components/Tarifs.astro";
+
 ---
 
-<Layout title="Acceuil">
-  <h1>Home Page</h1>
-  <Tarifs />
-  <Inscription />
+<Layout title={metaTitle} />
+<header>
+  <h1>{pageTitle}</h1>
+</header>
+<Inscription />
+
 </Layout>
+
