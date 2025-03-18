@@ -17,4 +17,6 @@ export const siteConfig = {
             description: 'Restauration, hébergement,...',
         },
     ],
+    ticketPrice: 'Gratuit',
+    parkingPrice: 'Gratuit',
 }

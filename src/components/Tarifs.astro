@@ -1,0 +1,12 @@
+---
+import { siteConfig } from "../site-config";
+const { ticketPrice, parkingPrice } = siteConfig;
+---
+
+<div>
+    <h2>Tarifs</h2>
+    <ul>
+        <li>Entrée : {ticketPrice}</li>
+        <li>Parking : {parkingPrice}</li>
+    </ul>
+</div>
