@@ -1,0 +1,45 @@
+---
+import { siteConfig } from "../site-config";
+import Button from "./ui/button.astro";
+const infosPage = "../infos";
+const googleMapsLink = siteConfig.googleMapsLink;
+---
+
+<div
+    class="border border-solid border-gray-300 rounded max-w-80 h-auto p-6 mb-12"
+>
+    <h2 class="strong text-foreground font-heading text-4xl mb-4">
+        Localisation
+    </h2>
+    <p class="has-separator text-foreground-light">
+        Une situation géographique idéale, dans les rues du centre bourg du
+        Vaudreuil
+    </p>
+    <p class="text-foreground-light mb-7 mt-4.5 text-lg font-normal">
+        Le village du Vaudreuil est situé à moins de 100 kilomètres de la région
+        parisienne, à 20km de Rouen ou encore 120km de Caen par l’autoroute A13
+        ; un village normand doté d’un superbe golf de 18 trous.
+    </p>
+
+    <div>
+        <Button
+            class="bg-primary hover:bg-primary/90 text-background rounded mb-4"
+            href={infosPage}
+        >
+            <h3>Infos pratiques</h3>
+        </Button>
+        <Button
+            class="bg-primary hover:bg-primary/90 text-background rounded"
+            href={googleMapsLink}
+        >
+            <h3>Obtenir un itinéraire</h3>
+        </Button>
+    </div>
+</div>
+
+<style>
+    .has-separator {
+        --separator-color: #76b201;
+        --separator-size: 3px;
+    }
+</style>

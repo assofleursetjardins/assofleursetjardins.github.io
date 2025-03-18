@@ -19,4 +19,6 @@ export const siteConfig = {
     ],
     ticketPrice: 'Gratuite',
     parkingPrice: 'Gratuit',
+    googleMapsLink: 'https://google.com/maps/dir//49.2562515,1.2087/@49.2582507,1.2174889,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D'
+
 }

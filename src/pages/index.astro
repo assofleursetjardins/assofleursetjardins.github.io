@@ -1,7 +1,7 @@
 ---
 import Inscription from "../components/Inscription.astro";
 import Layout from "../layouts/Layout.astro";
-
+import Localisation from "../components/Localisation.astro";
 const {
   metaTitle = "Page d'accueil",
   metaDescription = "",
@@ -16,4 +16,5 @@ const {
     {pageDescription && <p>{pageDescription}</p>}
   </header>
   <Inscription />
+  <Localisation />
 </Layout>
