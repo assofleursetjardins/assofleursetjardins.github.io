@@ -4,33 +4,36 @@
             "label": "Retour en haut de la page",
             "url": "#main-header"
         },
-        "primary": {
-            "accueil": {
-                "label": "Accueil",
-                "url": "/"
-            },
-            "aPropos": {
+        "home": {
+            "label": "Accueil",
+            "url": "/"
+        },
+        "primary": [
+            {
                 "label": "A propos",
+                "description": "Programme et animation",
                 "url": "/about"
             },
-            "exposants": {
+            {
                 "label": "Exposants",
+                "description": "Programme et animation",
                 "url": "/exposants"
             },
-            "infoPratiques": {
+            {
                 "label": "Infos Pratiques",
+                "description": "Programme et animation",
                 "url": "/infos"
             }
-        },
-        "footer": {
-            "medias": {
+        ],
+        "footer": [
+            {
                 "label": "Média & Presse",
                 "url": "/media"
             },
-            "mentions": {
+            {
                 "label": "Mentions légales",
                 "url": "/mentions"
             }
-        }
+        ]
     }
 }

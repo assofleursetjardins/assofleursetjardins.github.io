@@ -1,12 +1,15 @@
 ---
 import NavigationLink from "./NavigationLink.astro";
-import  siteConfig  from "./content/data/navigations.json";
+import  siteConfig  from "../data/navigations.json";
+
 const { id } = Astro.props;
 type LinkType = {
     url: string,
     label: string,
     description: string,
 }
+
+const { primary } = siteConfig.navigations;
 ---
 
 <nav class="absolute inset-x-4 lg:static top-full z-2">
@@ -15,10 +18,10 @@ type LinkType = {
     class="hidden flex-col lg:flex lg:flex-row top-10 lg:gap-10 text-center gap-10 bg-neutral-50 lg:border-none border border-gray-300 rounded-2xl"
   >
     {
-      siteConfig.mainMenu.map((link: LinkType) => (
+      primary.map((link) => (
         <NavigationLink
           url={link.url}
-          title={link.title}
+          title={link.label}
           description={link.description}
         />
       ))
