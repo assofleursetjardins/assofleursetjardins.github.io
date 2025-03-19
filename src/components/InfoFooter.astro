@@ -1,23 +1,27 @@
 ---
 import "../styles/global.css";
 import Social from "./Social.astro";
+import  siteConfigInfo  from "../data/infoGeneral.json";
 
+const conditateUrl = siteConfigInfo.site.email.contact;
+const phone = siteConfigInfo.phone.contact;
+const address = siteConfigInfo.address;
 
 ---
 
 <div class="px-3 mb-11 box-border w-full">
-    <h4 class="text-text text-base font-bold my-4">Association Fleurs & Jardins</h4>
+    <h4 class="text-foreground-contrast text-base font-bold my-4">Association Fleurs & Jardins</h4>
 
-    <div class="italic text-base text-primary leading-7">
-        <p>Rue B. Chedeville – 27100 Le Vaudreuil (27)</p>
-        <a class="underline" href="tel:02 32 61 27 85">Tél. 02 32 61 27 85</a>
+    <div class="italic text-base text-foreground leading-7">
+        <p>{address}</p>
+        <a class="underline" href={phone}>Tél. {phone}</a>
     </div>
 
-    <a class="block cursor-pointer underline hover:bg-color text-base text-primary" href="mailto:salonfleursetjardins@levaudreuil.fr">Nous écrire</a>
+    <a class="block cursor-pointer underline hover:text-background-accent text-base text-foreground" href={`mailto:${conditateUrl}`}>Nous écrire</a>
     
-    <h4 class="text-text text-base font-bold my-4">Retrouvez-nous également sur</h4>
+    <h4 class="text-foreground-contrast text-base font-bold my-4">Retrouvez-nous également sur</h4>
     
     <ul class="flex items-center gap-4">
-        <li><Social platform="facebook" username="levaudreuil.fr" /></li>
+        <li><Social/></li>
     </ul>
 </div>

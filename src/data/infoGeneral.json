@@ -19,7 +19,8 @@
     "address": "Rue B. Chedeville – 27100 Le Vaudreuil (27)", 
     "analytics": {
         "google": "UA-112422626-1",
-        "matomo": "---"
+        "matomo": "---",
+        "googleMapsLink": "https://google.com/maps/dir//49.2562515,1.2087/@49.2582507,1.2174889,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
     },
     "social": {
         "facebook": "https://www.facebook.com/levaudreuil.fr"

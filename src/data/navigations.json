@@ -27,6 +27,26 @@
         ],
         "footer": [
             {
+                "label": "Retour en haut de la page",
+                "url": "#main-header"
+            },
+            {
+                "label": "Accueil",
+                "url": "/"
+            },
+            {
+                "label": "A propos",
+                "url": "/about"
+            },
+            {
+                "label": "Exposants",
+                "url": "/exposants"
+            },
+            {
+                "label": "Infos Pratiques",
+                "url": "/infos"
+            },
+            {
                 "label": "Média & Presse",
                 "url": "/media"
             },
