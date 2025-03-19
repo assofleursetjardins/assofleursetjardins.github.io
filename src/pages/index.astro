@@ -2,19 +2,36 @@
 import Inscription from "../components/Inscription.astro";
 import Layout from "../layouts/Layout.astro";
 import Localisation from "../components/Localisation.astro";
+
+import { content } from "../content/index.md";
+
 const {
-  metaTitle = "Page d'accueil",
-  metaDescription = "",
-  pageTitle = "Page d'accueil",
-  pageDescription = "",
-} = Astro.props;
+  metaTitle,
+  metaDescription,
+  title,
+  description,
+  image,
+  layout,
+  author,
+  date,
+} = content.frontmatter;
 ---
 
-<Layout title={metaTitle}>
+<Layout
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+  pageTitle={title}
+  pageDescription={description}
+>
   <header>
-    <h1>{pageTitle}</h1>
-    {pageDescription && <p>{pageDescription}</p>}
+    <h1>{title}</h1>
+    {description && <p>{description}</p>}
   </header>
+
+  <div>
+    {content.body}
+  </div>
+
   <Inscription />
   <Localisation />
 </Layout>
