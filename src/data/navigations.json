@@ -12,7 +12,7 @@
             {
                 "label": "A propos",
                 "description": "Programme et animation",
-                "url": "/about"
+                "url": "/a-propos"
             },
             {
                 "label": "Exposants",
@@ -22,7 +22,7 @@
             {
                 "label": "Infos Pratiques",
                 "description": "Programme et animation",
-                "url": "/infos"
+                "url": "/infos-pratiques"
             }
         ],
         "footer": [

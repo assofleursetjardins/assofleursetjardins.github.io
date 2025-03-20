@@ -20,6 +20,18 @@
 
 }
 
+@layer base {
+    /* Headings */
+
+    /* text */
+
+    /* misc */
+    hr {
+        margin-block: 2rem;
+        border-color: var(--color-gray-300, #ccc);
+    }
+}
+
 @layer utilities {
     .has-separator::after {
         content: '';

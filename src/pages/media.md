@@ -10,10 +10,14 @@ metaTitle: "Page Médias"
 metaDescription: "Bienvenue sur la page Médias de Salon Fleurs et Jardin du Vaudreuil."
 ---
 
-# Media Presse
+# Communiqué de presse
 
 Bonjour, Bienvenu!
 
-## Nos services
+___
 
-Salon Fleurs et Jardin du Vaudreuil.
+## Support de com’
+
+### Affiche
+
+[Téléchargez l’affiche](/)

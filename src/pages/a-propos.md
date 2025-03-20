@@ -10,10 +10,16 @@ metaTitle: "Page À propos"
 metaDescription: "Bienvenue sur la page À propos de Salon Fleurs et Jardin du Vaudreuil."
 ---
 
-# À propos
+# À propos du Marché Floral du Vaudreuil
 
-Bonjour, Bienvenu!
+C’est avec une certaine fierté que nous sommes heureux de vous présenter cette nouvelle édition du Marché Floral du Vaudreuil. Fort de notre expérience acquise au cours des 26 dernières années avec la création du Salon Fleurs et Jardins, nous avons souhaité continuer l’ aventure malgré les contraintes sanitaires et sécuritaires en vigueur actuellement en vous proposant ce concept plus souple mais néanmoins qualitatif.
 
-## Nos services
+Des exposants renommés sont à nouveau au Rendez vous venus de toute la France et feront le succès des journées proposées à tous les amoureux de la nature et des plantes.
 
-Salon Fleurs et Jardin du Vaudreuil.
+/*Une image*/
+
+Ce Marché Floral ambitionne de présenter au Public les dernières créations des producteurs présents avec le plus large éventail possible de fleurs .
+
+/*Une image*/
+
+/*composant programme*/
