@@ -3,9 +3,7 @@ import TopBanner from "./TopBanner.astro";
 import Burger from "./ui/Burger.astro";
 import Navigation from "./Navigation.astro";
 import Logo from "./Logo.astro";
-import  siteConfig  from "../data/navigations.json";
 
-const home = siteConfig.navigations.home.url;
 ---
 
 <TopBanner />
@@ -13,7 +11,7 @@ const home = siteConfig.navigations.home.url;
   id="main-header"
   class="flex items-center justify-between px-2 py-4 relative max-w-7xl mx-auto"
 >
-  <a class="block w-[200px] lg:w-[300px]" href={home}>
+  <a class="block w-[200px] lg:w-[300px]" href="/">
     <Logo />
   </a>
   <Navigation id="main-nav-container" />
