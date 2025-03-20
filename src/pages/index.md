@@ -19,4 +19,12 @@ Des professionnels à l’écoute qui vous étonneront également par le rapport
 
 Ce Marché Floral s’adresse à tous les publics et comblera tous les amateurs de plantes et de fleurs.
 
+## Le programme
 
+### Riche en découvertes
+
+Actualités, animations, ateliers, interventions... Retrouvez le programme jour par jour...
+
+## Les exposants
+### De nombreux professionnels seront présents
+Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs, Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur savoir-faire et présenter leurs produits dans les rues du Vaudreuil
