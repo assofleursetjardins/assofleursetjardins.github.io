@@ -9,9 +9,10 @@ date: "19-03-2025"
 metaTitle: "Page Mentions Légales"
 metaDescription: "Bienvenue sur la page Mentions Légales de Salon Fleurs et Jardin du Vaudreuil."
 ---
-## Introduction
 
-Bonjour, Bienvenu! 
+# Mentions légales
+
+Bonjour, Bienvenu!
 
 ## Nos services
 

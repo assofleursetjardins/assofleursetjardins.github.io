@@ -9,9 +9,10 @@ date: "19-03-2025"
 metaTitle: "Page des exposants"
 metaDescription: "Bienvenue sur la page des exposants de Salon Fleurs et Jardin du Vaudreuil."
 ---
-## Introduction
 
-Bonjour, Bienvenu! 
+# Exposants
+
+Bonjour, Bienvenu!
 
 ## Nos services
 

@@ -9,9 +9,10 @@ date: "19-03-2025"
 metaTitle: "Page Informations Pratiques"
 metaDescription: "Bienvenue sur la page d'Informations Pratiques de Salon Fleurs et Jardin du Vaudreuil."
 ---
-## Introduction
 
-Bonjour, Bienvenu! 
+# Infos pratiques
+
+Bonjour, Bienvenu!
 
 ## Nos services
 

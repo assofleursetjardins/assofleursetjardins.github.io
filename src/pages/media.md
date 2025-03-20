@@ -9,9 +9,10 @@ date: "19-03-2025"
 metaTitle: "Page Médias"
 metaDescription: "Bienvenue sur la page Médias de Salon Fleurs et Jardin du Vaudreuil."
 ---
-## Introduction
 
-Bonjour, Bienvenu! 
+# Media Presse
+
+Bonjour, Bienvenu!
 
 ## Nos services
 

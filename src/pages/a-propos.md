@@ -9,9 +9,10 @@ date: "19-03-2025"
 metaTitle: "Page À propos"
 metaDescription: "Bienvenue sur la page À propos de Salon Fleurs et Jardin du Vaudreuil."
 ---
-## Introduction
 
-Bonjour, Bienvenu! 
+# À propos
+
+Bonjour, Bienvenu!
 
 ## Nos services
 
