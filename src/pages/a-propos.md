@@ -5,9 +5,13 @@ description: "**description**"
 image: ""
 author: ""
 date: "19-03-2025"
-# SEO
+# SEO metadata
 metaTitle: "Page À propos"
 metaDescription: "Bienvenue sur la page À propos de Salon Fleurs et Jardin du Vaudreuil."
+# Aside components
+asideComponents:
+  - Inscription
+  - Localisation
 ---
 
 # À propos du Marché Floral du Vaudreuil
@@ -16,10 +20,10 @@ C’est avec une certaine fierté que nous sommes heureux de vous présenter cet
 
 Des exposants renommés sont à nouveau au Rendez vous venus de toute la France et feront le succès des journées proposées à tous les amoureux de la nature et des plantes.
 
-/*Une image*/
+/_Une image_/
 
 Ce Marché Floral ambitionne de présenter au Public les dernières créations des producteurs présents avec le plus large éventail possible de fleurs .
 
-/*Une image*/
+/_Une image_/
 
-/*composant programme*/
+/_composant programme_/
