@@ -15,7 +15,8 @@ const address = siteConfigInfo.address;
 
     <div class="italic text-base text-foreground leading-7">
         {address && <p>{address}</p>}
-        <a class="underline" href={`tel:${formatedPhone}`}>Tél. {phone}</a>
+        {phone && <a class="underline" href={`tel:${formatedPhone}`}>Tél. {phone}</a>}
+        
     </div>
 
     <a class="block cursor-pointer underline hover:text-background-accent text-base text-foreground" href={`mailto:${conditateUrl}`}>Nous écrire</a>
