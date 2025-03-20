@@ -4,8 +4,9 @@ const { ticketPrice, parkingPrice } = siteConfig.salon.pricing;
 ---
 
 <div>
-    <h2>Tarifs</h2>
-    <ul>
-        {ticketPrice && <li>{ticketPrice}</li>}
-        {parkingPrice && <li>{parkingPrice}</li>}
+    <h2 class="font-heading text-4xl mb-10 text-foreground">Tarifs</h2>
+    <ul class="font-base">
+        {ticketPrice && <li class="text-2xl mb-6 mt-5"> <strong>Entrée</strong> : {ticketPrice}</li>}
+        {parkingPrice && <li class="text-2xl mb-7"> <strong>Parking</strong>  : {parkingPrice}</li>}
+    </ul>
 </div>
