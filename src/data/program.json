@@ -1,0 +1,15 @@
+[
+    {
+      "date": "Samedi 26 avril 2025",
+      "hours": [
+        {
+          "hour": "10h",
+          "desc": "Ouverture du marché floral"
+        },
+        {
+          "hour": "19h",
+          "desc": "Fermeture"
+        }
+      ]
+    }
+]

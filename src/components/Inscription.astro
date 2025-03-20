@@ -1,9 +1,11 @@
 ---
 import Button from "./ui/button.astro";
-// TODO: "editionYear" etre dynamique depuis la date du site depuis le fichier de configuration
-// TODO: "conditateUrl" etre dynamique depuis le fichier de configuration
-const editionYear = "2025";
-const conditateUrl = "mailto:salonfleursetjardins@levaudreuil.fr@gmail.com";
+import  siteConfig  from "../data/editonSalon.json";
+import  siteConfigInfo  from "../data/infoGeneral.json";
+
+const  editionYear  = siteConfig.salon.edition;
+const conditateUrl = siteConfigInfo.site.email.contact;
+
 ---
 <aside class="p-6 mb-12 bg-secondary text-secondary-foreground max-w-80 h-auto">
     <h2 class="font-heading text-4xl mb-5 leading-10 font-bold">Inscription</h2>
@@ -14,7 +16,7 @@ const conditateUrl = "mailto:salonfleursetjardins@levaudreuil.fr@gmail.com";
         et une réponse vous sera adressée dans les meilleurs délais.
     </p>
 
-    <Button href={conditateUrl} class="bg-neutral-50 text-secondary hover:bg-neutral-50/90">Candidater <br>maintenant</Button>
+    <Button href={`mailto:${conditateUrl}`} class="bg-neutral-50 text-secondary hover:bg-neutral-50/90">Candidater <br>maintenant</Button>
 </aside>
 
 <style>

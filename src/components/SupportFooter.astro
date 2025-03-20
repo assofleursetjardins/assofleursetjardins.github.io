@@ -20,12 +20,7 @@ const LogoPartenaires: LogoPartenairesType[] = [
 
 ---
 <div class="px-3 mb-11 box-border w-full">
-    <h4 class="text-text font-bold my-4">Avec le soutien de</h4>
-    <!-- <div  class="grid grid-cols-2">
-        <img class="filter grayscale w-32 h-28 m-3.5" src="../images/logo-le-vaudreuil.jpg" alt="logo-le-vaudreuil">
-        <img class="filter grayscale w-32 h-28 m-3.5" src="../images/logo-seine-eure.jpg" alt="logo-seine-eure">
-        <img class="filter grayscale w-32 h-28 m-3.5" src="../images/logo-francebleu-normandie.jpg" alt="logo-francebleu-normandie">
-    </div> -->
+    <h4 class="text-foreground-contrast font-bold my-4">Avec le soutien de</h4>
     <div class="flex flex-wrap justify-left">
         {LogoPartenaires.map((item: LogoPartenairesType) => (
             <Image class="filter grayscale m-3.5" src={item.path} width={120} height={120} alt={item.alt} />

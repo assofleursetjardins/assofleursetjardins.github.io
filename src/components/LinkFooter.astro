@@ -1,4 +1,5 @@
 ---
+import  siteConfig  from "../data/navigations.json";
 import "../styles/global.css";
 
 // Define the type of the props
@@ -8,16 +9,16 @@ type LinkFooterType = {
 }
 
 // Define the props
-const { link } = Astro.props;
+const { footer } = siteConfig.navigations;
 ---
 
 <div class="px-3 mb-11 box-border w-full">
-    <h4 class="text-text text-base font-bold my-4">Navigation</h4>
-    {link.map((item: LinkFooterType ) => {
-        return (
-            <a class="block cursor-pointer underline hover:text-bg text-primary text-base leading-7" href={item.url}>
+    <h4 class="text-foreground-contrast text-base font-bold my-4">Navigation</h4>
+    {
+    footer.map((item:LinkFooterType) => (
+            <a class="block cursor-pointer underline hover:text-foreground-accent text-foreground text-base leading-7" href={item.url}>
                 {item.label}
             </a>
-        )
-    })}
+        ))
+    }
 </div>

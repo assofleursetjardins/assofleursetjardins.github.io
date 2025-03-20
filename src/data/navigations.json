@@ -1,0 +1,59 @@
+{
+    "navigations": {
+        "retour": {
+            "label": "Retour en haut de la page",
+            "url": "#main-header"
+        },
+        "home": {
+            "label": "Accueil",
+            "url": "/"
+        },
+        "primary": [
+            {
+                "label": "A propos",
+                "description": "Programme et animation",
+                "url": "/about"
+            },
+            {
+                "label": "Exposants",
+                "description": "Programme et animation",
+                "url": "/exposants"
+            },
+            {
+                "label": "Infos Pratiques",
+                "description": "Programme et animation",
+                "url": "/infos"
+            }
+        ],
+        "footer": [
+            {
+                "label": "Retour en haut de la page",
+                "url": "#main-header"
+            },
+            {
+                "label": "Accueil",
+                "url": "/"
+            },
+            {
+                "label": "A propos",
+                "url": "/about"
+            },
+            {
+                "label": "Exposants",
+                "url": "/exposants"
+            },
+            {
+                "label": "Infos Pratiques",
+                "url": "/infos"
+            },
+            {
+                "label": "Média & Presse",
+                "url": "/media"
+            },
+            {
+                "label": "Mentions légales",
+                "url": "/mentions"
+            }
+        ]
+    }
+}
