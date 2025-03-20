@@ -58,3 +58,14 @@ Le Salon Fleurs et Jardins du Vaudreuil permet encore aux visiteurs de découvri
 **La Fabric d'Annick** Confiture fruits ou légumes - 
 **Les Ruchers de Vernon** Miels - Produits de la ruche - 
 **Cave Lajon** Blancs de fruits - Rhums - Jus de fruits
+
+
+import Inscription from '../components/Inscription.astro'
+
+<Inscription />
+
+/*composant info pratique*/
+
+import Localisation from '../components/Localisation.astro'
+
+<Localisation />
