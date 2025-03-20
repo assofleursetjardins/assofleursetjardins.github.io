@@ -5,6 +5,7 @@ import  siteConfigInfo  from "../data/infoGeneral.json";
 
 const conditateUrl = siteConfigInfo.site.email.contact;
 const phone = siteConfigInfo.phone.contact;
+const formatedPhone = siteConfigInfo.phone.contact.replace(/\s+/g, '');
 const address = siteConfigInfo.address;
 
 ---
@@ -13,8 +14,8 @@ const address = siteConfigInfo.address;
     <h4 class="text-foreground-contrast text-base font-bold my-4">Association Fleurs & Jardins</h4>
 
     <div class="italic text-base text-foreground leading-7">
-        <p>{address}</p>
-        <a class="underline" href={phone}>Tél. {phone}</a>
+        {address && <p>{address}</p>}
+        <a class="underline" href={`tel:${formatedPhone}`}>Tél. {phone}</a>
     </div>
 
     <a class="block cursor-pointer underline hover:text-background-accent text-base text-foreground" href={`mailto:${conditateUrl}`}>Nous écrire</a>

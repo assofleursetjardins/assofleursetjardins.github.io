@@ -1,9 +1,9 @@
 ---
-import { siteConfig } from "../site-config";
+import siteConfigInfo  from "../data/infoGeneral.json";
 import Button from "./ui/button.astro";
 
 const infosPage = "../infos";
-const googleMapsLink = siteConfig.googleMapsLink;
+const googleMapsLink = siteConfigInfo.analytics.googleMapsLink;
 ---
 
 <div
@@ -26,9 +26,11 @@ const googleMapsLink = siteConfig.googleMapsLink;
         <Button variant="primary" href={infosPage} size="small">
             Infos pratiques
         </Button>
-        <Button variant="primary" href={googleMapsLink} size="small">
-            Obtenir un itinéraire
-        </Button>
+        {googleMapsLink && 
+            <Button variant="primary" href={googleMapsLink} size="small">
+                Obtenir un itinéraire
+            </Button>
+        }
     </div>
 </div>
 

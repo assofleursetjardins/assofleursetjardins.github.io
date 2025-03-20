@@ -36,7 +36,7 @@
             },
             {
                 "label": "A propos",
-                "url": "/about"
+                "url": "/a-propos"
             },
             {
                 "label": "Exposants",
@@ -44,7 +44,7 @@
             },
             {
                 "label": "Infos Pratiques",
-                "url": "/infos"
+                "url": "/infos-pratiques"
             },
             {
                 "label": "Média & Presse",
@@ -52,7 +52,7 @@
             },
             {
                 "label": "Mentions légales",
-                "url": "/mentions"
+                "url": "/mentions-legales"
             }
         ]
     }

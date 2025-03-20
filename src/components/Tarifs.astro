@@ -1,12 +1,11 @@
 ---
-import { siteConfig } from "../site-config";
-const { ticketPrice, parkingPrice } = siteConfig;
+import  siteConfig  from "../data/editonSalon.json";
+const { ticketPrice, parkingPrice } = siteConfig.salon.pricing;
 ---
 
 <div>
     <h2>Tarifs</h2>
     <ul>
-        <li>Entrée : {ticketPrice}</li>
-        <li>Parking : {parkingPrice}</li>
-    </ul>
+        {ticketPrice && <li>{ticketPrice}</li>}
+        {parkingPrice && <li>{parkingPrice}</li>}
 </div>
