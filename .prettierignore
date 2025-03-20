@@ -1,0 +1,9 @@
+node_modules
+dist
+public
+.astro
+.vscode
+.github
+.DS_Store
+.env
+.env.local

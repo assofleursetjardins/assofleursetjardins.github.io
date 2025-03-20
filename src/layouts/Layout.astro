@@ -1,14 +1,14 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import "../styles/global.css";
-import "@fontsource/abril-fatface";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import '@fontsource/abril-fatface';
 
 const {
-  metaTitle = "",
-  metaDescription = "",
-  pageTitle = "",
-  pageDescription = "",
+  metaTitle = '',
+  metaDescription = '',
+  pageTitle = '',
+  pageDescription = '',
 } = Astro.props;
 ---
 
@@ -19,7 +19,7 @@ const {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{metaTitle || "Salon fleurs & Jardins"}</title>
+    <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
     {metaDescription && <meta name="description" content={metaDescription} />}
   </head>
   <body class="bg-background text-foreground">

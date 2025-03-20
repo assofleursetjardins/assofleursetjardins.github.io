@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.1",
@@ -18,6 +20,11 @@
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.0.14"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,astro,css,md}": "prettier --write"
   }
 }
