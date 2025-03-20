@@ -1,13 +1,13 @@
 ---
-import NavigationLink from "./NavigationLink.astro";
-import  siteConfig  from "../data/navigations.json";
+import NavigationLink from './NavigationLink.astro';
+import siteConfig from '../data/navigations.json';
 
 const { id } = Astro.props;
 type LinkType = {
-    url: string,
-    label: string,
-    description: string,
-}
+  url: string;
+  label: string;
+  description: string;
+};
 
 const { primary } = siteConfig.navigations;
 ---

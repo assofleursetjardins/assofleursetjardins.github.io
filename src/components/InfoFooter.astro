@@ -1,11 +1,11 @@
 ---
-import "../styles/global.css";
-import Social from "./Social.astro";
-import siteConfigInfo from "../data/infoGeneral.json";
+import '../styles/global.css';
+import Social from './Social.astro';
+import siteConfigInfo from '../data/infoGeneral.json';
 
 const conditateUrl = siteConfigInfo.site.email.contact;
 const phone = siteConfigInfo.phone.contact;
-const formatedPhone = siteConfigInfo.phone.contact.replace(/\s+/g, "");
+const formatedPhone = siteConfigInfo.phone.contact.replace(/\s+/g, '');
 const address = siteConfigInfo.address;
 const social = siteConfigInfo.social;
 ---

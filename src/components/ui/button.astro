@@ -1,46 +1,46 @@
 ---
-import { cn } from "../../lib/utils";
+import { cn } from '../../lib/utils';
 
 // Types
-export type ButtonType = "button" | "a";
+export type ButtonType = 'button' | 'a';
 
 export type ButtonPropsType = {
   default?: string;
-  variant?: "default" | "primary" | "secondary";
-  size?: "small" | "medium" | "large";
+  variant?: 'default' | 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
   class?: string;
   href?: string;
 };
 
 // Récupération des props
 const {
-  variant = "default",
-  size = "medium",
+  variant = 'default',
+  size = 'medium',
   class: className,
   href,
 }: ButtonPropsType = Astro.props;
 
 // Styles de base
-const baseStyles = "cursor-pointer font-base text-xl block text-center w-full";
+const baseStyles = 'cursor-pointer font-base text-xl block text-center w-full';
 
 // Styles des variantes
 const variants = {
-  default: "bg-foreground text-background hover:bg-foreground/90 rounded",
+  default: 'bg-foreground text-background hover:bg-foreground/90 rounded',
   primary:
-    "bg-primary text-primary-foreground hover:bg-primary/90 mb-4 rounded",
+    'bg-primary text-primary-foreground hover:bg-primary/90 mb-4 rounded',
   secondary:
-    "bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded",
+    'bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded',
 };
 
 // Styles des tailles
 const sizes = {
-  small: "px-5 py-2.5" /* dimensions pour les boutons de style default/verts*/,
-  medium: "p-5",
-  large: "",
+  small: 'px-5 py-2.5' /* dimensions pour les boutons de style default/verts*/,
+  medium: 'p-5',
+  large: '',
 };
 
 // Définition du composant en fonction du type de lien
-const Component: ButtonType = href ? "a" : "button";
+const Component: ButtonType = href ? 'a' : 'button';
 ---
 
 <Component

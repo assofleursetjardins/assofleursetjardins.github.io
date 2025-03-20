@@ -1,86 +1,83 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    /* Fonts */
-    --font-heading:'Abril Fatface', serif;
-    --font-base: system-ui, sans-serif;
+  /* Fonts */
+  --font-heading: 'Abril Fatface', serif;
+  --font-base: system-ui, sans-serif;
 
-    /* Colors */
-    --color-primary: #76B201;
-    --color-primary-foreground: #FFFFFF;
-    --color-secondary: #0268A2;
-    --color-secondary-foreground: #FFFFFF;
-    --color-tertiary-foreground: #666;
-        
-    --color-background: var(--color-neutral-50);
-    --color-background-accent: var(--color-neutral-900);
+  /* Colors */
+  --color-primary: #76b201;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0268a2;
+  --color-secondary-foreground: #ffffff;
+  --color-tertiary-foreground: #666;
 
-    --color-foreground: #262623;
-    --color-foreground-light: #A1ACAD;
-    --color-foreground-contrast: #545450; 
+  --color-background: var(--color-neutral-50);
+  --color-background-accent: var(--color-neutral-900);
 
+  --color-foreground: #262623;
+  --color-foreground-light: #a1acad;
+  --color-foreground-contrast: #545450;
 }
 
 @layer base {
-    h1, h2, h3 {
-        font-family: var(--font-heading);
-    }
-    h1 {
-        font-size: clamp(1.7rem, 0.075rem + 5.2vw, 3rem);
-    }
-    h2 {
-        font-size: clamp(1.3rem, 0.075rem + 5.2vw, 2.3rem);
-        font-weight: normal;
-    }
-    h3 {
-        font-size: clamp(1.05rem, 0.075rem + 5.2vw, 1.9rem);
-        font-weight: normal;
-    }
-    h4 {
-        font-size: clamp(1.05rem, 0.075rem + 5.2vw, 1.9rem);
-        font-weight: normal;
-        color: var( --color-tertiary-foreground);
-        font: var(--font-base);
-    }
-        /* text */
-    p {
-        font-size: 1rem;
-        font-weight: normal;
-        color: var(--color-foreground);
-        font: var(--font-base);
-    }
-    /* misc */
-    hr {
-        margin-block: 2rem;
-        border-color: var(--color-gray-300, #ccc);
-    }
-    /* links */
-    main a {
-        text-decoration: underline;  
-        color: inherit;  
-        transition: color 0.3s ease; 
-      }
-      
-    main a:hover {
-        color: var(--color-primary);  
-      }
-      
-      
-      
-    .main {
-        /* À remplir */
-    }
-      
-      
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+  h1 {
+    font-size: clamp(1.7rem, 0.075rem + 5.2vw, 3rem);
+  }
+  h2 {
+    font-size: clamp(1.3rem, 0.075rem + 5.2vw, 2.3rem);
+    font-weight: normal;
+  }
+  h3 {
+    font-size: clamp(1.05rem, 0.075rem + 5.2vw, 1.9rem);
+    font-weight: normal;
+  }
+  h4 {
+    font-size: clamp(1.05rem, 0.075rem + 5.2vw, 1.9rem);
+    font-weight: normal;
+    color: var(--color-tertiary-foreground);
+    font: var(--font-base);
+  }
+  /* text */
+  p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color-foreground);
+    font: var(--font-base);
+  }
+  /* misc */
+  hr {
+    margin-block: 2rem;
+    border-color: var(--color-gray-300, #ccc);
+  }
+  /* links */
+  main a {
+    text-decoration: underline;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  main a:hover {
+    color: var(--color-primary);
+  }
+
+  .main {
+    /* À remplir */
+  }
 }
 
 @layer utilities {
-    .has-separator::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: var(--separator-size, 2px);
-        background-color: var(--separator-color, var(--color-accent));
-        margin-top: 1em;
-    }
+  .has-separator::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: var(--separator-size, 2px);
+    background-color: var(--separator-color, var(--color-accent));
+    margin-top: 1em;
+  }
 }
