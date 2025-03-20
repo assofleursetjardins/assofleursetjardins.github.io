@@ -1,13 +1,5 @@
 {
     "navigations": {
-        "retour": {
-            "label": "Retour en haut de la page",
-            "url": "#main-header"
-        },
-        "home": {
-            "label": "Accueil",
-            "url": "/"
-        },
         "primary": [
             {
                 "label": "A propos",
