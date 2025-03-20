@@ -1,5 +1,5 @@
 ---
-import siteConfigInfo  from "../data/infoGeneral.json";
+import siteConfigInfo from "../data/infoGeneral.json";
 import Button from "./ui/button.astro";
 
 const infosPage = "../infos";
@@ -12,24 +12,26 @@ const googleMapsLink = siteConfigInfo.analytics.googleMapsLink;
     <h2 class="strong text-foreground font-heading text-4xl mb-4">
         Localisation
     </h2>
-    <h3 class="has-separator text-foreground-light">
+    <p class="has-separator text-foreground-light">
         Une situation géographique idéale, dans les rues du centre bourg du
         Vaudreuil
-    </h3>
-    <h3 class="text-foreground-light mb-7 mt-4.5 text-lg font-normal">
+    </p>
+    <p class="text-foreground-light mb-7 mt-4.5 text-lg font-normal">
         Le village du Vaudreuil est situé à moins de 100 kilomètres de la région
         parisienne, à 20km de Rouen ou encore 120km de Caen par l’autoroute A13
         ; un village normand doté d’un superbe golf de 18 trous.
-    </h3>
+    </p>
 
     <div>
         <Button variant="primary" href={infosPage} size="small">
             Infos pratiques
         </Button>
-        {googleMapsLink && 
-            <Button variant="primary" href={googleMapsLink} size="small">
-                Obtenir un itinéraire
-            </Button>
+        {
+            googleMapsLink && (
+                <Button variant="primary" href={googleMapsLink} size="small">
+                    Obtenir un itinéraire
+                </Button>
+            )
         }
     </div>
 </div>

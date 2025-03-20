@@ -2,13 +2,16 @@
 layout: "../layouts/Layout.astro"
 title: "Bienvenue"
 description: "**description**"
-image: ""
+image: "src/assets/images/hero-banner-2020.jpg"
 author: ""
 date: "19-03-2025"
 #SEO
 metaTitle: "Page d'accueil"
 metaDescription: "Bienvenue sur la page d'accueil de Salon Fleurs et Jardin du Vaudreuil."
+
 ---
+## 26 avril 2025 
+
 # L’Association Fleurs et Jardins du Vaudreuil organise cette année un Marché Floral
 
 Dans la continuité du Salon Fleurs et Jardins dont les 25ème et 26ème Editions en 2020 et 2021 n’ont pu avoir lieu en raison du Covid19 et en raison de la crise sanitaire actuelle, l’Association a décidé d’organiser un Marché Floral dans les rues du Vaudreuil en respectant les contraintes sanitaires et sécuritaires en vigueur à ce jour.
@@ -17,14 +20,28 @@ La deuxième edition en 2023 eut un réel succès. Nous vous attendons donc nomb
 
 Des professionnels à l’écoute qui vous étonneront également par le rapport qualité prix de leur production.
 
+![Marché Floral 2020](../assets/images/hero-banner-2020.jpg)
+
 Ce Marché Floral s’adresse à tous les publics et comblera tous les amateurs de plantes et de fleurs.
 
 ## Le programme
 
-### Riche en découvertes
+#### Riche en découvertes
 
 Actualités, animations, ateliers, interventions... Retrouvez le programme jour par jour...
 
+
+import Inscription from "../components/Inscription.astro";
+
+<Inscription />
+
 ## Les exposants
-### De nombreux professionnels seront présents
-Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs, Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur savoir-faire et présenter leurs produits dans les rues du Vaudreuil
+
+#### De nombreux professionnels seront présents
+
+Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs, Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur savoir-faire et présenter leurs produits dans les rues du Vaudreuil.
+
+
+import Localisation from "../components/Localisation.astro";
+
+<Localisation />
