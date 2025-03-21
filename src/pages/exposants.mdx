@@ -8,7 +8,15 @@ date: '19-03-2025'
 #SEO
 metaTitle: 'Page des exposants'
 metaDescription: 'Bienvenue sur la page des exposants de Salon Fleurs et Jardin du Vaudreuil.'
+asideComponents:
+  - Inscription
+  - InfoPratiques
+  - Localisation
 ---
+
+import Inscription from '../components/Inscription.astro';
+import InfoPratiques from '../components/InfoPratiques.astro';
+import Localisation from '../components/Localisation.astro';
 
 # Exposants
 
@@ -22,26 +30,6 @@ Le Salon Fleurs et Jardins du Vaudreuil permet encore aux visiteurs de découvri
 
 ## Nos fidèles exposants
 
-/_has-separator_/
-
 import ExibitorList from '../components/ExibitorList.astro';
 
 <ExibitorList />
-
-
-
-/*aside*/
-
-import Inscription from '../components/Inscription.astro';
-
-<Inscription />
-
-import InfoPratiques from '../components/InfoPratiques.astro';
-
-<InfoPratiques />
-
-import Localisation from '../components/Localisation.astro';
-
-<Localisation />
-
-

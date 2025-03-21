@@ -1,0 +1,29 @@
+---
+import siteConfig from '../data/program.json';
+const { Opening, Closing, Date } = siteConfig.salon.schedule;
+---
+
+<div>
+  <h2 class="font-heading text-4xl mb-4 text-foreground">Le programme</h2>
+  <p>Retrouvez le programme jour par jour…</p>
+
+  {Date && <h3>{Date}</h3>}
+  <ul class="font-base">
+    {
+      Opening && (
+        <li class="text-xl mb-4 mt-4">
+          {'•'}
+          <span>Ouverture du marché floral</span> : {Opening}
+        </li>
+      )
+    }
+    {
+      Closing && (
+        <li class="text-xl mb-4">
+          {'•'}
+          <span>Fermeture</span> : {Closing}
+        </li>
+      )
+    }
+  </ul>
+</div>
