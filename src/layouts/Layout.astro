@@ -3,6 +3,9 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
+import Inscription from '../components/Inscription.astro';
+import Localisation from '../components/Localisation.astro';
+import Prices from '../components/Prices.astro';
 
 const {
   metaTitle = '',
@@ -10,6 +13,8 @@ const {
   pageTitle = '',
   pageDescription = '',
 } = Astro.props;
+
+const asideComponents = Astro.props.frontmatter?.asideComponents || [];
 ---
 
 <!doctype html>
@@ -24,9 +29,27 @@ const {
   </head>
   <body class="bg-background text-foreground">
     <Header />
-    <main class="max-w-7xl mx-auto">
-      <slot />
-    </main>
+    <div class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8">
+      <main class="md:col-span-8">
+        <slot />
+      </main>
+      <aside class="md:col-span-4">
+        {
+          asideComponents.map((components: string) => {
+            switch (components) {
+              case 'Inscription':
+                return <Inscription />;
+              case 'Localisation':
+                return <Localisation />;
+              case 'Prices':
+                return <Prices />;
+              default:
+                return null;
+            }
+          })
+        }
+      </aside>
+    </div>
     <Footer />
   </body>
 </html>
