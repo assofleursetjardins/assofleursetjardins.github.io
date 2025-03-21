@@ -8,7 +8,15 @@ date: '19-03-2025'
 #SEO
 metaTitle: "Page d'accueil"
 metaDescription: "Bienvenue sur la page d'accueil de Salon Fleurs et Jardin du Vaudreuil."
+asideComponents:
+  - Inscription
+  - Localisation
 ---
+
+import Localisation from '../components/Localisation.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/ui/button.astro';
+import Inscription from '../components/Inscription.astro';
 
 ## 26 avril 2025
 
@@ -24,22 +32,26 @@ Des professionnels à l’écoute qui vous étonneront également par le rapport
 
 Ce Marché Floral s’adresse à tous les publics et comblera tous les amateurs de plantes et de fleurs.
 
-## Le programme
+<Section title="Programme" subtitle="Riche en découvertes">
+  <p class="text-foreground mb-7 mt-4.5 text-lg font-normal">
+    Actualités, animations, ateliers, interventions... Retrouvez le programme
+    jour par jour...
+  </p>
+  <Button variant="primary" href="/a-propos#programme" size="small">
+    <span>Décourvrir</span>
+  </Button>
+</Section>
 
-#### Riche en découvertes
-
-Actualités, animations, ateliers, interventions... Retrouvez le programme jour par jour...
-
-import Inscription from '../components/Inscription.astro';
-
-<Inscription />
-
-## Les exposants
-
-#### De nombreux professionnels seront présents
-
-Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs, Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur savoir-faire et présenter leurs produits dans les rues du Vaudreuil.
-
-import Localisation from '../components/Localisation.astro';
-
-<Localisation />
+<Section
+  title="Les exposants"
+  subtitle="De nombreux professionnels seront présents"
+>
+  <p class="text-foreground mb-7 mt-4.5 text-lg font-normal">
+    Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
+    Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur
+    savoir-faire et présenter leurs produits dans les rues du Vaudreuil
+  </p>
+  <Button variant="primary" href="/exposants" size="small">
+    <span>Découvrez tous nos exposants</span>
+  </Button>
+</Section>

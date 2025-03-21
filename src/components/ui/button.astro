@@ -21,7 +21,8 @@ const {
 }: ButtonPropsType = Astro.props;
 
 // Styles de base
-const baseStyles = 'cursor-pointer font-base text-xl block text-center w-full';
+const baseStyles =
+  'cursor-pointer font-base text-xl block text-center w-full no-underline';
 
 // Styles des variantes
 const variants = {
@@ -34,7 +35,8 @@ const variants = {
 
 // Styles des tailles
 const sizes = {
-  small: 'px-5 py-2.5' /* dimensions pour les boutons de style default/verts*/,
+  small:
+    'px-5 py-2.5 max-w-80' /* dimensions pour les boutons de style default/verts*/,
   medium: 'p-5',
   large: '',
 };

@@ -25,6 +25,7 @@
   h2,
   h3 {
     font-family: var(--font-heading);
+    line-height: 1.1;
   }
   h1 {
     font-size: clamp(1.7rem, 0.075rem + 5.2vw, 3rem);
@@ -38,17 +39,21 @@
     font-weight: normal;
   }
   h4 {
+    font-family: var(--font-base);
     font-size: clamp(1.05rem, 0.075rem + 5.2vw, 1.9rem);
     font-weight: normal;
     color: var(--color-tertiary-foreground);
-    font: var(--font-base);
   }
   /* text */
-  p {
-    font-size: 1rem;
-    font-weight: normal;
+  body {
+    font-family: var(--font-base);
+    font-size: clamp(1rem, 0.8125rem + 0.6vw, 1.15rem);
+    line-height: 1.5;
     color: var(--color-foreground);
-    font: var(--font-base);
+  }
+
+  p + p {
+    margin-top: 1em;
   }
   /* misc */
   hr {
