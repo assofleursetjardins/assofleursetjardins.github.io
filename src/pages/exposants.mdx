@@ -8,7 +8,15 @@ date: '19-03-2025'
 #SEO
 metaTitle: 'Page des exposants'
 metaDescription: 'Bienvenue sur la page des exposants de Salon Fleurs et Jardin du Vaudreuil.'
+asideComponents:
+  - Inscription
+  - InfoPratiques
+  - Localisation
 ---
+
+import Inscription from '../components/Inscription.astro';
+import InfoPratiques from '../components/InfoPratiques.astro';
+import Localisation from '../components/Localisation.astro';
 
 # Exposants
 
@@ -21,8 +29,6 @@ Les producteurs présents au Salon : horticulteurs, pépiniéristes, paysagistes
 Le Salon Fleurs et Jardins du Vaudreuil permet encore aux visiteurs de découvrir les dernières nouveautés dans le domaine de l’outillage de jardin avec des démonstrations gratuites en compagnie de professionnels réputés.
 
 ## Nos fidèles exposants
-
-/_has-separator_/
 
 ## LE VÉGÉTAL
 
@@ -58,21 +64,3 @@ Le Salon Fleurs et Jardins du Vaudreuil permet encore aux visiteurs de découvri
 **La Fabric d'Annick** Confiture fruits ou légumes -
 **Les Ruchers de Vernon** Miels - Produits de la ruche -
 **Cave Lajon** Blancs de fruits - Rhums - Jus de fruits
-
-
-
-/*aside*/
-
-import Inscription from '../components/Inscription.astro';
-
-<Inscription />
-
-import InfoPratiques from '../components/InfoPratiques.astro';
-
-<InfoPratiques />
-
-import Localisation from '../components/Localisation.astro';
-
-<Localisation />
-
-
