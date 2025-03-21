@@ -1,14 +1,21 @@
 ---
-layout: "../layouts/Layout.astro"
-title: "À propos"
-description: "**description**"
-image: ""
-author: ""
-date: "19-03-2025"
+layout: '../layouts/Layout.astro'
+title: 'À propos'
+description: '**description**'
+image: ''
+author: ''
+date: '19-03-2025'
 # SEO
-metaTitle: "Page À propos"
-metaDescription: "Bienvenue sur la page À propos de Salon Fleurs et Jardin du Vaudreuil."
+metaTitle: 'Page À propos'
+metaDescription: 'Bienvenue sur la page À propos de Salon Fleurs et Jardin du Vaudreuil.'
+asideComponents:
+  - Prices
+  - Localisation
 ---
+
+import Localisation from '../components/Localisation.astro';
+import Prices from '../components/Prices.astro';
+import Programme from '../components/Programme.astro';
 
 # À propos du Marché Floral du Vaudreuil
 
@@ -22,12 +29,4 @@ Ce Marché Floral ambitionne de présenter au Public les dernières créations d
 
 ![Vue du salon et de ses allées](../assets/medias/vue-du-salon-3.jpg)
 
-/*composant programme*/
-
-import Localisation from '../components/Localisation.astro'
-
-<Localisation />
-
-import Prices from "../components/Prices.astro";
-
-<Prices/>
+<Programme />

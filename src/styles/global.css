@@ -26,6 +26,8 @@
   h3 {
     font-family: var(--font-heading);
     line-height: 1.1;
+    padding-bottom: 1rem;
+    padding-top: 1em;
   }
   h1 {
     font-size: clamp(1.7rem, 0.075rem + 5.2vw, 3rem);
@@ -66,13 +68,15 @@
     color: inherit;
     transition: color 0.3s ease;
   }
-
+  aside {
+    margin-top: 6em;
+  }
   main a:hover {
     color: var(--color-primary);
   }
 
-  .main {
-    /* À remplir */
+  main {
+    margin-top: 2em;
   }
 }
 

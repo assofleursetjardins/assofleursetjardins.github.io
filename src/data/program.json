@@ -1,15 +1,9 @@
-[
-  {
-    "date": "Samedi 26 avril 2025",
-    "hours": [
-      {
-        "hour": "10h",
-        "desc": "Ouverture du marché floral"
-      },
-      {
-        "hour": "19h",
-        "desc": "Fermeture"
-      }
-    ]
+{
+  "salon": {
+    "schedule": {
+      "Opening": "10h",
+      "Closing": "19h",
+      "Date": "26 avril 2025"
+    }
   }
-]
+}
