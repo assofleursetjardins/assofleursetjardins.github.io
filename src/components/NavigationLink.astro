@@ -1,13 +1,30 @@
 ---
 const { url, title, description } = Astro.props;
+
+const isActive = Astro.url.pathname === url;
 ---
 
 <a
   href={url}
-  class="nav-links group flex flex-col text-center border-transparent border-2 hover:border-gray-300 border-solid"
+  class=`relative nav-links group flex flex-col text-center ${isActive ? 'is-active' : ''}`
 >
-  <span class="text-2xl font-extrabold group-active:text-green-600 gap-10"
+  <span class=`text-2xl font-extrabold gap-10 ${isActive ? 'text-primary' : ''}`
     >{title}</span
   >
   <span class="text-sm font-light text-gray-500">{description}</span>
 </a>
+
+<style>
+  a.is-active::after {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+</style>
