@@ -19,7 +19,7 @@ const social = siteConfigInfo.social;
     {address && <p>{address}</p>}
     {
       phone && (
-        <a class="underline" href={`tel:${formatedPhone}`}>
+        <a class="hover:text-primary underline" href={`tel:${formatedPhone}`}>
           Tél. {phone}
         </a>
       )
@@ -27,7 +27,7 @@ const social = siteConfigInfo.social;
   </div>
 
   <a
-    class="hover:text-background-accent text-foreground block cursor-pointer text-base underline"
+    class="hover:text-primary text-foreground block cursor-pointer text-base underline"
     href={`mailto:${conditateUrl}`}>Nous écrire</a
   >
 
