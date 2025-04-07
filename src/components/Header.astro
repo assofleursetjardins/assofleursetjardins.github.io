@@ -4,12 +4,12 @@ import Burger from './ui/Burger.astro';
 import Navigation from './Navigation.astro';
 import Logo from './Logo.astro';
 ---
-
-<TopBanner />
-<header
-  id="main-header"
-  class="flex items-center justify-between px-2 py-4 relative max-w-7xl mx-auto"
->
+<header id="header" class="fixed top-0 bg-background w-screen z-9000 transition-transform duration-800">
+  <TopBanner />
+  <div
+    id="main-header"
+    class="flex items-center justify-between px-7 py-4 max-w-7xl mx-auto"
+  >
   <a class="block w-[200px] lg:w-[300px]" href="/">
     <Logo />
   </a>
@@ -26,5 +26,26 @@ import Logo from './Logo.astro';
         navContainer.classList.toggle('hidden');
       });
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      let lastScrollY = window.scrollY;
+      const header = document.querySelector('#header');
+
+      if (!header) return;
+
+      document.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY) {
+          // Cache le header si on défile vers le bas
+          header.classList.add('-translate-y-full');
+        } else {
+          // Affiche le header si on défile vers le haut
+          header.classList.remove('-translate-y-full');
+        }
+
+        lastScrollY = window.scrollY;
+      });
+    });
   </script>
 </header>
+
+</div>

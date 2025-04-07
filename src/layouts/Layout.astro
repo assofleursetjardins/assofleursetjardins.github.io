@@ -33,13 +33,14 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
     <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
     {metaDescription && <meta name="description" content={metaDescription} />}
   </head>
-  <body class="bg-background text-foreground">
+  <body class="bg-background text-foreground ">
     <Header />
-    <div class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8">
-      <main class="md:col-span-8">
+    <div class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8 relative top-65">
+      <main class="md:col-span-8 sm:mx-7 max-sm:mx-7 ">
+        <img src="" alt="">
         <slot />
       </main>
-      <aside class="md:col-span-4">
+      <aside class="md:col-span-4 sm:mx-7">
         {
           asideComponents.map((components: string) => {
             switch (components) {

@@ -12,10 +12,10 @@ type LinkType = {
 const { primary } = siteConfig.navigations;
 ---
 
-<nav class="absolute inset-x-4 lg:static top-full z-2">
+<nav class="absolute inset-x-4 lg:static top-full z-2 lg:w-auto w-screen left-0">
   <div
     id={id}
-    class="hidden px-4 py-8 md:p-0 flex-col lg:flex lg:flex-row top-10 lg:gap-10 text-center gap-10 bg-neutral-50 lg:border-none border border-gray-300 rounded-2xl"
+    class="hidden max-h-auto px-4 py-8 flex-col lg:flex lg:flex-row top-10 lg:gap-20 text-center gap-10 bg-primary lg:bg-background lg:border-none border border-gray-300 "
   >
     {
       primary.map((link) => (
