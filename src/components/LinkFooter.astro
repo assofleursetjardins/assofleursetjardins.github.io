@@ -10,13 +10,13 @@ type LinkFooterType = {
 const { footer } = siteConfig.navigations;
 ---
 
-<div class="px-3 mb-11 box-border w-full">
-  <h4 class="text-foreground-contrast text-base font-bold my-4">Navigation</h4>
+<div class="mb-11 box-border w-full px-3">
+  <h4 class="text-foreground-contrast my-4 text-base font-bold">Navigation</h4>
   {
     footer &&
       footer.map((item: LinkFooterType) => (
         <a
-          class="block cursor-pointer underline hover:text-foreground-accent text-foreground text-base leading-7"
+          class="hover:text-foreground-accent text-foreground block cursor-pointer text-base leading-7 underline"
           href={item.url}
         >
           {item.label}
