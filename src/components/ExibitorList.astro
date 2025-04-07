@@ -1,68 +1,84 @@
 ---
-import data from "../data/exhibitors.json";
+import data from '../data/exhibitors.json';
 
 const exhibitors = data;
 
 type ExhibitorType = {
-    name: string;
-    description: string;
-    category: string;
+  name: string;
+  description: string;
+  category: string;
 };
 ---
+
 <div class="mb-11 w-full">
-    <h3 class="strong text-foreground font-heading text-4xl mb-4 uppercase">Le végétal </h3>
-        <ul
-            class="has-separator w-auto text-foreground leading-7"
-        >
-                    
-        {exhibitors && exhibitors.length > 0 ? (
-            exhibitors.map((exhibitor: ExhibitorType) => {
-                return exhibitor.category === "Le végétal" ? (
-                    <li class="inline"><span class="font-heading text-2xl">{exhibitor.name}</span> <span class="uppercase text-xs">{exhibitor.description}</span> - </li>
-                ) : null;
-            })
-        ) : (
-            <p>Il n'y a pas d'exposants pour le moment</p>
-        )}
-        </ul>
+  <h3 class="strong text-foreground font-heading mb-4 text-4xl uppercase">
+    Le végétal
+  </h3>
+  <ul class="has-separator text-foreground w-auto leading-7">
+    {
+      exhibitors && exhibitors.length > 0 ? (
+        exhibitors.map((exhibitor: ExhibitorType) => {
+          return exhibitor.category === 'Le végétal' ? (
+            <li class="inline">
+              <span class="font-heading text-2xl">{exhibitor.name}</span>{' '}
+              <span class="text-xs uppercase">{exhibitor.description}</span>{' '}
+              -{' '}
+            </li>
+          ) : null;
+        })
+      ) : (
+        <p>Il n'y a pas d'exposants pour le moment</p>
+      )
+    }
+  </ul>
 
-        <h3 class="strong text-foreground font-heading text-4xl mb-4 uppercase">Autour Du Jardin</h3>
-        <ul
-            class="has-separator w-auto text-foreground leading-7"
-        >
-                    
-        {exhibitors && exhibitors.length > 0 ? (
-            exhibitors.map((exhibitor: ExhibitorType) => {
-                return exhibitor.category === "Autour Du Jardin" ? (
-                    <li class="inline"><span class="font-heading text-2xl">{exhibitor.name}</span> <span class="uppercase text-xs">{exhibitor.description}</span> - </li>
-                ) : null;
-            })
-        ) : (
-            <p>Il n'y a pas d'exposants pour le moment</p>
-        )}
-        </ul>
+  <h3 class="strong text-foreground font-heading mb-4 text-4xl uppercase">
+    Autour Du Jardin
+  </h3>
+  <ul class="has-separator text-foreground w-auto leading-7">
+    {
+      exhibitors && exhibitors.length > 0 ? (
+        exhibitors.map((exhibitor: ExhibitorType) => {
+          return exhibitor.category === 'Autour Du Jardin' ? (
+            <li class="inline">
+              <span class="font-heading text-2xl">{exhibitor.name}</span>{' '}
+              <span class="text-xs uppercase">{exhibitor.description}</span>{' '}
+              -{' '}
+            </li>
+          ) : null;
+        })
+      ) : (
+        <p>Il n'y a pas d'exposants pour le moment</p>
+      )
+    }
+  </ul>
 
-        <h3 class="strong text-foreground font-heading text-4xl mb-4 uppercase">Produits Naturels</h3>
-        <ul
-            class="w-auto text-foreground leading-7"
-        >
-                    
-        {exhibitors && exhibitors.length > 0 ? (
-            exhibitors.map((exhibitor: ExhibitorType) => {
-                return exhibitor.category === "Produits Naturels" ? (
-                    <li class="inline"><span class="font-heading text-2xl">{exhibitor.name}</span> <span class="uppercase text-xs">{exhibitor.description}</span> - </li>
-                ) : null;
-            })
-        ) : (
-            <p>Il n'y a pas d'exposants pour le moment</p>
-        )}
-        </ul>
+  <h3 class="strong text-foreground font-heading mb-4 text-4xl uppercase">
+    Produits Naturels
+  </h3>
+  <ul class="text-foreground w-auto leading-7">
+    {
+      exhibitors && exhibitors.length > 0 ? (
+        exhibitors.map((exhibitor: ExhibitorType) => {
+          return exhibitor.category === 'Produits Naturels' ? (
+            <li class="inline">
+              <span class="font-heading text-2xl">{exhibitor.name}</span>{' '}
+              <span class="text-xs uppercase">{exhibitor.description}</span>{' '}
+              -{' '}
+            </li>
+          ) : null;
+        })
+      ) : (
+        <p>Il n'y a pas d'exposants pour le moment</p>
+      )
+    }
+  </ul>
 </div>
 
 <style>
-    .has-separator {
-        --separator-color: #a1acad;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-    }
+  .has-separator {
+    --separator-color: #a1acad;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
 </style>

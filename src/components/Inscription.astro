@@ -7,15 +7,15 @@ const editionYear = siteConfig.salon.edition;
 const conditateUrl = siteConfigInfo.site.email.contact;
 ---
 
-<aside class="p-6 mb-12 bg-secondary text-secondary-foreground h-auto">
-  <h2 class="font-heading text-4xl mb-5 leading-10 font-bold">Inscription</h2>
+<aside class="bg-secondary text-secondary-foreground mb-12 h-auto p-6">
+  <h2 class="font-heading mb-5 text-4xl leading-10 font-bold">Inscription</h2>
   <p
-    class="has-separator mb-3 uppercase leading-5 font-medium text-base text-neutral-50"
+    class="has-separator mb-3 text-base leading-5 font-medium text-neutral-50 uppercase"
   >
     Vous êtes exposant ? Il est encore temps de candidater
   </p>
 
-  <p class="mb-7 mt-4.5 text-lg font-normal">
+  <p class="mt-4.5 mb-7 text-lg font-normal">
     Vous êtes un professionnel et vous souhaitez venir participer au Marché
     floral {editionYear}, envoyez nous votre demande de candidature. Celle-ci
     sera étudiée par le comité organisteur et une réponse vous sera adressée
@@ -24,7 +24,7 @@ const conditateUrl = siteConfigInfo.site.email.contact;
 
   <Button
     href={`mailto:${conditateUrl}`}
-    class="bg-neutral-50 text-secondary rounded hover:bg-neutral-50/90"
+    class="text-secondary rounded bg-neutral-50 hover:bg-neutral-50/90"
     >Candidater <br />maintenant</Button
   >
 </aside>

@@ -35,7 +35,7 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
   </head>
   <body class="bg-background text-foreground">
     <Header />
-    <div class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8">
+    <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
       <main class="md:col-span-8">
         <slot />
       </main>
@@ -154,7 +154,7 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
     document.querySelectorAll('h2').forEach((h2) => {
       if (!h2.textContent) return;
       const id = normalizeText(
-        h2.textContent.toLowerCase().replace(/\s+/g, '-')
+        h2.textContent.toLowerCase().replace(/\s+/g, '-'),
       );
       h2.id = id;
     });

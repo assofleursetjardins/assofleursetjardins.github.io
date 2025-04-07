@@ -10,12 +10,12 @@ const address = siteConfigInfo.address;
 const social = siteConfigInfo.social;
 ---
 
-<div class="px-3 mb-11 box-border w-full">
-  <h4 class="text-foreground-contrast text-base font-bold my-4">
+<div class="mb-11 box-border w-full px-3">
+  <h4 class="text-foreground-contrast my-4 text-base font-bold">
     Association Fleurs & Jardins
   </h4>
 
-  <div class="italic text-base text-foreground leading-7">
+  <div class="text-foreground text-base leading-7 italic">
     {address && <p>{address}</p>}
     {
       phone && (
@@ -27,11 +27,11 @@ const social = siteConfigInfo.social;
   </div>
 
   <a
-    class="block cursor-pointer underline hover:text-background-accent text-base text-foreground"
+    class="hover:text-background-accent text-foreground block cursor-pointer text-base underline"
     href={`mailto:${conditateUrl}`}>Nous écrire</a
   >
 
-  <h4 class="text-foreground-contrast text-base font-bold my-4">
+  <h4 class="text-foreground-contrast my-4 text-base font-bold">
     Retrouvez-nous également sur
   </h4>
 
