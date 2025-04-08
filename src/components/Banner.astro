@@ -5,26 +5,26 @@ const numero = info.site.edition.numero;
 const image = info.site.edition.image;
 ---
 
-<section
-  class="flex w-full flex-col items-center justify-between p-8 md:flex-row"
->
-  <div class="ml-10 w-full max-w-lg text-left">
+<section class="flex w-full flex-col items-center justify-between md:flex-row">
+  <div class="w-full max-w-lg pl-30 text-left md:w-1/2">
     <div class="font-heading flex items-baseline">
-      <span class="text-primary text-9xl font-bold">{numero}</span>
-      <span class="text-primary self-end text-3xl">ème</span>
+      <span class="text-primary text-[12rem] leading-none font-bold"
+        >{numero}</span
+      >
+      <span class="text-primary text-5xl">ème</span>
     </div>
-    <h2 class="font-heading pt-0 pb-20 text-6xl font-bold">édition</h2>
-    <div class="mb-6">
+    <div class="font-heading pb-16 text-6xl font-bold">édition</div>
+    <div class="pb-4">
       <Date />
     </div>
-    <p class="font-base text-xl font-semibold">Le Vaudreuil (27)</p>
+    <p class="font-base pl-4 text-lg">Le Vaudreuil (27)</p>
   </div>
 
-  <div class="mt-8 md:mt-0">
+  <div class="w-full md:mt-0 md:w-1/2">
     <img
       src={image}
-      alt="Bannière d'édition"
-      class="h-100 w-400 max-w-md rounded object-cover"
+      alt="Bannière du salon"
+      class="h-auto w-full rounded object-cover"
     />
   </div>
 </section>
