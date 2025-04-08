@@ -20,7 +20,16 @@ const {
 const image = frontmatter.image || '';
 const title = frontmatter.imgtitle || '';
 
+const imageBanner = frontmatter.imageBanner || '';
+const titleBanner = frontmatter.titleBanner || '';
+
 const asideComponents = Astro.props.frontmatter?.asideComponents || [];
+const banner = Astro.props.frontmatter?.banner || [];
+
+// Get the current URL
+const currentUrl = Astro.url.pathname;
+const isHomePage = currentUrl === '/';
+console.log('isHomePage', isHomePage);
 ---
 
 <!doctype html>
@@ -33,11 +42,22 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
     <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
     {metaDescription && <meta name="description" content={metaDescription} />}
   </head>
-  <body class="bg-background text-foreground ">
-    <Header />
-    <div class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8 relative lg:top-65 top-50">
-      <main class="md:col-span-8 sm:mx-7 max-sm:mx-7 ">
-        <img src="" alt="">
+  <body class="bg-background text-foreground">
+    <Header isHomePage={isHomePage} />
+
+    {
+      banner === 'afficher' && (
+        <img
+          src={frontmatter.imageBanner}
+          alt={frontmatter.titleBanner}
+          class=""
+        />
+      )
+    }
+    <div
+      class="grid md:grid-cols-12 max-w-7xl mx-auto gap-8 relative lg:top-65 top-50"
+    >
+      <main class="md:col-span-8 sm:mx-7 max-sm:mx-7">
         <slot />
       </main>
       <aside class="md:col-span-4 sm:mx-7">

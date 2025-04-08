@@ -4,6 +4,9 @@ export type LogoType = {
 };
 
 const { textColor, accentColor } = Astro.props;
+const { isHomePage } = Astro.props;
+const className = isHomePage ? 'text-background' : 'text-secondary';
+
 ---
 
 <svg
@@ -11,10 +14,7 @@ const { textColor, accentColor } = Astro.props;
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 25 810.29 452.94"
 >
-  <g
-    fill={textColor ? textColor : 'var(--color-foreground, #141412)'}
-    id="Fleurs"
-  >
+  <g fill={textColor ? textColor : className} id="Fleurs">
     <path
       d="M268,262.69H368l1.92,40h-3.46Q359.3,281.9,350,274.41t-27.76-7.5h-5.39v62.45h8.65a20,20,0,0,0,15.37-6.72q6.15-6.72,8.46-18.45h2.88v56.88h-3.26q-3.09-14.42-8.56-20.56t-14.89-6.15h-8.65V393h23.83v4.23H268V393h11.33V266.91H268Z"
       transform="translate(-236.17 -155.03)"></path>
@@ -43,7 +43,7 @@ const { textColor, accentColor } = Astro.props;
     transform="translate(-236.17 -155.03)"></path>
 
   <g
-    fill={textColor ? textColor : 'var(--color-foreground, #141412)'}
+    fill={textColor ? textColor : 'var(--color-background, #141412)'}
     id="Jardins"
   >
     <path
@@ -70,7 +70,7 @@ const { textColor, accentColor } = Astro.props;
   </g>
 
   <g
-    fill={textColor ? textColor : 'var(--color-foreground, #141412)'}
+    fill={textColor ? textColor : 'var(--color-background, #141412)'}
     id="Le_vaudreuil_27_"
     data-name="Le vaudreuil(27)"
     ><path

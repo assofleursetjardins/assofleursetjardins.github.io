@@ -3,21 +3,27 @@ import TopBanner from './TopBanner.astro';
 import Burger from './ui/Burger.astro';
 import Navigation from './Navigation.astro';
 import Logo from './Logo.astro';
+
+const { isHomePage } = Astro.props;
+const className = isHomePage
+  ? 'bg-transparent shadow-none text-background'
+  : 'bg-background shadow-lg text-foreground bg-primary';
 ---
-<header id="header" class="">
-  <div class="z-10000 fixed top-0 w-screen">
+
+<header class={className}>
+  <div class="z-1000 fixed top-0 w-screen">
     <TopBanner />
   </div>
-  
   <div
     id="main-header"
-    class="flex items-center justify-between px-7 py-4 max-w-7xl mx-auto fixed top-15 bg-background w-screen z-900 transition-transform duration-850"
+    class="flex items-center justify-between px-7 py-4 max-w-7xl mx-auto fixed top-15 w-screen z-900 transition-transform duration-850"
   >
-  <a class="block w-[200px] lg:w-[300px]" href="/">
-    <Logo />
-  </a>
-  <Navigation id="main-nav-container" />
-  <Burger id="main-burger-menu" />
+    <a class="block w-[200px] lg:w-[300px]" href="/">
+      <Logo  />
+    </a>
+    <Navigation id="main-nav-container" />
+    <Burger id="main-burger-menu" />
+  </div>
 
   <script>
     const burgerMenu = document.querySelector('#main-burger-menu');
@@ -50,5 +56,3 @@ import Logo from './Logo.astro';
     });
   </script>
 </header>
-
-</div>
