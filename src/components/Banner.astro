@@ -1,0 +1,30 @@
+---
+import info from '../data/infoGeneral.json';
+import Date from './Date.astro';
+const numero = info.site.edition.numero;
+const image = info.site.edition.image;
+---
+
+<section
+  class="flex w-full flex-col items-center justify-between p-8 md:flex-row"
+>
+  <div class="ml-10 w-full max-w-lg text-left">
+    <div class="font-heading flex items-baseline">
+      <span class="text-primary text-9xl font-bold">{numero}</span>
+      <span class="text-primary self-end text-3xl">ème</span>
+    </div>
+    <h2 class="font-heading pt-0 pb-20 text-6xl font-bold">édition</h2>
+    <div class="mb-6">
+      <Date />
+    </div>
+    <p class="font-base text-xl font-semibold">Le Vaudreuil (27)</p>
+  </div>
+
+  <div class="mt-8 md:mt-0">
+    <img
+      src={image}
+      alt="Bannière d'édition"
+      class="h-100 w-400 max-w-md rounded object-cover"
+    />
+  </div>
+</section>
