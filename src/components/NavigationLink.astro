@@ -2,7 +2,6 @@
 const { url, title, description } = Astro.props;
 
 const isActive = Astro.url.pathname === url;
-
 ---
 
 <a
@@ -10,10 +9,12 @@ const isActive = Astro.url.pathname === url;
   class=`relative nav-links group flex flex-col text-center ${isActive ? 'is-active' : ''}`
 >
   <span
-    class=`text-2xl font-extrabold gap-10  ${isActive ? 'text-background lg:text-primary' : ''}`
+    class=`text-2xl font-semibold gap-10 font-heading lg:text-foreground text-background lg:hover:text-primary/80 hover:text-foreground/80 ${isActive ? 'text-background lg:text-primary' : ''}`
     >{title}</span
   >
-  <span class="text-sm font-light">{description}</span>
+  <span class="text-sm font-light lg:text-foreground text-background"
+    >{description}</span
+  >
 </a>
 
 <style>
@@ -37,7 +38,7 @@ const isActive = Astro.url.pathname === url;
       display: block;
       width: 0.5rem;
       height: 0.5rem;
-      background-color: transparent;
+      background-color: var(--color-background);
       position: absolute;
       bottom: -1rem;
       left: 50%;
