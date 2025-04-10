@@ -1,28 +1,21 @@
 ---
-layout: '../layouts/Layout.astro'
+layout: '../layouts/LayoutHome.astro'
 title: 'Bienvenue'
 description: '**description**'
-image: 'src/assets/images/hero-banner-2020.jpg'
-imgtitle: 'Marché floral 2020'
+image: ''
+imgtitle: ''
 author: ''
 date: '19-03-2025'
-#SEO
 metaTitle: "Page d'accueil"
 metaDescription: "Bienvenue sur la page d'accueil de Salon Fleurs et Jardin du Vaudreuil."
 asideComponents:
   - image
   - Inscription
   - Localisation
+hasBanner: true
 ---
 
-import Localisation from '../components/Localisation.astro';
-import Section from '../components/Section.astro';
-import Button from '../components/ui/button.astro';
-import Inscription from '../components/Inscription.astro';
-
-import Date from '../components/Date.astro';
-
-<Date />
+import Banner from '../components/Banner.astro';
 
 # L’Association Fleurs et Jardins du Vaudreuil organise cette année un Marché Floral
 
@@ -33,27 +26,3 @@ La deuxième edition en 2023 eut un réel succès. Nous vous attendons donc nomb
 Des professionnels à l’écoute qui vous étonneront également par le rapport qualité prix de leur production.
 
 Ce Marché Floral s’adresse à tous les publics et comblera tous les amateurs de plantes et de fleurs.
-
-<Section title="Programme" subtitle="Riche en découvertes">
-  <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-    Actualités, animations, ateliers, interventions... Retrouvez le programme
-    jour par jour...
-  </p>
-  <Button variant="primary" href="/a-propos#programme" size="small">
-    <span>Découvrir</span>
-  </Button>
-</Section>
-
-<Section
-  title="Les exposants"
-  subtitle="De nombreux professionnels seront présents"
->
-  <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-    Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
-    Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur
-    savoir-faire et présenter leurs produits dans les rues du Vaudreuil
-  </p>
-  <Button variant="primary" href="/exposants" size="small">
-    <span>Découvrez tous nos exposants</span>
-  </Button>
-</Section>

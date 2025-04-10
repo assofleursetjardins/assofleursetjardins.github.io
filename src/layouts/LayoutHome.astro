@@ -1,0 +1,95 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Inscription from '../components/Inscription.astro';
+import Localisation from '../components/Localisation.astro';
+import Prices from '../components/Prices.astro';
+import InfoPratiques from '../components/InfoPratiques.astro';
+import Banner from '../components/Banner.astro';
+import '../styles/global.css';
+import '@fontsource/abril-fatface';
+import { Image, imageConfig } from 'astro:assets';
+
+const {
+  metaTitle = '',
+  metaDescription = '',
+  pageTitle = '',
+  pageDescription = '',
+  frontmatter = {},
+} = Astro.props;
+
+const asideComponents = frontmatter?.asideComponents || [];
+const hasBanner = frontmatter?.hasBanner || false;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{metaTitle || 'Salon Fleurs & Jardins'}</title>
+    {metaDescription && <meta name="description" content={metaDescription} />}
+  </head>
+  <body class="bg-background text-foreground">
+    <Header />
+
+    {
+      hasBanner && (
+        <div class="w-full">
+          <Banner />
+        </div>
+      )
+    }
+
+    <div class="mx-auto my-8 max-w-7xl px-6">
+      <main>
+        <slot />
+      </main>
+
+      {
+        asideComponents.length > 0 && (
+          <section class="mt-16 flex flex-col items-stretch justify-center gap-8 md:flex-row">
+            {asideComponents.map((component: string) => {
+              let content;
+              switch (component) {
+                case 'Inscription':
+                  content = <Inscription />;
+                  break;
+                case 'Localisation':
+                  content = <Localisation />;
+                  break;
+                case 'Prices':
+                  content = <Prices />;
+                  break;
+                case 'InfoPratiques':
+                  content = <InfoPratiques />;
+                  break;
+                case 'image':
+                  content = (
+                    <img
+                      src={frontmatter.image}
+                      alt={frontmatter.imgtitle}
+                      class="h-auto w-full object-cover"
+                    />
+                  );
+                  break;
+                default:
+                  return null;
+              }
+
+              return (
+                <div class="flex flex-col justify-between md:w-[40%]">
+                  {content}
+                </div>
+              );
+            })}
+          </section>
+        )
+      }
+    </div>
+
+    <Footer />
+  </body>
+</html>

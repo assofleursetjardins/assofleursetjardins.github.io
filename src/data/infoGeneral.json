@@ -10,6 +10,10 @@
     "message": {
       "text": "⚠️ Le marché floral 2025 est Annulé",
       "isVisible": true
+    },
+    "edition": {
+      "numero": "30",
+      "image": "src/assets/images/hero-banner-2020.png"
     }
   },
   "phone": {
