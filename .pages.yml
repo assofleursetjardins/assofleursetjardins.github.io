@@ -5,12 +5,16 @@ media:
 content:
   - name: pages
     label: Pages
-    path: /src/pages
     type: collection
+    path: src/pages
+    filename: '{primary}.md'
+    view:
+      fields: [title, order]
+      primary: title
+      sort: [order, title]
+      default:
+        sort: order
+        order: asc
     fields:
-      - name: title
-        label: Title
-        type: text
-      - content: true
-        label: Content
-        type: rich-text
+      - { name: title, label: Title, type: string, required: true }
+      - { name: body, label: Body, type: rich-text }
