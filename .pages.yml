@@ -3,38 +3,11 @@ media:
   output: /src/assets/medias
 
 content:
-  - name: homepage
-    label: Home page
-    type: single
-    path: src/pages/index.mdx
-    fields:
-      - { name: title, label: Titre, type: string }
-      - { name: description, label: Description, type: string }
-      - { name: image, label: Image, type: string }
-      - {
-          name: imgtitle,
-          label: Titre de l’image,
-          type: string,
-          required: false,
-        }
-      - { name: author, label: Auteur, type: string, required: false }
-      - { name: date, label: Date, type: date }
-      - { name: metaTitle, label: Meta Title (SEO), type: string }
-      - { name: metaDescription, label: Meta Description (SEO), type: string }
-      - {
-          name: asideComponents,
-          label: Composants aside,
-          type: list,
-          of: string,
-        }
-      - { name: body, label: Contenu principal, type: markdown }
-
   - name: pages
     label: Pages du site
     type: collection
     path: src/pages
     match: '*.mdx'
-    exclude: 'index.mdx'
     view:
       fields: [title, date]
       primary: title
@@ -96,13 +69,6 @@ content:
       - { name: site.description, label: Description, type: string }
       - { name: site.url, label: URL du site, type: string }
       - { name: site.email.contact, label: Email contact, type: string }
-      - { name: site.email.presse, label: Email presse, type: string }
-      - { name: site.message.text, label: Message d'alerte, type: string }
-      - {
-          name: site.message.isVisible,
-          label: Afficher le message,
-          type: boolean,
-        }
       - { name: phone.contact, label: Téléphone contact, type: string }
       - { name: phone.presse, label: Téléphone presse, type: string }
       - { name: address, label: Adresse, type: string }
