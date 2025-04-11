@@ -7,4 +7,3 @@ content:
   label: Pages
   type: collection
   folder: src/pages
-  create: true
