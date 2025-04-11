@@ -7,7 +7,7 @@ content:
     label: Pages du site
     type: collection
     path: src/pages
-    match: '{primary}.mdx'
+    match: '*.mdx'
     view:
       fields: [title, date]
       primary: title
