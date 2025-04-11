@@ -5,5 +5,5 @@ media:
 content:
   - name: pages
     label: Pages
-    path: /src/pages
+    path: src/pages
     type: collection
