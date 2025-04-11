@@ -102,7 +102,7 @@ content:
       - { name: url, label: URL, type: string }
 
   - name: exhibitors
-    label: Exposants
+    label: Exposant
     type: list
     path: src/data/exhibitors.json
     fields:
