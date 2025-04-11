@@ -21,7 +21,7 @@ content:
       
   - name: exibitors
     path: src/data/exhibitors.json
-    type: file
+    type: collection
     view:
       fields: [name, category]
       primary: name
