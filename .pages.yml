@@ -18,3 +18,15 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: body, label: Body, type: rich-text }
+      
+  - name: exibitors
+    path: src/data
+    filename: "exhibitors.json"
+    type: file
+    view:
+      fields: [name, category]
+      primary: name
+    fields:
+      - {name: name, label: Name, type: string}
+      - {name: description, label: Description, type: text}
+      - {name: category, label: Category, type: select}
