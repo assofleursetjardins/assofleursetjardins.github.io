@@ -20,7 +20,7 @@ content:
       - { name: body, label: Body, type: rich-text }
       
   - name: exibitors
-    path: src/data/exhibitors.json
+    path: src/data
     type: collection
     view:
       fields: [name, category]
