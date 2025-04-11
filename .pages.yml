@@ -7,7 +7,3 @@ content:
     label: Pages
     path: /src/pages
     type: collection
-  - name: info_general
-    label: General Information
-    path: /src/content/data/infoGeneral.json
-    type: data
