@@ -7,7 +7,7 @@ content:
     label: Pages du site
     type: collection
     path: src/pages
-    match: '*.mdx'
+    match: '{primary}.mdx'
     view:
       fields: [title, date]
       primary: title
@@ -102,7 +102,7 @@ content:
       - { name: url, label: URL, type: string }
 
   - name: exhibitors
-    label: Exposants
+    label: Exposant
     type: list
     path: src/data/exhibitors.json
     fields:
