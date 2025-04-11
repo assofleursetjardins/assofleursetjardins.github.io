@@ -7,7 +7,7 @@ content:
     label: Pages du site
     type: collection
     path: src/pages
-    match: "*.mdx"
+    match: '*.mdx'
     view:
       fields: [title, date]
       primary: title
@@ -19,12 +19,22 @@ content:
       - { name: title, label: Titre, type: string }
       - { name: description, label: Description, type: string }
       - { name: image, label: Image, type: string }
-      - { name: imgtitle, label: Titre de l’image, type: string, required: false }
+      - {
+          name: imgtitle,
+          label: Titre de l’image,
+          type: string,
+          required: false,
+        }
       - { name: author, label: Auteur, type: string, required: false }
       - { name: date, label: Date, type: date }
       - { name: metaTitle, label: Meta Title (SEO), type: string }
       - { name: metaDescription, label: Meta Description (SEO), type: string }
-      - { name: asideComponents, label: Composants aside, type: list, of: string }
+      - {
+          name: asideComponents,
+          label: Composants aside,
+          type: list,
+          of: string,
+        }
       - { name: body, label: Contenu principal, type: markdown }
 
   - name: siteConfig
