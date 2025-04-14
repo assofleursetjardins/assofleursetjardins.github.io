@@ -1,8 +1,8 @@
 import { defineConfig } from 'tinacms';
 import { PagesCollection } from 'tina/collections/pages.ts';
-import { ExhibitorsCollection } from './collections/pages';
-import { ProgramCollection } from './collections/pages';
-import { InfosCollection } from './collections/pages';
+import { ExhibitorsCollection } from 'tina/collections/exhibitors.ts';
+import { ProgramCollection } from 'tina/collections/program.ts';
+import { InfosCollection } from 'tina/collections/infos.ts';
 
 const branch =
   process.env.GITHUB_BRANCH ||
