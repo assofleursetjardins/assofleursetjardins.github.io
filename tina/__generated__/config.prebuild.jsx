@@ -1,5 +1,9 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
+import { PagesCollection } from "tina/collections/pages.ts";
+import { ExhibitorsCollection } from "tina/collections/exhibitors.ts";
+import { ProgramCollection } from "tina/collections/program.ts";
+import { InfosCollection } from "tina/collections/infos.ts";
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var config_default = defineConfig({
   branch,
@@ -17,52 +21,10 @@ var config_default = defineConfig({
   },
   schema: {
     collections: [
-      {
-        name: "pages",
-        label: "Pages du site",
-        path: "src/pages",
-        format: "mdx",
-        match: {
-          include: "*"
-        },
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Titre",
-            isTitle: true,
-            required: true
-          },
-          { type: "string", name: "description", label: "Description" },
-          { type: "image", name: "image", label: "Image" },
-          {
-            type: "string",
-            name: "imgtitle",
-            label: "Titre de l\u2019image",
-            required: false
-          },
-          { type: "string", name: "author", label: "Auteur", required: false },
-          { type: "datetime", name: "date", label: "Date" },
-          { type: "string", name: "metaTitle", label: "Meta Title (SEO)" },
-          {
-            type: "string",
-            name: "metaDescription",
-            label: "Meta Description (SEO)"
-          },
-          {
-            type: "string",
-            name: "asideComponents",
-            label: "Composants aside",
-            list: true
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Contenu principal",
-            isBody: true
-          }
-        ]
-      }
+      PagesCollection,
+      ExhibitorsCollection,
+      ProgramCollection,
+      InfosCollection
     ]
   }
 });
