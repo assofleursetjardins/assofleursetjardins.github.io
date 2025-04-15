@@ -2,7 +2,7 @@ import type { Collection } from 'tinacms';
 
 export const ProgramCollection: Collection = {
   name: 'program',
-  label: 'Program',
+  label: 'Programme',
   path: 'src/data',
   format: 'json',
   match: {
@@ -13,7 +13,6 @@ export const ProgramCollection: Collection = {
       name: 'schedule',
       label:'Horaires',
       type: 'object',
-      list: true,
       fields: [
         {
           name : 'Opening',
