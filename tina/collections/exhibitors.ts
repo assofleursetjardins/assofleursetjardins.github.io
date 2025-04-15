@@ -2,14 +2,21 @@ import type { Collection } from 'tinacms';
 
 export const ExhibitorsCollection: Collection = {
   name: 'exhibitors',
-  label: 'Exhibitors',
-  path: 'src/data/exhibitors',
+  label: 'Exposants',
+  path: 'src/data',
   format: 'json',
+  match: {
+    include: 'exhibitors.json',
+  },
   fields: [
     {
-      name: 'name',
-      label: 'Name',
+      label: 'Nom',
       type: 'string',
+      name: 'name',
+      isTitle: true,
+      required: true,
     },
+    { label: 'Description', type: 'string', name: 'description' },
+    { label: 'Catégorie', type: 'string', name: 'category' },
   ],
 };
