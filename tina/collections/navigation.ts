@@ -2,7 +2,7 @@ import type { Collection } from 'tinacms';
 
 export const NavigationCollection: Collection = {
     name: 'navigations',
-    label: 'Navigantion du site',
+    label: 'Navigation du site',
     path: 'src/data',
     format: 'json',
     match: {
@@ -50,3 +50,4 @@ export const NavigationCollection: Collection = {
         },
     ],
 };
+
