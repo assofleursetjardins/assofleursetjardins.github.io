@@ -8,6 +8,12 @@ export const ProgramCollection: Collection = {
   match: {
     include: 'program',
   },
+  ui: {
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
+},
   fields: [
     {
       name: 'ProgramSalon',

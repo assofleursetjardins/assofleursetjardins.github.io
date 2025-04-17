@@ -8,14 +8,26 @@ export const NavigationCollection: Collection = {
     match: {
         include: 'navigations',
     },
+    ui: {
+        allowedActions: {
+          create: false,
+          delete: false,
+        },
+    },
     fields: [
         {
             name: 'primary',
             label: 'Navigation principale',
             type: 'object',
+            list: true,
+            ui: {
+                itemProps: (item) => ({
+                label: item?.label || 'Nouvel élément',
+                }),
+            },
             fields: [
                 {   
-                    name: 'title',
+                    name: 'label',
                     label: 'Titre',
                     type: 'string',
                 },
@@ -35,16 +47,22 @@ export const NavigationCollection: Collection = {
             name: 'footer',
             label: 'Navigation de pied de page',
             type: 'object',
+            list: true,
+            ui: {
+                itemProps: (item) => ({
+                label: item?.label || 'Nouvel élément',
+                }),
+            },
             fields: [
-                {   
-                    name: 'title',
-                    label: 'Titre',
-                    type: 'string',
+                {
+                name: 'label',
+                label: 'Titre',
+                type: 'string',
                 },
                 {
-                    name: 'url',
-                    label: 'URL',
-                    type: 'string',
+                name: 'url',
+                label: 'URL',
+                type: 'string',
                 },
             ],
         },
