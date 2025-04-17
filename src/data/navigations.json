@@ -47,5 +47,12 @@
         "url": "/mentions-legales"
       }
     ]
-  }
+  },
+  "primary": [
+    {
+      "title": "test",
+      "description": "test",
+      "url": "test.com"
+    }
+  ]
 }
