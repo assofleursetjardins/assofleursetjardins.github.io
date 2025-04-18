@@ -1,51 +1,49 @@
 {
-  "navigations": {
-    "primary": [
-      {
-        "label": "A propos",
-        "description": "Programme et animation",
-        "url": "/a-propos"
-      },
-      {
-        "label": "Exposants",
-        "description": "Des professionnels à l’écoute",
-        "url": "/exposants"
-      },
-      {
-        "label": "Infos Pratiques",
-        "description": "Restauration, hébergements, ...",
-        "url": "/infos-pratiques"
-      }
-    ],
-    "footer": [
-      {
-        "label": "Retour en haut de la page",
-        "url": "#main-header"
-      },
-      {
-        "label": "Accueil",
-        "url": "/"
-      },
-      {
-        "label": "A propos",
-        "url": "/a-propos"
-      },
-      {
-        "label": "Exposants",
-        "url": "/exposants"
-      },
-      {
-        "label": "Infos Pratiques",
-        "url": "/infos-pratiques"
-      },
-      {
-        "label": "Média & Presse",
-        "url": "/media"
-      },
-      {
-        "label": "Mentions légales",
-        "url": "/mentions-legales"
-      }
-    ]
-  }
+  "primary": [
+    {
+      "label": "A propos",
+      "description": "Programme et animation",
+      "url": "/a-propos"
+    },
+    {
+      "label": "Exposants",
+      "description": "Des professionnels à l’écoute",
+      "url": "/exposants"
+    },
+    {
+      "label": "Infos Pratiques",
+      "description": "Restauration, hébergements, ...",
+      "url": "/infos-pratiques"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Retour en haut de la page",
+      "url": "#main-header"
+    },
+    {
+      "label": "Accueil",
+      "url": "/"
+    },
+    {
+      "label": "A propos",
+      "url": "/a-propos"
+    },
+    {
+      "label": "Exposants",
+      "url": "/exposants"
+    },
+    {
+      "label": "Infos Pratiques",
+      "url": "/infos-pratiques"
+    },
+    {
+      "label": "Média & Presse",
+      "url": "/media"
+    },
+    {
+      "label": "Mentions légales",
+      "url": "/mentions-legales"
+    }
+  ]
 }
