@@ -13,34 +13,39 @@ export const ProgramCollection: Collection = {
       create: false,
       delete: false,
     },
-},
+  },
   fields: [
     {
-      name: 'ProgramSalon',
-      label: 'Salon',
+      name: 'schedule',
+      label: 'Horaires',
       type: 'object',
+      list: true,
+      ui: {
+        itemProps: (item) => ({
+          label: item?.date || 'Nouvel élément',
+        }),
+      },
       fields: [
         {
-          name: 'schedule',
-          label: 'Horaires',
-          type: 'object',
-          fields: [
-            {
-              name: 'Opening',
-              label: 'Ouverture',
-              type: 'string',
-            },
-            {
-              name: 'Closing',
-              label: 'Fermeture',
-              type: 'string',
-            },
-            {
-              name: 'Date',
-              label: 'Date',
-              type: 'string',
-            },
-          ],
+          name: 'date',
+          label: 'Date',
+          type: 'string',
+        },
+        {
+          name: 'opening',
+          label: 'Ouverture',
+          type: 'string',
+        },
+        {
+          name: 'closing',
+          label: 'Fermeture',
+          type: 'string',
+        },
+        {
+          name: 'description',
+          label: 'Description',
+          type: 'rich-text',
+          toolbarOverride: ['heading', 'bold', 'italic', 'ul', 'link'],
         },
       ],
     },
