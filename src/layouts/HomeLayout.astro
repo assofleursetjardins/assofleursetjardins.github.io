@@ -3,8 +3,6 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Inscription from '../components/Inscription.astro';
 import Localisation from '../components/Localisation.astro';
-import Prices from '../components/Prices.astro';
-import InfoPratiques from '../components/InfoPratiques.astro';
 import Section from '../components/Section.astro';
 import Button from '../components/ui/button.astro';
 import Date from '../components/Date.astro';
@@ -36,54 +34,48 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
     <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
     {metaDescription && <meta name="description" content={metaDescription} />}
   </head>
-  <body class="bg-background text-foreground max sm:mx-7 max-sm:mx-7">
+  <body class="bg-background text-foreground max max-sm:mx-7 sm:mx-7">
     <Header />
     <main class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
-            <div class="md:col-span-8" >
-                <slot />
-            </div>
-            <img class="md:col-span-4" src={frontmatter.image} alt={frontmatter.imgtitle} />
+      <div class="md:col-span-8">
+        <Date />
+        <slot />
+      </div>
+      <img
+        class="md:col-span-4"
+        src={frontmatter.image}
+        alt={frontmatter.imgtitle}
+      />
     </main>
     <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
-        <Section title="Programme" subtitle="Riche en découvertes">
-            <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-                Actualités, animations, ateliers, interventions... Retrouvez le programme
-                jour par jour...
-            </p>
-            <Button variant="primary" href="/a-propos#programme" size="small">
-                <span>Découvrir</span>
-            </Button>
-        </Section>
+      <Section title="Programme" subtitle="Riche en découvertes">
+        <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
+          Actualités, animations, ateliers, interventions... Retrouvez le
+          programme jour par jour...
+        </p>
+        <Button variant="primary" href="/a-propos#programme" size="small">
+          <span>Découvrir</span>
+        </Button>
+      </Section>
 
-        <Section
+      <Section
         title="Les exposants"
         subtitle="De nombreux professionnels seront présents"
-        >
-            <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-                Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
-                Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer leur
-                savoir-faire et présenter leurs produits dans les rues du Vaudreuil
-            </p>
-            <Button variant="primary" href="/exposants" size="small">
-                <span>Découvrez tous nos exposants</span>
-            </Button>
-        </Section>
-        {
-            asideComponents.map((components: string) => {
-                switch (components) {
-                case 'Inscription':
-                    return <Inscription />;
-                case 'Localisation':
-                return <Localisation />;
-                case 'Prices':
-                    return <Prices />;
-                case 'InfoPratiques':
-                    return <InfoPratiques />;
-                default:
-                    return null;
-                }
-            })
-        }
+      >
+        <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
+          Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
+          Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer
+          leur savoir-faire et présenter leurs produits dans les rues du
+          Vaudreuil
+        </p>
+        <Button variant="primary" href="/exposants" size="small">
+          <span>Découvrez tous nos exposants</span>
+        </Button>
+      </Section>
+
+      <Inscription />
+
+      <Localisation />
     </div>
     <Footer />
   </body>
