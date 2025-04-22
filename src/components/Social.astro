@@ -2,14 +2,18 @@
 import '../styles/global.css';
 import { Icon } from 'astro-icon/components';
 
-const { platform, username } = Astro.props;
+const { platform, url } = Astro.props;
 
 const platformIcon = platform.toLowerCase();
 ---
 
 <a
   class="hover:text-primary text-2xl"
-  href={`https://www.${platform}.com/${username}`}
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  title={`Retrouvez-nous sur ${platform}`}
+  aria-label={`Retrouvez-nous sur ${platform}`}
 >
   <Icon name={platformIcon} />
 </a>

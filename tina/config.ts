@@ -7,7 +7,6 @@ import { EditionCollection } from './collections/edition';
 import { NavigationCollection } from './collections/navigation';
 import { HomeCollection } from './collections/home';
 
-
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
@@ -39,9 +38,7 @@ export default defineConfig({
       InfosCollection,
       ExhibitorsCollection,
       ProgramCollection,
-      InfosCollection,
       EditionCollection,
-      NavigationCollection,
     ],
   },
 });

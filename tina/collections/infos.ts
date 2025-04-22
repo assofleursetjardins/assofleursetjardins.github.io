@@ -63,6 +63,11 @@ export const InfosCollection: Collection = {
       name: 'contact',
       fields: [
         {
+          label: 'Adresse postale',
+          type: 'string',
+          name: 'address',
+        },
+        {
           label: 'Téléphones',
           type: 'object',
           name: 'phone',
@@ -70,7 +75,7 @@ export const InfosCollection: Collection = {
             {
               label: 'Téléphone contact',
               type: 'string',
-              name: 'contact',
+              name: 'general',
             },
             {
               label: 'Téléphone presse',
@@ -87,7 +92,7 @@ export const InfosCollection: Collection = {
             {
               label: 'Email de contact',
               type: 'string',
-              name: 'contact',
+              name: 'general',
             },
             {
               label: 'Email presse',
@@ -96,10 +101,36 @@ export const InfosCollection: Collection = {
             },
           ],
         },
+      ],
+    },
+    {
+      label: 'Réseaux sociaux',
+      type: 'object',
+      name: 'social',
+      ui: {
+        itemProps: (item) => ({
+          label: item?.label || 'Nouveau réseau',
+        }),
+      },
+      fields: [
         {
-          label: 'Adresse postale',
-          type: 'string',
-          name: 'address',
+          label: 'Liste des réseaux',
+          type: 'object',
+          name: 'networks',
+          description: 'Ajouter vos réseaux sociaux',
+          list: true,
+          fields: [
+            {
+              label: 'Nom du réseau',
+              type: 'string',
+              name: 'label',
+            },
+            {
+              label: 'Url du réseau',
+              type: 'string',
+              name: 'url',
+            },
+          ],
         },
       ],
     },
@@ -122,29 +153,6 @@ export const InfosCollection: Collection = {
           label: 'Lien Google Maps',
           type: 'string',
           name: 'googleMapsLink',
-        },
-      ],
-    },
-    {
-      label: 'Réseaux sociaux',
-      type: 'object',
-      name: 'social',
-      list: true,
-      ui: {
-        itemProps: (item) => ({
-          label: item?.label || 'Nouveau réseau',
-        }),
-      },
-      fields: [
-        {
-          label: 'Nom du réseau',
-          type: 'string',
-          name: 'label',
-        },
-        {
-          label: 'Nom d’utilisateur',
-          type: 'string',
-          name: 'username',
         },
       ],
     },
