@@ -1,11 +1,19 @@
 import type { Collection } from 'tinacms';
 
-export const PagesCollection: Collection = {
-  name: 'posts',
-  label: 'Pages',
+export const HomeCollection: Collection = {
+  name: 'home',
+  label: "Accueil",
   path: 'src/pages',
   format: 'mdx',
-  match: { exclude: '**/index' },
+  match: {
+    include: 'index',
+    },
+  ui: {
+    allowedActions: {
+        create: false,
+        delete: false,
+    },
+  },
   fields: [
     {
       type: 'string',
@@ -49,11 +57,6 @@ export const PagesCollection: Collection = {
       type: 'string',
       name: 'metaDescription',
       label: 'Description meta',
-    },
-    {
-      type: 'string',
-      name: 'asideComponents',
-      label: 'Composants de la side bar',
     },
     {
       type: 'rich-text',
