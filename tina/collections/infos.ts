@@ -39,23 +39,6 @@ export const InfosCollection: Collection = {
           name: 'url',
         },
         {
-          label: 'Emails',
-          type: 'object',
-          name: 'email',
-          fields: [
-            {
-              label: 'Email de contact',
-              type: 'string',
-              name: 'contact',
-            },
-            {
-              label: 'Email presse',
-              type: 'string',
-              name: 'presse',
-            },
-          ],
-        },
-        {
           label: 'Bannière',
           type: 'object',
           name: 'message',
@@ -75,26 +58,50 @@ export const InfosCollection: Collection = {
       ],
     },
     {
-      label: 'Téléphone',
+      label: 'Contact',
       type: 'object',
-      name: 'phone',
+      name: 'contact',
       fields: [
         {
-          label: 'Téléphone contact',
-          type: 'string',
-          name: 'contact',
+          label: 'Téléphones',
+          type: 'object',
+          name: 'phone',
+          fields: [
+            {
+              label: 'Téléphone contact',
+              type: 'string',
+              name: 'contact',
+            },
+            {
+              label: 'Téléphone presse',
+              type: 'string',
+              name: 'presse',
+            },
+          ],
         },
         {
-          label: 'Téléphone presse',
+          label: 'Emails',
+          type: 'object',
+          name: 'email',
+          fields: [
+            {
+              label: 'Email de contact',
+              type: 'string',
+              name: 'contact',
+            },
+            {
+              label: 'Email presse',
+              type: 'string',
+              name: 'presse',
+            },
+          ],
+        },
+        {
+          label: 'Adresse postale',
           type: 'string',
-          name: 'presse',
+          name: 'address',
         },
       ],
-    },
-    {
-      label: 'Adresse postale',
-      type: 'string',
-      name: 'address',
     },
     {
       label: 'Statistiques',

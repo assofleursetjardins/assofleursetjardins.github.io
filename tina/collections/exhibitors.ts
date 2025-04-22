@@ -30,7 +30,7 @@ export const ExhibitorsCollection: Collection = {
       },
       fields: [
         {
-          label: 'Nom de l’exposant',
+          label: "Nom de l'exposant",
           type: 'string',
           name: 'name',
           isTitle: true,
