@@ -1,9 +1,10 @@
 {
-  "salon": {
-    "schedule": {
-      "Opening": "10h",
-      "Closing": "19h",
-      "Date": "26 avril 2025"
+  "schedule": [
+    {
+      "date": "26 avril 2025",
+      "opening": "10h",
+      "closing": "19h",
+      "description": ""
     }
-  }
+  ]
 }
