@@ -2,12 +2,18 @@ import type { Collection } from 'tinacms';
 
 export const HomeCollection: Collection = {
   name: 'home',
-  label: "Page d'accueil",
+  label: "Accueil",
   path: 'src/pages',
   format: 'mdx',
   match: {
     include: 'index',
     },
+  ui: {
+    allowedActions: {
+        create: false,
+        delete: false,
+    },
+  },
   fields: [
     {
       type: 'string',
