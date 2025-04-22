@@ -3,6 +3,8 @@ import { PagesCollection } from './collections/pages';
 import { ExhibitorsCollection } from './collections/exhibitors';
 import { ProgramCollection } from './collections/program';
 import { InfosCollection } from './collections/infos';
+import { EditionCollection } from './collections/edition';
+import { NavigationCollection } from './collections/navigation';
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -33,6 +35,8 @@ export default defineConfig({
       ExhibitorsCollection,
       ProgramCollection,
       InfosCollection,
+      EditionCollection,
+      NavigationCollection,
     ],
   },
 });

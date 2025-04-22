@@ -6,17 +6,47 @@ export const ExhibitorsCollection: Collection = {
   path: 'src/data',
   format: 'json',
   match: {
-    include: 'exhibitors.json',
+    include: 'exhibitors',
+  },
+  ui: {
+    filename: {
+      slugify: () => 'exhibitors',
+    },
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
   },
   fields: [
     {
-      label: 'Nom',
-      type: 'string',
-      name: 'name',
-      isTitle: true,
-      required: true,
+      name: 'exhibitors',
+      label: 'Liste des exposants',
+      type: 'object',
+      list: true,
+      ui: {
+        itemProps: (item) => ({
+          label: item?.name || 'Nouvel exposant',
+        }),
+      },
+      fields: [
+        {
+          label: 'Nom de l’exposant',
+          type: 'string',
+          name: 'name',
+          isTitle: true,
+          required: true,
+        },
+        {
+          label: 'Description',
+          type: 'string',
+          name: 'description',
+        },
+        {
+          label: 'Catégorie',
+          type: 'string',
+          name: 'category',
+        },
+      ],
     },
-    { label: 'Description', type: 'string', name: 'description' },
-    { label: 'Catégorie', type: 'string', name: 'category' },
   ],
 };

@@ -6,90 +6,139 @@ export const InfosCollection: Collection = {
   path: 'src/data',
   format: 'json',
   match: {
-    include: 'infoGeneral.json',
+    include: 'infoGeneral',
+  },
+  ui: {
+    filename: {
+      slugify: () => 'infoGeneral',
+    },
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
   },
   fields: [
     {
-      label: 'Titre du site',
-      type: 'string',
-      name: 'site_title',
-      nameOverride: 'site.title',
+      label: 'Site internet',
+      type: 'object',
+      name: 'site',
+      fields: [
+        {
+          label: 'Titre du site',
+          type: 'string',
+          name: 'title',
+        },
+        {
+          label: 'Description',
+          type: 'string',
+          name: 'description',
+        },
+        {
+          label: 'Adresse du site',
+          type: 'string',
+          name: 'url',
+        },
+        {
+          label: 'Emails',
+          type: 'object',
+          name: 'email',
+          fields: [
+            {
+              label: 'Email de contact',
+              type: 'string',
+              name: 'contact',
+            },
+            {
+              label: 'Email presse',
+              type: 'string',
+              name: 'presse',
+            },
+          ],
+        },
+        {
+          label: 'Bannière',
+          type: 'object',
+          name: 'message',
+          fields: [
+            {
+              label: 'Texte de la bannière',
+              type: 'string',
+              name: 'text',
+            },
+            {
+              label: 'Afficher la bannière',
+              type: 'boolean',
+              name: 'isVisible',
+            },
+          ],
+        },
+      ],
     },
     {
-      label: 'Description',
-      type: 'string',
-      name: 'site_description',
-      nameOverride: 'site.description',
+      label: 'Téléphone',
+      type: 'object',
+      name: 'phone',
+      fields: [
+        {
+          label: 'Téléphone contact',
+          type: 'string',
+          name: 'contact',
+        },
+        {
+          label: 'Téléphone presse',
+          type: 'string',
+          name: 'presse',
+        },
+      ],
     },
     {
-      label: 'URL',
+      label: 'Adresse postale',
       type: 'string',
-      name: 'site_url',
-      nameOverride: 'site.url',
+      name: 'address',
     },
     {
-      label: 'Email contact',
-      type: 'string',
-      name: 'site_email_contact',
-      nameOverride: 'site.email.contact',
-    },
-    {
-      label: 'Email presse',
-      type: 'string',
-      name: 'site_email_presse',
-      nameOverride: 'site.email.presse',
-    },
-    {
-      label: 'Texte de bannière',
-      type: 'string',
-      name: 'site_message_text',
-      nameOverride: 'site.message.text',
-    },
-    {
-      label: 'Message visible',
-      type: 'boolean',
-      name: 'site_message_isVisible',
-      nameOverride: 'site.message.isVisible',
-    },
-    {
-      label: 'Téléphone contact',
-      type: 'string',
-      name: 'phone_contact',
-      nameOverride: 'phone.contact',
-    },
-    {
-      label: 'Téléphone presse',
-      type: 'string',
-      name: 'phone_presse',
-      nameOverride: 'phone.presse',
-    },
-    { label: 'Adresse', type: 'string', name: 'address' },
-    {
-      label: 'Google Analytics',
-      type: 'string',
-      name: 'analytics_google',
-      nameOverride: 'analytics.google',
-    },
-    {
-      label: 'Matomo',
-      type: 'string',
-      name: 'analytics_matomo',
-      nameOverride: 'analytics.matomo',
-    },
-    {
-      label: 'Google Maps',
-      type: 'string',
-      name: 'analytics_googleMapsLink',
-      nameOverride: 'analytics.googleMapsLink',
+      label: 'Statistiques',
+      type: 'object',
+      name: 'analytics',
+      fields: [
+        {
+          label: 'Google Analytics',
+          type: 'string',
+          name: 'google',
+        },
+        {
+          label: 'Matomo',
+          type: 'string',
+          name: 'matomo',
+        },
+        {
+          label: 'Lien Google Maps',
+          type: 'string',
+          name: 'googleMapsLink',
+        },
+      ],
     },
     {
       label: 'Réseaux sociaux',
       type: 'object',
       name: 'social',
       list: true,
+      ui: {
+        itemProps: (item) => ({
+          label: item?.label || 'Nouveau réseau',
+        }),
+      },
       fields: [
-        { label: 'Réseau', type: 'string', name: 'label' },
-        { label: 'Nom d’utilisateur', type: 'string', name: 'username' },
+        {
+          label: 'Nom du réseau',
+          type: 'string',
+          name: 'label',
+        },
+        {
+          label: 'Nom d’utilisateur',
+          type: 'string',
+          name: 'username',
+        },
       ],
     },
   ],
