@@ -1,6 +1,7 @@
 import type { Collection } from 'tinacms';
 
 export const NavigationCollection: Collection = {
+
     name: 'navigations',
     label: 'Navigation du site',
     path: 'src/data',

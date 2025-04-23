@@ -1,31 +1,39 @@
 {
+  "phone": {
+    "contact": "02 32 61 27 85",
+    "presse": "02 32 59 14 48"
+  },
   "site": {
     "title": "Salon Fleurs et Jardins",
     "description": "Le Salon Fleurs et Jardins organisé en plein air sur un site ...",
     "url": "salon-fleurs-et-jardins.com",
-    "email": {
-      "contact": "salonfleursetjardins@levaudreuil.fr",
-      "presse": "marc-alvarez@bbox.fr"
-    },
     "message": {
       "text": "⚠️ Le marché floral 2025 est Annulé",
       "isVisible": true
     }
   },
-  "phone": {
-    "contact": "02 32 61 27 85",
-    "presse": "02 32 59 14 48"
+  "contact": {
+    "address": "Rue B. Chedeville – 27100 Le Vaudreuil (27)",
+    "phone": {
+      "general": "02 32 61 27 85",
+      "presse": "02 32 61 27 85"
+    },
+    "email": {
+      "general": "salonfleursetjardins@levaudreuil.fr",
+      "presse": "salonfleursetjardins@levaudreuil.fr"
+    }
   },
-  "address": "Rue B. Chedeville – 27100 Le Vaudreuil (27)",
+  "social": {
+    "networks": [
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/levaudreuil.fr"
+      }
+    ]
+  },
   "analytics": {
     "google": "UA-112422626-1",
     "matomo": "---",
     "googleMapsLink": "https://google.com/maps/dir//49.2562515,1.2087/@49.2582507,1.2174889,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
-  },
-  "social": [
-    {
-      "label": "Facebook",
-      "username": "levaudreuil.fr"
-    }
-  ]
+  }
 }

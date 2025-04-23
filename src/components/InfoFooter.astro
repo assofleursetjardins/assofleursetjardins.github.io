@@ -3,11 +3,11 @@ import '../styles/global.css';
 import Social from './Social.astro';
 import siteConfigInfo from '../data/infoGeneral.json';
 
-const conditateUrl = siteConfigInfo.site.email.contact;
-const phone = siteConfigInfo.phone.contact;
-const formatedPhone = siteConfigInfo.phone.contact.replace(/\s+/g, '');
-const address = siteConfigInfo.address;
-const social = siteConfigInfo.social;
+const conditateUrl = siteConfigInfo.contact.email.general;
+const phone = siteConfigInfo.contact.phone.general;
+const formatedPhone = siteConfigInfo.contact.phone.general.replace(/\s+/g, '');
+const address = siteConfigInfo.contact.address;
+const social = siteConfigInfo.social.networks;
 ---
 
 <div class="mb-11 box-border w-full px-3">
@@ -37,9 +37,9 @@ const social = siteConfigInfo.social;
 
   <ul class="flex items-center gap-4">
     {
-      social.map(({ label, username }) => (
+      social.map(({ label, url }) => (
         <li>
-          <Social platform={label} username={username} />
+          <Social platform={label} url={url} />
         </li>
       ))
     }
