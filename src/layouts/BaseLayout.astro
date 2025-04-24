@@ -35,11 +35,11 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
   </head>
   <body class="bg-background text-foreground">
     <Header />
-    <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
-      <main class="md:col-span-8">
+    <div class="mx-auto grid max-w-7xl gap-24 md:grid-cols-[2fr_1fr]">
+      <main>
         <slot />
       </main>
-      <aside class="md:col-span-4">
+      <aside>
         {
           asideComponents.map((components: string) => {
             switch (components) {

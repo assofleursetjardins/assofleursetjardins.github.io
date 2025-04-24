@@ -26,21 +26,14 @@ export const EditionCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'pricing',
-      label: 'Prix',
-      type: 'object',
-      fields: [
-        {
-          name: 'ticketPrice',
-          label: 'Prix du ticket',
-          type: 'string',
-        },
-        {
-          name: 'parkingPrice',
-          label: 'Prix du parking',
-          type: 'string',
-        },
-      ],
+      name: 'ticketPrice',
+      label: 'Prix du ticket',
+      type: 'string',
+    },
+    {
+      name: 'parkingPrice',
+      label: 'Prix du parking',
+      type: 'string',
     },
   ],
 };

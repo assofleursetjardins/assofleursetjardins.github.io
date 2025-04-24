@@ -22,23 +22,27 @@ const {
 
 // Styles de base
 const baseStyles =
-  'cursor-pointer font-base text-xl block text-center w-full no-underline';
+  'justify-center inline-flex items-center gap-2 cursor-pointer font-base font-medium text-xl text-center no-underline select-none';
 
 // Styles des variantes
 const variants = {
   default: 'bg-foreground text-background hover:bg-foreground/90 rounded',
-  primary:
-    'bg-primary text-primary-foreground hover:bg-primary/90 mb-4 rounded',
+  primary: 'bg-primary text-primary-foreground hover:bg-primary/90 rounded',
   secondary:
     'bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded',
+  outline:
+    'border border-foreground text-foreground hover:bg-foreground/10 rounded',
+  ghost: 'border border-foreground/10 hover:bg-foreground/10 rounded',
+  link: 'hover:underline px-0',
 };
 
 // Styles des tailles
 const sizes = {
   small:
-    'px-5 py-2.5 max-w-80' /* dimensions pour les boutons de style default/verts*/,
-  medium: 'p-5',
-  large: '',
+    'px-2.5 py-1.5 text-sm' /* dimensions pour les boutons de style default/verts*/,
+  medium: 'px-5 py-2.5 text-base',
+  large: 'px-6 py-3.5 text-lg',
+  link: 'px-0 text-base',
 };
 
 // Définition du composant en fonction du type de lien

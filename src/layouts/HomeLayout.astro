@@ -3,12 +3,13 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Inscription from '../components/Inscription.astro';
 import Localisation from '../components/Localisation.astro';
-import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
 import Button from '../components/ui/button.astro';
 import Date from '../components/Date.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
 import { Image, imageConfig } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 
 const {
   metaTitle = '',
@@ -34,49 +35,69 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
     <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
     {metaDescription && <meta name="description" content={metaDescription} />}
   </head>
-  <body class="bg-background text-foreground ">
+  <body class="bg-background text-foreground">
     <Header />
-    <main class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
-      <div class="md:col-span-8">
-        <Date />
-        <slot />
-      </div>
-      <img
-        class="md:col-span-4"
-        src={frontmatter.image}
-        alt={frontmatter.imgtitle}
-      />
+    <main>
+      <section class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
+        <div class="md:col-span-8">
+          <Date />
+          <slot />
+        </div>
+        <img
+          class="md:col-span-4"
+          src={frontmatter.image}
+          alt={frontmatter.imgtitle}
+        />
+      </section>
+
+      <section class="mx-auto my-8 grid max-w-7xl gap-8 md:grid-cols-3">
+        <Card title="Programme" subtitle="Riche en découvertes">
+          <p
+            class="text-foreground mt-4.5 mb-7 text-lg font-normal text-pretty"
+          >
+            Actualités, animations, ateliers, conférences… Découvrez un
+            programme riche et varié, jour après jour, pour tous les publics et
+            tous les âges !
+          </p>
+          <Button variant="ghost" href="/a-propos#programme">
+            <span>Consulter le programme</span>
+            <Icon name="arrow-right" class="text-primary h-4 w-4" />
+          </Button>
+        </Card>
+
+        <Card title="Localisation" subtitle="Une situation géographique idéale">
+          <p
+            class="text-foreground mt-4.5 mb-7 text-lg font-normal text-pretty"
+          >
+            À moins de 100 km de Paris, à 20 km de Rouen et 120 km de Caen via
+            l’A13, le village du Vaudreuil vous accueille dans un cadre normand
+            charmant, avec son golf 18 trous.
+          </p>
+          <Button variant="ghost" href="/infos-pratiques">
+            <span>Voir les infos pratiques</span>
+            <Icon name="arrow-right" class="text-primary h-4 w-4" />
+          </Button>
+        </Card>
+
+        <Card title="Exposants" subtitle="De nombreux professionnels">
+          <p
+            class="text-foreground mt-4.5 mb-7 text-lg font-normal text-pretty"
+          >
+            Comme chaque année, nos exposants fidèles seront présents pour
+            partager leur passion et exposer leur savoir-faire dans les rues du
+            village.
+          </p>
+          <Button variant="ghost" href="/exposants">
+            <span>Découvrir les exposants</span>
+            <Icon name="arrow-right" class="text-primary h-4 w-4" />
+          </Button>
+        </Card>
+      </section>
+
+      <section class="mx-auto my-8 grid max-w-7xl gap-8 md:grid-cols-1">
+        <Inscription class="p-16" />
+      </section>
     </main>
-    <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
-      <Section title="Programme" subtitle="Riche en découvertes">
-        <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-          Actualités, animations, ateliers, interventions... Retrouvez le
-          programme jour par jour...
-        </p>
-        <Button variant="primary" href="/a-propos#programme" size="small">
-          <span>Découvrir</span>
-        </Button>
-      </Section>
-
-      <Section
-        title="Les exposants"
-        subtitle="De nombreux professionnels seront présents"
-      >
-        <p class="text-foreground mt-4.5 mb-7 text-lg font-normal">
-          Comme par le passé nos fidèles exposants Pépiniéristes, Horticulteurs,
-          Paysagistes, Matériel de jardin, Décoration, etc... viendront exposer
-          leur savoir-faire et présenter leurs produits dans les rues du
-          Vaudreuil
-        </p>
-        <Button variant="primary" href="/exposants" size="small">
-          <span>Découvrez tous nos exposants</span>
-        </Button>
-      </Section>
-
-      <Inscription />
-
-      <Localisation />
-    </div>
     <Footer />
   </body>
 </html>

@@ -2,31 +2,41 @@
 import Button from './ui/button.astro';
 import siteConfig from '../data/editonSalon.json';
 import siteConfigInfo from '../data/infoGeneral.json';
+import { cn } from '../lib/utils';
 
 const editionYear = siteConfig.edition;
+const nextEditionYear = Number(editionYear) + 1;
 const conditateUrl = siteConfigInfo.contact.email.general;
+
+const { class: className } = Astro.props;
 ---
 
-<aside class="bg-secondary text-secondary-foreground mt-0 mb-12 h-auto p-6">
-  <h2 class="font-heading mb-5 text-4xl leading-10 font-bold">Inscription</h2>
-  <p
-    class="has-separator mb-3 text-base leading-5 font-medium text-neutral-50 uppercase"
-  >
-    Vous êtes exposant ? Il est encore temps de candidater
+<aside
+  class={cn(
+    'bg-secondary text-secondary-foreground mt-0 mb-12 h-auto rounded p-6',
+    className,
+  )}
+>
+  <h2 class="font-heading mb-0 py-4 text-4xl leading-10 font-bold">
+    Vous êtes exposant ?
+  </h2>
+  <p class="has-separator font-base text-sm text-balance uppercase">
+    Il est encore temps de candidater pour le prochaine édition du Marché Floral
   </p>
 
   <p class="mt-4.5 mb-7 text-lg font-normal">
     Vous êtes un professionnel et vous souhaitez venir participer au Marché
-    floral {editionYear}, envoyez nous votre demande de candidature. Celle-ci
-    sera étudiée par le comité organisteur et une réponse vous sera adressée
-    dans les meilleurs délais.
+    floral {nextEditionYear}, envoyez nous votre demande de candidature.
+    Celle-ci sera étudiée par le comité organisteur et une réponse vous sera
+    adressée dans les meilleurs délais.
   </p>
 
   <Button
     href={`mailto:${conditateUrl}`}
     class="text-secondary rounded bg-neutral-50 hover:bg-neutral-50/90"
-    >Candidater <br />maintenant</Button
   >
+    Candidater maintenant
+  </Button>
 </aside>
 
 <style>

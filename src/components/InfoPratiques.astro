@@ -1,43 +1,69 @@
 ---
+const siteUrl = Astro.site?.origin;
 
+import siteConfig from '../data/editonSalon.json';
+const { ticketPrice, parkingPrice } = siteConfig;
 ---
 
-<div class="mb-12">
-  <h2 class="strong text-foreground font-heading mb-4 text-4xl">
+<div
+  class="sticky top-4 mb-12 h-auto rounded border border-solid border-gray-300 p-6"
+>
+  <h2 class="strong text-foreground font-heading mb-0 py-4 text-4xl">
     Info pratiques
   </h2>
-  <h3
-    class="has-separator text-foreground-light font-base mb-3 text-base uppercase"
-  >
+  <p class="has-separator text-foreground-light font-base text-sm uppercase">
     Pour que votre séjour se déroule au mieux
-  </h3>
-  <ul class="list-inside list-disc pl-4 text-lg">
+  </p>
+  <ul class="mt-4 list-inside list-disc pl-4 text-lg">
     <li>
       <a
-        href="#comment-venir-au-vaudreuil(27)"
+        href={`${siteUrl}/infos-pratiques#comment-venir-au-vaudreuil(27)`}
         class="text-foreground hover:text-primary">Comment venir au Vaudreuil</a
       >
     </li>
     <li>
       <a
-        href="#restauration-a-proximite-"
+        href={`${siteUrl}/infos-pratiques#restauration-a-proximite-`}
         class="text-foreground hover:text-primary">Se restaurer</a
       >
     </li>
     <li>
       <a
-        href="#hebergement-a-proximite"
+        href={`${siteUrl}/infos-pratiques#hebergement-a-proximite`}
         class="text-foreground hover:text-primary">Se loger</a
       >
     </li>
     <li>
       <a
-        href="#loisirs-autour-du-vaudreuil"
+        href={`${siteUrl}/infos-pratiques#loisirs-autour-du-vaudreuil`}
         class="text-foreground hover:text-primary"
         >Loisirs autour du Vaudreuil</a
       >
     </li>
   </ul>
+  <hr class="mt-8 mb-0 border-t border-gray-300" />
+  <h2 class="font-heading text-foreground mb-0 text-4xl">Tarifs</h2>
+  <p class="has-separator text-foreground-light font-base text-sm uppercase">
+    Un tarif unique pour tous les jours
+  </p>
+  <dl class="font-base mt-4 grid grid-cols-[min-content_1fr] gap-x-4">
+    {
+      ticketPrice && (
+        <>
+          <dt class="font-bold">Entrée&nbsp;:</dt>
+          <dd class="font-base">{ticketPrice}</dd>
+        </>
+      )
+    }
+    {
+      parkingPrice && (
+        <>
+          <dt class="font-bold">Parking&nbsp;:</dt>
+          <dd class="font-base">{parkingPrice}</dd>
+        </>
+      )
+    }
+  </dl>
 </div>
 
 <style>

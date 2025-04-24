@@ -1,8 +1,6 @@
 {
-    "date": "26 avril 2025",
-    "edition": "2025",
-    "pricing": {
-      "ticketPrice": "Gratuite",
-      "parkingPrice": "Gratuit"
-    }
+  "date": "26 avril 2025",
+  "edition": "2025",
+  "ticketPrice": "Gratuite",
+  "parkingPrice": "Gratuit"
 }
