@@ -23,7 +23,7 @@ export default defineConfig({
       }),
     },
   },
-  site: PUBLIC_SITE_URL,
+  site: PUBLIC_SITE_URL || 'https://salon-fleurs-et-jardins.netlify.app',
   vite: {
     plugins: [tailwindcss()],
   },
