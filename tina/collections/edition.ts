@@ -35,5 +35,22 @@ export const EditionCollection: Collection = {
       label: 'Prix du parking',
       type: 'string',
     },
+    {
+      name: 'editionRegistration',
+      label: 'Inscription',
+      type: 'object',
+      fields: [
+        {
+          name: 'registrationEditionDate',
+          label: "Année de l'édition",
+          type: 'string',
+        },
+        {
+          name: 'registrationShowCallout',
+          label: "Afficher le callout d'inscription",
+          type: 'boolean',
+        },
+      ],
+    },
   ],
 };

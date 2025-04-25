@@ -1,5 +1,5 @@
 ---
-const { id } = Astro.props;
+const { id, isActive = false } = Astro.props;
 ---
 
 <button
@@ -7,7 +7,27 @@ const { id } = Astro.props;
   class="cursor-pointer lg:hidden"
   aria-label="Ouvrir/fermer le menu principal"
 >
-  <span class="line mb-2 block h-1 w-8 bg-black"></span>
-  <span class="line mb-2 block h-1 w-8 bg-black"></span>
-  <span class="line mb-2 block h-1 w-8 bg-black"></span>
+  <span
+    class="line line-1 mb-2 block h-[2px] w-8 bg-black transition-transform duration-300"
+  ></span>
+  <span
+    class="line line-2 mb-2 block h-[2px] w-8 bg-black transition-opacity duration-300"
+  ></span>
+  <span
+    class="line line-3 mb-2 block h-[2px] w-8 bg-black transition-transform duration-300"
+  ></span>
 </button>
+
+<style>
+  button[aria-expanded='true'] {
+    .line-1 {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .line-2 {
+      opacity: 0;
+    }
+    .line-3 {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+</style>

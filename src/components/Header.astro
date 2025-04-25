@@ -3,27 +3,42 @@ import TopBanner from './TopBanner.astro';
 import Burger from './ui/Burger.astro';
 import Navigation from './Navigation.astro';
 import Logo from './Logo.astro';
+
+let isActive = false;
 ---
 
 <TopBanner />
 <header
   id="main-header"
-  class="relative mx-auto flex max-w-7xl items-center justify-between px-2 py-4"
+  class="relative mx-auto mb-8 flex max-w-7xl items-center justify-between px-6 py-4 md:mb-16"
 >
-  <a class="block w-[200px] lg:w-[300px]" href="/">
+  <a class="block w-[150px] lg:w-[300px]" href="/">
     <Logo />
   </a>
   <Navigation id="main-nav-container" />
-  <Burger id="main-burger-menu" />
+  <Burger id="main-burger-menu" isActive={isActive} />
 
   <script>
     const burgerMenu = document.querySelector('#main-burger-menu');
     const navContainer = document.querySelector('#main-nav-container');
+    const mainContent = document.querySelector('#main-content');
+    let isActive = false;
 
     if (burgerMenu && navContainer) {
       burgerMenu.addEventListener('click', () => {
+        isActive = !isActive;
         navContainer.classList.toggle('flex');
         navContainer.classList.toggle('hidden');
+        burgerMenu.classList.toggle('is-active');
+        burgerMenu.setAttribute('aria-expanded', String(isActive));
+        burgerMenu.setAttribute(
+          'aria-label',
+          isActive ? 'Fermer le menu' : 'Ouvrir le menu',
+        );
+        if (mainContent) {
+          mainContent.classList.toggle('blur-[2px]');
+          mainContent.classList.toggle('opacity-50');
+        }
       });
     }
   </script>
