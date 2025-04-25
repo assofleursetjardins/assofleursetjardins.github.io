@@ -3,7 +3,6 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Inscription from '../components/Inscription.astro';
 import Localisation from '../components/Localisation.astro';
-import Prices from '../components/Prices.astro';
 import InfoPratiques from '../components/InfoPratiques.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
@@ -47,8 +46,6 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
                 return <Inscription />;
               case 'Localisation':
                 return <Localisation />;
-              case 'Prices':
-                return <Prices />;
               case 'InfoPratiques':
                 return <InfoPratiques />;
               case 'image':

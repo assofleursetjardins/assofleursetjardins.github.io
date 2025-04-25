@@ -86,8 +86,8 @@
     content: '';
     display: block;
     width: 80px;
-    height: var(--separator-size, 2px);
-    background-color: var(--separator-color, var(--color-accent));
+    height: var(--separator-size, 4px);
+    background-color: var(--separator-color, var(--color-primary));
     margin-top: 1em;
   }
 }
