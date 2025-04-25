@@ -1,16 +1,19 @@
 ---
+import { Icon } from 'astro-icon/components';
 import siteConfigInfo from '../data/infoGeneral.json';
 import Button from './ui/button.astro';
 
-const infosPage = '../infos';
+const infosPage = '../infos-pratiques';
 const googleMapsLink = siteConfigInfo.analytics.googleMapsLink;
 ---
 
-<div class="mb-12 h-auto rounded border border-solid border-gray-300 p-6">
-  <h2 class="strong text-foreground font-heading mb-4 text-4xl">
+<div class="h-auto rounded border border-solid border-gray-300 p-6">
+  <h2 class="strong text-foreground font-heading mb-0 py-4 text-4xl">
     Localisation
   </h2>
-  <p class="has-separator text-foreground-light uppercase">
+  <p
+    class="has-separator text-foreground-light font-base text-sm text-balance uppercase"
+  >
     Une situation géographique idéale, dans les rues du centre bourg du
     Vaudreuil
   </p>
@@ -20,23 +23,18 @@ const googleMapsLink = siteConfigInfo.analytics.googleMapsLink;
     village normand doté d’un superbe golf de 18 trous.
   </p>
 
-  <div>
-    <Button variant="primary" href={infosPage} size="small">
-      Infos pratiques
+  <div class="flex flex-col gap-4">
+    <Button variant="primary" href={infosPage} size="medium">
+      <span>Infos pratiques</span>
+      <Icon name="arrow-right" class="text-primary h-4 w-4" />
     </Button>
     {
       googleMapsLink && (
-        <Button variant="primary" href={googleMapsLink} size="small">
-          Obtenir un itinéraire
+        <Button variant="ghost" href={googleMapsLink} size="medium">
+          <span>Obtenir un itinéraire</span>
+          <Icon name="arrow-right" class="text-primary h-4 w-4" />
         </Button>
       )
     }
   </div>
 </div>
-
-<style>
-  .has-separator {
-    --separator-color: #76b201;
-    --separator-size: 3px;
-  }
-</style>

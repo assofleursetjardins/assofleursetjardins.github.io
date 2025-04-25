@@ -26,19 +26,29 @@ export const EditionCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'pricing',
-      label: 'Prix',
+      name: 'ticketPrice',
+      label: 'Prix du ticket',
+      type: 'string',
+    },
+    {
+      name: 'parkingPrice',
+      label: 'Prix du parking',
+      type: 'string',
+    },
+    {
+      name: 'editionRegistration',
+      label: 'Inscription',
       type: 'object',
       fields: [
         {
-          name: 'ticketPrice',
-          label: 'Prix du ticket',
+          name: 'registrationEditionDate',
+          label: "Année de l'édition",
           type: 'string',
         },
         {
-          name: 'parkingPrice',
-          label: 'Prix du parking',
-          type: 'string',
+          name: 'registrationShowCallout',
+          label: "Afficher le callout d'inscription",
+          type: 'boolean',
         },
       ],
     },

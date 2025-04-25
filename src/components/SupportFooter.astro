@@ -17,15 +17,17 @@ const LogoPartenaires: LogoPartenairesType[] = [
 ---
 
 <div class="mb-11 box-border w-full px-3">
-  <h4 class="text-foreground-contrast my-4 font-bold">Avec le soutien de</h4>
+  <h4 class="text-foreground-contrast my-4 text-base font-bold">
+    Avec le soutien de :
+  </h4>
   <div class="justify-left flex flex-wrap">
     {
       LogoPartenaires.map((item: LogoPartenairesType) => (
         <Image
           class="m-3.5 grayscale filter"
           src={item.path}
-          width={120}
-          height={120}
+          width={100}
+          height={100}
           alt={item.alt}
         />
       ))

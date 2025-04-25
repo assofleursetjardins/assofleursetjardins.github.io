@@ -10,38 +10,44 @@ const address = siteConfigInfo.contact.address;
 const social = siteConfigInfo.social.networks;
 ---
 
-<div class="mb-11 box-border w-full px-3">
-  <h4 class="text-foreground-contrast my-4 text-base font-bold">
-    Association Fleurs & Jardins
-  </h4>
+<div class="mb-11 box-border w-full space-y-8 px-3">
+  <div>
+    <h4 class="text-foreground-contrast my-4 text-base font-bold">
+      Association Fleurs & Jardins
+    </h4>
 
-  <div class="text-foreground text-base leading-7 italic">
-    {address && <p>{address}</p>}
-    {
-      phone && (
-        <a class="underline" href={`tel:${formatedPhone}`}>
-          Tél. {phone}
-        </a>
-      )
-    }
+    <div class="text-foreground text-base leading-7 italic">
+      {address && <p>{address}</p>}
+      {
+        phone && (
+          <a class="underline" href={`tel:${formatedPhone}`}>
+            Tél. {phone}
+          </a>
+        )
+      }
+    </div>
+
+    <a
+      class="hover:text-background-accent text-foreground block cursor-pointer text-base underline"
+      href={`mailto:${conditateUrl}`}
+    >
+      Nous écrire
+    </a>
   </div>
 
-  <a
-    class="hover:text-background-accent text-foreground block cursor-pointer text-base underline"
-    href={`mailto:${conditateUrl}`}>Nous écrire</a
-  >
+  <div>
+    <h4 class="text-foreground-contrast my-4 text-base font-bold">
+      Retrouvez-nous également sur
+    </h4>
 
-  <h4 class="text-foreground-contrast my-4 text-base font-bold">
-    Retrouvez-nous également sur
-  </h4>
-
-  <ul class="flex items-center gap-4">
-    {
-      social.map(({ label, url }) => (
-        <li>
-          <Social platform={label} url={url} />
-        </li>
-      ))
-    }
-  </ul>
+    <ul class="flex items-center gap-4">
+      {
+        social.map(({ label, url }) => (
+          <li>
+            <Social platform={label} url={url} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>

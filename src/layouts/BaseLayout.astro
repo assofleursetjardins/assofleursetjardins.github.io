@@ -3,7 +3,6 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Inscription from '../components/Inscription.astro';
 import Localisation from '../components/Localisation.astro';
-import Prices from '../components/Prices.astro';
 import InfoPratiques from '../components/InfoPratiques.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
@@ -35,11 +34,13 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
   </head>
   <body class="bg-background text-foreground">
     <Header />
-    <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-12">
-      <main class="md:col-span-8">
+    <div
+      class="mx-auto grid max-w-7xl space-y-8 md:grid-cols-[2fr_1fr] md:gap-24 md:space-y-0"
+    >
+      <main id="main-content" class="px-6">
         <slot />
       </main>
-      <aside class="md:col-span-4">
+      <aside class="space-y-8 px-6">
         {
           asideComponents.map((components: string) => {
             switch (components) {
@@ -47,8 +48,6 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
                 return <Inscription />;
               case 'Localisation':
                 return <Localisation />;
-              case 'Prices':
-                return <Prices />;
               case 'InfoPratiques':
                 return <InfoPratiques />;
               case 'image':

@@ -3,9 +3,9 @@ import siteConfigInfo from '../data/infoGeneral.json';
 const { title, subtitle } = Astro.props;
 ---
 
-<section class="mb-12 h-auto p-6">
+<div class="h-auto">
   <hgroup>
-    <h2 class="strong text-foreground font-heading mb-4 text-4xl">
+    <h2 class="strong text-foreground font-heading mb-0 text-4xl">
       {title}
     </h2>
     <p class="has-separator text-foreground-light">
@@ -16,11 +16,4 @@ const { title, subtitle } = Astro.props;
   <div class="space-y-4">
     <slot />
   </div>
-
-  <style>
-    .has-separator {
-      --separator-color: #76b201;
-      --separator-size: 3px;
-    }
-  </style>
-</section>
+</div>
