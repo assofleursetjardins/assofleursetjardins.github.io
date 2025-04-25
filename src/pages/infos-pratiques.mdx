@@ -1,18 +1,18 @@
 ---
-layout: '../layouts/BaseLayout.astro'
-title: 'Informations Pratiques'
 description: '**description**'
 image: ''
 author: ''
-date: '19-03-2025'
-#SEO
-metaTitle: 'Page Informations Pratiques'
-metaDescription: "Bienvenue sur la page d'Informations Pratiques de Salon Fleurs et Jardin du Vaudreuil."
+date: '2025-04-24T22:00:00.000Z'
+metaTitle: Page Informations Pratiques
+metaDescription: >-
+  Bienvenue sur la page d'Informations Pratiques de Salon Fleurs et Jardin du
+  Vaudreuil.
+title: Informations Pratiques
+layout: ../layouts/BaseLayout.astro
 asideComponents:
-  - InfoPratiques
+  - component: Localisation
+  - component: InfoPratiques
 ---
-
-import InfoPratiques from '../components/InfoPratiques.astro';
 
 # Informations pratiques
 
@@ -32,22 +32,12 @@ Le village du Vaudreuil est situé à moins de 100 kilomètres de la région par
 
 **En train**: gare de Val de Reuil (ligne Paris - Rouen - Le Havre)
 
-import Button from '../components/ui/button.astro';
-
-<Button class="mt-4 flex w-auto" variant="primary" href="" size="small">
-  Plan d'accès au Marché Floral
-</Button>
-
-<Button class="mt-4 w-auto" variant="primary" href="" size="small">
-  Obtenir un itinéraire
-</Button>
-
 ## Restauration à proximité [](#restaurer)
 
 Si vous êtes plutot amateur de bonnes tables, nous vous proposons quelques restaurants proximités
 
-- Restaurant du Golf : 02 32 50 51 51 [Voir le plan](https://www.google.fr/maps/place/Restaurant+du+Golf+PGA+France+du+Vaudreuil/@49.2599562,1.2226501,17z/data=!3m1!4b1!4m6!3m5!1s0x47e125f39882ce57:0xd7b570c814e287f1!8m2!3d49.2599562!4d1.2226501!16s%2Fg%2F1v7pxrzr?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D)
-- Restaurant La Cascade Insolite : 02 32 25 97 41
+* Restaurant du Golf : 02 32 50 51 51 [Voir le plan](https://www.google.fr/maps/place/Restaurant+du+Golf+PGA+France+du+Vaudreuil/@49.2599562,1.2226501,17z/data=!3m1!4b1!4m6!3m5!1s0x47e125f39882ce57:0xd7b570c814e287f1!8m2!3d49.2599562!4d1.2226501!16s%2Fg%2F1v7pxrzr?entry=ttu\&g_ep=EgoyMDI1MDMxOC4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D)
+* Restaurant La Cascade Insolite : 02 32 25 97 41
 
 ## Hébergement à proximité
 
@@ -83,10 +73,9 @@ En hôtel ou en gîte, il y en a pour tous les gouts
 
 Si vous séjournez plusieurs jours au Vaudreuil voici quelques lieux incontournables
 
-- Voie verte le long de l’Eure
-- Golf du Vaudreuil (18 trous)
-- Forêt domaniale de Bord
-
-- [Base de loisirs de Léry-Poses](https://lery-poses.fr)
-- [Serre Zoologique Biotropica](https://www.biotropica.fr)
-- Parcours découverte des pâtures
+* Voie verte le long de l’Eure
+* Golf du Vaudreuil (18 trous)
+* Forêt domaniale de Bord
+* [Base de loisirs de Léry-Poses](https://lery-poses.fr)
+* [Serre Zoologique Biotropica](https://www.biotropica.fr)
+* Parcours découverte des pâtures

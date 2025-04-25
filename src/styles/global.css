@@ -56,6 +56,9 @@
   p + p {
     margin-top: 1em;
   }
+  article > p + h2 {
+    margin-top: 2em;
+  }
   /* misc */
   hr {
     margin-block: 2rem;

@@ -1,12 +1,13 @@
 ---
 import Button from './ui/button.astro';
-import siteConfig from '../data/editonSalon.json';
+import siteConfig from '../data/infoGeneral.json';
 import siteConfigInfo from '../data/infoGeneral.json';
 import { cn } from '../lib/utils';
 
-const editionYear = siteConfig.editionRegistration.registrationEditionDate;
+const editionYear =
+  siteConfig.edition.editionRegistration.registrationEditionDate;
 const editionShowCallout =
-  siteConfig.editionRegistration.registrationShowCallout;
+  siteConfig.edition.editionRegistration.registrationShowCallout;
 const conditateUrl = siteConfigInfo.contact.email.general;
 
 const { class: className } = Astro.props;

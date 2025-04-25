@@ -18,6 +18,7 @@ export const ProgramCollection: Collection = {
     {
       name: 'schedule',
       label: 'Horaires',
+      description: 'Horaires des stands et des activités',
       type: 'object',
       list: true,
       ui: {

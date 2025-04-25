@@ -6,7 +6,8 @@ import siteConfigInfo from '../data/infoGeneral.json';
 const conditateUrl = siteConfigInfo.contact.email.general;
 const phone = siteConfigInfo.contact.phone.general;
 const formatedPhone = siteConfigInfo.contact.phone.general.replace(/\s+/g, '');
-const address = siteConfigInfo.contact.address;
+const address = siteConfigInfo.contact.address.postalAddress;
+const addressLink = siteConfigInfo.contact.address.postalAddressLink;
 const social = siteConfigInfo.social.networks;
 ---
 
@@ -17,11 +18,31 @@ const social = siteConfigInfo.social.networks;
     </h4>
 
     <div class="text-foreground text-base leading-7 italic">
-      {address && <p>{address}</p>}
+      {
+        address && (
+          <p>
+            {address}
+            {addressLink && (
+              <>
+                <span class="">-</span>
+                <a
+                  href={addressLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Voir sur Google Maps"
+                  class="text-sm underline"
+                >
+                  Plan d'accès
+                </a>
+              </>
+            )}
+          </p>
+        )
+      }
       {
         phone && (
           <a class="underline" href={`tel:${formatedPhone}`}>
-            Tél. {phone}
+            {phone}
           </a>
         )
       }
@@ -30,8 +51,9 @@ const social = siteConfigInfo.social.networks;
     <a
       class="hover:text-background-accent text-foreground block cursor-pointer text-base underline"
       href={`mailto:${conditateUrl}`}
+      aria-label={`Envoyer un email à ${conditateUrl}. Ouvre le client de messagerie par défaut.`}
     >
-      Nous écrire
+      Nous contacter par email
     </a>
   </div>
 
@@ -40,11 +62,22 @@ const social = siteConfigInfo.social.networks;
       Retrouvez-nous également sur
     </h4>
 
-    <ul class="flex items-center gap-4">
+    <ul
+      class="flex items-center gap-4"
+      aria-label="Réseaux sociaux"
+      role="list"
+    >
       {
         social.map(({ label, url }) => (
-          <li>
-            <Social platform={label} url={url} />
+          <li role="listitem">
+            <Social
+              platform={label}
+              url={url}
+              aria-label={`Aller sur le réseau social ${label}.`}
+            />
+            <span class="sr-only md:not-sr-only" aria-hidden>
+              {label}
+            </span>
           </li>
         ))
       }

@@ -12,8 +12,21 @@
       "isVisible": true
     }
   },
+  "edition": {
+    "date": "26 avril 2025",
+    "edition": "2025",
+    "ticketPrice": "Gratuite",
+    "parkingPrice": "Gratuit",
+    "editionRegistration": {
+      "registrationEditionDate": "2026",
+      "registrationShowCallout": true
+    }
+  },
   "contact": {
-    "address": "Rue B. Chedeville – 27100 Le Vaudreuil (27)",
+    "address": {
+      "postalAddress": "Rue B. Chedeville, 27100 Le Vaudreuil",
+      "postalAddressLink": "https://google.com/maps/dir//49.2562515,1.2087/@49.2582507,1.2174889,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+    },
     "phone": {
       "general": "02 32 61 27 85",
       "presse": "02 32 61 27 85"
@@ -33,7 +46,6 @@
   },
   "analytics": {
     "google": "UA-112422626-1",
-    "matomo": "---",
-    "googleMapsLink": "https://google.com/maps/dir//49.2562515,1.2087/@49.2582507,1.2174889,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+    "matomo": "---"
   }
 }
