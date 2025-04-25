@@ -1,8 +1,8 @@
 ---
 const siteUrl = Astro.site?.origin;
 
-import siteConfig from '../data/editonSalon.json';
-const { ticketPrice, parkingPrice } = siteConfig;
+import siteConfig from '../data/infoGeneral.json';
+const { edition } = siteConfig;
 ---
 
 <div
@@ -48,18 +48,18 @@ const { ticketPrice, parkingPrice } = siteConfig;
   </p>
   <dl class="font-base mt-4 grid grid-cols-[min-content_1fr] gap-x-4">
     {
-      ticketPrice && (
+      edition.ticketPrice && (
         <>
           <dt class="font-bold">Entrée&nbsp;:</dt>
-          <dd class="font-base">{ticketPrice}</dd>
+          <dd class="font-base">{edition.ticketPrice}</dd>
         </>
       )
     }
     {
-      parkingPrice && (
+      edition.parkingPrice && (
         <>
           <dt class="font-bold">Parking&nbsp;:</dt>
-          <dd class="font-base">{parkingPrice}</dd>
+          <dd class="font-base">{edition.parkingPrice}</dd>
         </>
       )
     }

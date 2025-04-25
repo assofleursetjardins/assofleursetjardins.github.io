@@ -3,9 +3,7 @@ import { PagesCollection } from './collections/pages';
 import { ExhibitorsCollection } from './collections/exhibitors';
 import { ProgramCollection } from './collections/program';
 import { InfosCollection } from './collections/infos';
-import { EditionCollection } from './collections/edition';
 import { NavigationCollection } from './collections/navigation';
-import { HomeCollection } from './collections/home';
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -32,13 +30,11 @@ export default defineConfig({
 
   schema: {
     collections: [
-      HomeCollection,
       PagesCollection,
-      NavigationCollection,
-      InfosCollection,
       ExhibitorsCollection,
       ProgramCollection,
-      EditionCollection,
+      NavigationCollection,
+      InfosCollection,
     ],
   },
 });

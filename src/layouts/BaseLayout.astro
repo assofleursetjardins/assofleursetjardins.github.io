@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Inscription from '../components/Inscription.astro';
 import Localisation from '../components/Localisation.astro';
 import InfoPratiques from '../components/InfoPratiques.astro';
+import ExhibitorList from '../components/ExhibitorList.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
 import { Image, imageConfig } from 'astro:assets';
@@ -20,6 +21,16 @@ const image = frontmatter.image || '';
 const title = frontmatter.imgtitle || '';
 
 const asideComponents = Astro.props.frontmatter?.asideComponents || [];
+const bottomComponents = Astro.props.frontmatter?.bottomComponents || [];
+
+const components: Record<string, any> = {
+  Inscription,
+  Localisation,
+  InfoPratiques,
+  ExhibitorList,
+};
+
+console.log(bottomComponents);
 ---
 
 <!doctype html>
@@ -38,26 +49,21 @@ const asideComponents = Astro.props.frontmatter?.asideComponents || [];
       class="mx-auto grid max-w-7xl space-y-8 md:grid-cols-[2fr_1fr] md:gap-24 md:space-y-0"
     >
       <main id="main-content" class="px-6">
-        <slot />
+        <article>
+          <slot />
+        </article>
+        {
+          bottomComponents.map((componentObj: { component: string }) => {
+            const Component = components[componentObj.component];
+            return Component ? <Component /> : null;
+          })
+        }
       </main>
       <aside class="space-y-8 px-6">
         {
-          asideComponents.map((components: string) => {
-            switch (components) {
-              case 'Inscription':
-                return <Inscription />;
-              case 'Localisation':
-                return <Localisation />;
-              case 'InfoPratiques':
-                return <InfoPratiques />;
-              case 'image':
-                return (
-                  <img src={frontmatter.image} alt={frontmatter.imgtitle} />
-                );
-
-              default:
-                return null;
-            }
+          asideComponents.map((componentObj: { component: string }) => {
+            const Component = components[componentObj.component];
+            return Component ? <Component /> : null;
           })
         }
       </aside>

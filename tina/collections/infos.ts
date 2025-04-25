@@ -19,9 +19,11 @@ export const InfosCollection: Collection = {
   },
   fields: [
     {
-      label: 'Site internet',
+      label: '⚠️ Site internet',
       type: 'object',
       name: 'site',
+      description:
+        'Informations sur le site internet (titre, description, adresse, bannière). A modifier avec précaution.',
       fields: [
         {
           label: 'Titre du site',
@@ -58,14 +60,73 @@ export const InfosCollection: Collection = {
       ],
     },
     {
+      label: 'Edition',
+      type: 'object',
+      name: 'edition',
+      description:
+        "Informations sur l'édition du salon (date, prix du ticket, prix du parking, etc.)",
+      fields: [
+        {
+          name: 'date',
+          label: 'Date',
+          type: 'string',
+        },
+        {
+          name: 'edition',
+          label: "Année de l'édition",
+          type: 'string',
+        },
+        {
+          name: 'ticketPrice',
+          label: 'Prix du ticket',
+          type: 'string',
+        },
+        {
+          name: 'parkingPrice',
+          label: 'Prix du parking',
+          type: 'string',
+        },
+        {
+          name: 'editionRegistration',
+          label: 'Inscription',
+          type: 'object',
+          fields: [
+            {
+              name: 'registrationEditionDate',
+              label: "Année de l'édition",
+              type: 'string',
+            },
+            {
+              name: 'registrationShowCallout',
+              label: "Afficher le callout d'inscription",
+              type: 'boolean',
+            },
+          ],
+        },
+      ],
+    },
+    {
       label: 'Contact',
       type: 'object',
       name: 'contact',
+      description: 'Adresse postale, téléphone et email',
       fields: [
         {
-          label: 'Adresse postale',
-          type: 'string',
+          type: 'object',
           name: 'address',
+          label: 'Adresse postale',
+          fields: [
+            {
+              label: 'Adresse postale',
+              type: 'string',
+              name: 'postalAddress',
+            },
+            {
+              label: 'Lien Google Maps',
+              type: 'string',
+              name: 'postalAddressLink',
+            },
+          ],
         },
         {
           label: 'Téléphones',
@@ -107,6 +168,7 @@ export const InfosCollection: Collection = {
       label: 'Réseaux sociaux',
       type: 'object',
       name: 'social',
+      description: 'Réseaux sociaux',
       ui: {
         itemProps: (item) => ({
           label: item?.label || 'Nouveau réseau',
@@ -148,11 +210,6 @@ export const InfosCollection: Collection = {
           label: 'Matomo',
           type: 'string',
           name: 'matomo',
-        },
-        {
-          label: 'Lien Google Maps',
-          type: 'string',
-          name: 'googleMapsLink',
         },
       ],
     },
