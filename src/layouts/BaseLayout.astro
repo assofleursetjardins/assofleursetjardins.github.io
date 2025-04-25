@@ -46,9 +46,9 @@ console.log(bottomComponents);
   <body class="bg-background text-foreground">
     <Header />
     <div
-      class="mx-auto grid max-w-7xl space-y-8 md:grid-cols-[2fr_1fr] md:gap-24 md:space-y-0"
+      class="mx-auto grid max-w-7xl space-y-8 px-6 lg:grid-cols-[2fr_1fr] lg:gap-16 lg:space-y-0"
     >
-      <main id="main-content" class="px-6">
+      <main id="main-content">
         <article>
           <slot />
         </article>
@@ -59,7 +59,7 @@ console.log(bottomComponents);
           })
         }
       </main>
-      <aside class="space-y-8 px-6">
+      <aside class="space-y-8">
         {
           asideComponents.map((componentObj: { component: string }) => {
             const Component = components[componentObj.component];
