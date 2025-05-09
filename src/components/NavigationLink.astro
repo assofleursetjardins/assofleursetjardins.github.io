@@ -1,17 +1,33 @@
 ---
 const { url, title, description } = Astro.props;
 
-const isActive = Astro.url.pathname === url;
+// Normaliser les URLs en retirant les trailing slashes et en s'assurant qu'elles commencent par /
+const normalizeUrl = (path: string) => {
+  return path.replace(/\/$/, '').replace(/^\/?/, '/');
+};
+
+const currentPath = normalizeUrl(Astro.url.pathname);
+const targetPath = normalizeUrl(url);
+
+// Vérifier si le chemin actuel commence par le chemin cible
+const isActive =
+  currentPath.startsWith(targetPath) || targetPath.startsWith(currentPath);
 ---
 
 <a
   href={url}
-  class=`relative nav-links group flex flex-col text-center ${isActive ? 'is-active' : ''}`
+  class={`relative nav-links group flex flex-col text-center ${isActive ? 'is-active' : ''}`}
+  aria-current={isActive ? 'page' : undefined}
+  role="menuitem"
+  aria-label={`${title} - ${description}`}
 >
-  <span class=`text-2xl font-extrabold gap-10 ${isActive ? 'text-primary' : ''}`
-    >{title}</span
+  <span
+    class={`text-2xl font-extrabold gap-10 ${isActive ? 'text-primary' : ''}`}
+    aria-hidden="true">{title}</span
   >
-  <span class="text-sm font-light text-gray-500">{description}</span>
+  <span class="text-sm font-light text-gray-500" aria-hidden="true"
+    >{description}</span
+  >
 </a>
 
 <style>
@@ -26,5 +42,12 @@ const isActive = Astro.url.pathname === url;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
+  }
+
+  /* Amélioration du focus visible */
+  a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: 0.25rem;
   }
 </style>
