@@ -9,9 +9,11 @@ const normalizeUrl = (path: string) => {
 const currentPath = normalizeUrl(Astro.url.pathname);
 const targetPath = normalizeUrl(url);
 
-// Vérifier si le chemin actuel commence par le chemin cible
+// Gestion spéciale pour la page d'accueil
 const isActive =
-  currentPath.startsWith(targetPath) || targetPath.startsWith(currentPath);
+  currentPath === '/'
+    ? targetPath === '/'
+    : currentPath.startsWith(targetPath) && targetPath !== '/';
 ---
 
 <a
