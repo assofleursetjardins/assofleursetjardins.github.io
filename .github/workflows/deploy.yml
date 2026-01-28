@@ -20,7 +20,7 @@ jobs:
     environment:
       name: github-pages
     env:
-      PUBLIC_SITE_URL: ${{ secrets.PUBLIC_SITE_URL }}
+      PUBLIC_SITE_URL: https://salon-fleurs-et-jardins.com
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
