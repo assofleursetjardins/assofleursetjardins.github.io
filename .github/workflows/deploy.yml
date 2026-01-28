@@ -17,6 +17,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     env:
       PUBLIC_SITE_URL: ${{ secrets.PUBLIC_SITE_URL }}
     steps:
