@@ -20,6 +20,7 @@ export default defineConfig({
       PUBLIC_SITE_URL: envField.string({
         context: 'server',
         access: 'public',
+        optional: true,
       }),
     },
   },
