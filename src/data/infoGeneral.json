@@ -9,12 +9,12 @@
     "url": "salon-fleurs-et-jardins.com",
     "message": {
       "text": "⚠️ Le marché floral 2025 est Annulé",
-      "isVisible": true
+      "isVisible": false
     }
   },
   "edition": {
-    "date": "26 avril 2025",
-    "edition": "2025",
+    "date": "Samedi 25 & Dimanche 26 avril 2026",
+    "edition": "2026",
     "ticketPrice": "Gratuite",
     "parkingPrice": "Gratuit",
     "editionRegistration": {
