@@ -8,12 +8,15 @@ const platformIcon = platform.toLowerCase();
 ---
 
 <a
-  class="hover:text-primary text-2xl"
+  class="hover:text-primary flex items-center gap-2 text-2xl"
   href={url}
   target="_blank"
-  rel="noopener noreferrer"
+  rel="noindex nofollow noopener noreferrer"
   title={`Retrouvez-nous sur ${platform}`}
   aria-label={`Retrouvez-nous sur ${platform}`}
 >
-  <Icon name={platformIcon} />
+  <Icon name={platformIcon} size={32} />
+  <span class="sr-only text-base md:not-sr-only" aria-hidden>
+    {platform}
+  </span>
 </a>

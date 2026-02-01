@@ -6,6 +6,7 @@ import { loadEnv } from 'vite';
 import icon from 'astro-icon';
 
 import mdx from '@astrojs/mdx';
+import { remarkExternalLinks } from './src/lib/remark-external-links.mjs';
 
 const { PUBLIC_SITE_URL } = loadEnv(
   process.env.NODE_ENV || 'development',
@@ -29,5 +30,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [icon(), mdx()],
+  integrations: [
+    icon(),
+    mdx({
+      remarkPlugins: [remarkExternalLinks],
+    }),
+  ],
 });

@@ -31,10 +31,11 @@ const exhibitorsByCategory = exhibitors.reduce(
           </h3>
           <ul class="text-foreground w-auto leading-7">
             {exhibitors.map((exhibitor: ExhibitorType) => (
-              <li class="inline">
+              <li class="mr-[0.5em] inline">
                 <span class="font-heading text-lg">{exhibitor.name}</span>{' '}
-                <span class="text-xs uppercase">{exhibitor.description}</span>{' '}
-                -{' '}
+                <span class="text-xs uppercase">
+                  {exhibitor.description}
+                </span>{' '}
               </li>
             ))}
           </ul>
