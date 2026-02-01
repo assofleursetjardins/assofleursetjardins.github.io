@@ -56,7 +56,7 @@
   p + p {
     margin-top: 1em;
   }
-  article > p + h2 {
+  article h2 {
     margin-top: 2em;
   }
   /* misc */
@@ -72,6 +72,23 @@
   }
   main a:hover {
     color: var(--color-primary);
+  }
+
+  /* images */
+  main img {
+    width: 100%;
+  }
+
+  main li {
+    margin-block: 0.5em;
+  }
+  main li::before {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--color-primary);
+    margin-right: 0.5em;
   }
 }
 
