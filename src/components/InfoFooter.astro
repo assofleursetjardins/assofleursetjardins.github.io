@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Social from './Social.astro';
+import ExternalLink from './ExternalLink.astro';
 import siteConfigInfo from '../data/infoGeneral.json';
 
 const conditateUrl = siteConfigInfo.contact.email.general;
@@ -13,7 +14,7 @@ const social = siteConfigInfo.social.networks;
 
 <div class="mb-11 box-border w-full space-y-8 px-3">
   <div>
-    <h4 class="text-foreground-contrast my-4 text-base font-bold">
+    <h4 class="text-foreground-contrast my-4 text-lg font-bold">
       Association Fleurs & Jardins
     </h4>
 
@@ -25,15 +26,13 @@ const social = siteConfigInfo.social.networks;
             {addressLink && (
               <>
                 <span class="">-</span>
-                <a
+                <ExternalLink
                   href={addressLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-label="Voir sur Google Maps"
                   class="text-sm underline"
                 >
                   Plan d'accès
-                </a>
+                </ExternalLink>
               </>
             )}
           </p>
@@ -58,7 +57,7 @@ const social = siteConfigInfo.social.networks;
   </div>
 
   <div>
-    <h4 class="text-foreground-contrast my-4 text-base font-bold">
+    <h4 class="text-foreground-contrast my-4 text-lg font-bold">
       Retrouvez-nous également sur
     </h4>
 
@@ -69,15 +68,12 @@ const social = siteConfigInfo.social.networks;
     >
       {
         social.map(({ label, url }) => (
-          <li role="listitem">
+          <li role="listitem" class="flex items-center gap-2">
             <Social
               platform={label}
               url={url}
               aria-label={`Aller sur le réseau social ${label}.`}
             />
-            <span class="sr-only md:not-sr-only" aria-hidden>
-              {label}
-            </span>
           </li>
         ))
       }
