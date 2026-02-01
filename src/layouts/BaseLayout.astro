@@ -7,18 +7,17 @@ import InfoPratiques from '../components/InfoPratiques.astro';
 import ExhibitorList from '../components/ExhibitorList.astro';
 import '../styles/global.css';
 import '@fontsource/abril-fatface';
-import { Image, imageConfig } from 'astro:assets';
 
 const {
-  metaTitle = '',
-  metaDescription = '',
-  pageTitle = '',
-  pageDescription = '',
+  metaTitle: propsMetaTitle = '',
+  metaDescription: propsMetaDescription = '',
   frontmatter = {},
 } = Astro.props;
 
-const image = frontmatter.image || '';
-const title = frontmatter.imgtitle || '';
+// Récupération des meta depuis props ou frontmatter (pour gérer tous les cas)
+const metaTitle = propsMetaTitle || frontmatter.metaTitle || '';
+const metaDescription =
+  propsMetaDescription || frontmatter.metaDescription || '';
 
 const asideComponents = Astro.props.frontmatter?.asideComponents || [];
 const bottomComponents = Astro.props.frontmatter?.bottomComponents || [];
@@ -41,7 +40,7 @@ console.log(bottomComponents);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{metaTitle || 'Salon fleurs & Jardins'}</title>
-    {metaDescription && <meta name="description" content={metaDescription} />}
+    <meta name="description" content={metaDescription} />
   </head>
   <body class="bg-background text-foreground">
     <Header />

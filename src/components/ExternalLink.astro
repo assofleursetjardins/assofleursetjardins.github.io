@@ -1,7 +1,12 @@
 ---
 import { isExternalLink } from '../lib/utils';
 
-const { href, class: className = '', children, ...props } = Astro.props;
+const {
+  href,
+  class: className = '',
+  'aria-label': ariaLabel,
+  ...props
+} = Astro.props;
 
 const isExternal = isExternalLink(href);
 ---
@@ -13,6 +18,7 @@ const isExternal = isExternalLink(href);
       target="_blank"
       rel="noindex nofollow noopener noreferrer"
       class={`inline-flex items-center gap-1 ${className}`}
+      aria-label={ariaLabel || undefined}
       {...props}
     >
       <slot />

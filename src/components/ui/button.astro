@@ -27,7 +27,7 @@ const baseStyles =
 // Styles des variantes
 const variants = {
   default: 'bg-foreground text-background hover:bg-foreground/90 rounded',
-  primary: 'bg-primary text-primary-foreground hover:bg-primary/90 rounded',
+  primary: 'bg-primary text-foreground hover:bg-primary/90 rounded',
   secondary:
     'bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded',
   outline:
@@ -58,23 +58,35 @@ const isExternal = href ? isExternalLink(href) : false;
   rel={isExternal ? 'noindex nofollow noopener noreferrer' : undefined}
 >
   <slot />
-  {isExternal && (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="var(--color-foreground-light)"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="inline-block shrink-0"
-      aria-hidden="true"
-    >
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-      <polyline points="15 3 21 3 21 9"/>
-      <line x1="10" y1="14" x2="21" y2="3"/>
-    </svg>
-  )}
+  {
+    isExternal && (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="var(--color-foreground-light)"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="inline-block shrink-0"
+        aria-hidden="true"
+      >
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
+      </svg>
+    )
+  }
 </Component>
+
+<style>
+  /* Amélioration du focus visible pour l'accessibilité */
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+</style>

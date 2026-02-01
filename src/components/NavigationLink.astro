@@ -20,14 +20,13 @@ const isActive =
   href={url}
   class={`relative nav-links group flex flex-col text-center ${isActive ? 'is-active' : ''}`}
   aria-current={isActive ? 'page' : undefined}
-  role="menuitem"
   aria-label={`${title} - ${description}`}
 >
   <span
     class={`text-2xl font-extrabold gap-10 ${isActive ? 'text-primary' : ''}`}
     aria-hidden="true">{title}</span
   >
-  <span class="text-sm font-light text-gray-500" aria-hidden="true"
+  <span class="text-foreground-contrast text-sm font-light" aria-hidden="true"
     >{description}</span
   >
 </a>
