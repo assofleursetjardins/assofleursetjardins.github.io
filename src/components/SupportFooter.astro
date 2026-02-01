@@ -14,9 +14,9 @@ const LogoPartenaires: LogoPartenairesType[] = [
 ---
 
 <div class="mb-11 box-border w-full px-3">
-  <h4 class="text-foreground-contrast my-4 text-lg font-bold">
-    Avec le soutien de :
-  </h4>
+  <p class="text-foreground-contrast my-4 text-lg font-bold">
+    Avec le soutien de
+  </p>
   <div class="justify-left flex flex-wrap">
     {
       LogoPartenaires.map((item: LogoPartenairesType) => (
@@ -26,6 +26,7 @@ const LogoPartenaires: LogoPartenairesType[] = [
           width={100}
           height={100}
           alt={item.alt}
+          aria-label={`Logo de ${item.alt}`}
         />
       ))
     }

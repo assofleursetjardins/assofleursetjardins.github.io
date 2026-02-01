@@ -6,6 +6,7 @@ const { id, isActive = false } = Astro.props;
   id={id}
   class="cursor-pointer lg:hidden"
   aria-label="Ouvrir/fermer le menu principal"
+  aria-expanded={isActive ? 'true' : 'false'}
 >
   <span
     class="line line-1 mb-2 block h-[2px] w-8 bg-black transition-transform duration-300"
@@ -29,5 +30,12 @@ const { id, isActive = false } = Astro.props;
     .line-3 {
       transform: translateY(-10px) rotate(-45deg);
     }
+  }
+
+  /* Amélioration du focus visible pour l'accessibilité */
+  button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: 0.25rem;
   }
 </style>

@@ -12,19 +12,24 @@ type LinkType = {
 const { primary } = siteConfig;
 ---
 
-<nav class="absolute inset-x-4 top-full z-2 lg:static">
-  <div
+<nav
+  class="absolute inset-x-4 top-full z-2 lg:static"
+  aria-label="Navigation principale"
+>
+  <ul
     id={id}
-    class="top-10 hidden flex-col gap-10 rounded-2xl border border-gray-300 bg-neutral-50 px-4 py-8 text-center lg:flex lg:flex-row lg:gap-10 lg:border-none lg:p-0"
+    class="top-10 hidden list-none flex-col gap-10 rounded-2xl border border-gray-300 bg-neutral-50 px-4 py-8 text-center lg:flex lg:flex-row lg:gap-10 lg:border-none lg:p-0"
   >
     {
       primary.map((link) => (
-        <NavigationLink
-          url={link.url}
-          title={link.label}
-          description={link.description}
-        />
+        <li>
+          <NavigationLink
+            url={link.url}
+            title={link.label}
+            description={link.description}
+          />
+        </li>
       ))
     }
-  </div>
+  </ul>
 </nav>
