@@ -1,0 +1,42 @@
+---
+import { isExternalLink } from '../lib/utils';
+
+const { href, class: className = '', children, ...props } = Astro.props;
+
+const isExternal = isExternalLink(href);
+---
+
+{
+  isExternal ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noindex nofollow noopener noreferrer"
+      class={`inline-flex items-center gap-1 ${className}`}
+      {...props}
+    >
+      <slot />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="var(--color-foreground-light, #a1acad)"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="inline-block shrink-0"
+        aria-hidden="true"
+      >
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
+      </svg>
+    </a>
+  ) : (
+    <a href={href} class={className} {...props}>
+      <slot />
+    </a>
+  )
+}
