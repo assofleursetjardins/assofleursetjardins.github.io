@@ -1,8 +1,8 @@
 {
   "exhibitors": [
     {
-      "name": "L.Piccoli pro",
-      "description": "Ail des ours, Pommes bio",
+      "name": "Pépinières le Clos St Antoine",
+      "description": "Plantes vivaces de prairie",
       "category": "Le végétal"
     },
     {
@@ -11,109 +11,89 @@
       "category": "Le végétal"
     },
     {
-      "name": "Les serres de la Garenne",
-      "description": "Plantes Vivaces Annuelles",
+      "name": "Les Serres de la Garenne",
+      "description": "Plantes vivaces annuelles",
       "category": "Le végétal"
     },
     {
-      "name": "Madame Cactus",
-      "description": "Collection de cactus, plantes grasses",
+      "name": "Le champ des Saules",
+      "description": "Aromatiques, maraîchage, légumes",
       "category": "Le végétal"
     },
     {
-      "name": "Nathali e Lerouge",
-      "description": "Tomates, Vivaces",
+      "name": "Lerouge Nathalie",
+      "description": "Vivaces, légumes (uniquement le samedi)",
       "category": "Le végétal"
     },
     {
       "name": "Végét'Eure",
-      "description": "Vivaces, sauges",
+      "description": "Vivaces",
       "category": "Le végétal"
     },
     {
-      "name": "Au jardin d'espérance",
-      "description": "Plants de Fleurs et de légumes",
+      "name": "Au jardin d'Espérance",
+      "description": "Plants de fleurs et de légumes",
       "category": "Le végétal"
     },
     {
-      "name": "Doucet Vivaces",
-      "description": "Vivaces, Plants potagers",
+      "name": "Lemire",
+      "description": "Plantes à massifs",
       "category": "Le végétal"
     },
     {
-      "name": "Pépinière Leclerc",
-      "description": "Plants potager, aromatiques et fraises",
+      "name": "Plant'Eure",
+      "description": "Plants tomates anciennes collection (uniquement le samedi)",
       "category": "Le végétal"
     },
     {
-      "name": "Pépinière de la Source",
-      "description": "Plantes d'ornement",
+      "name": "EBSALVIA'S",
+      "description": "Producteur de sauges",
       "category": "Le végétal"
     },
     {
-      "name": "SANTERRE Sarah",
-      "description": "aquareliste botanique",
+      "name": "Pépinières Leroi",
+      "description": "Producteur de rosiers en pot",
+      "category": "Le végétal"
+    },
+    {
+      "name": "Pépinières de Tupot",
+      "description": "Arbustes d'ornement",
+      "category": "Le végétal"
+    },
+    {
+      "name": "Décofer",
+      "description": "Décorations métalliques",
       "category": "Autour Du Jardin"
     },
     {
-      "name": "Miroiterie Franconville",
-      "description": "Portail - Stores - Fermeture",
+      "name": "Linagraf",
+      "description": "Objets de décoration, bijoux à partir de fleurs séchées",
       "category": "Autour Du Jardin"
     },
     {
-      "name": "Zazcat",
-      "description": "Portail - Stores - Fermeture",
-      "category": "Autour Du Jardin"
-    },
-    {
-      "name": "Zazcat",
-      "description": "Poteries pour le jardin",
-      "category": "Autour Du Jardin"
-    },
-    {
-      "name": "Kokedamas",
-      "description": "Bougies végétales",
-      "category": "Autour Du Jardin"
-    },
-    {
-      "name": "Flower Bloom",
-      "description": "Jeux de société sur le jardin",
-      "category": "Autour Du Jardin"
-    },
-    {
-      "name": "Gammebois",
-      "description": "Mobilier de jardin - Bacs fleurs - Ganivelles",
+      "name": "Kassoumaï",
+      "description": "Sièges filet de jardin",
       "category": "Autour Du Jardin"
     },
     {
       "name": "Bric à Brac",
-      "description": "Brocante de jardinage",
+      "description": "Brocante",
+      "category": "Autour Du Jardin"
+    },
+    {
+      "name": "Broc'jardin",
+      "description": "Brocante de jardin",
       "category": "Autour Du Jardin"
     },
     {
       "name": "Bouton d'Eure",
-      "description": "Minis ateliers de jardinage",
+      "description": "Ateliers de jardinage",
       "category": "Autour Du Jardin"
     },
     {
-      "name": "Bouton d'Eure",
-      "description": "Minis ateliers de jardinage",
-      "category": "Produits Naturels"
-    },
-    {
-      "name": "La Fabric d'Annick",
-      "description": "Confiture fruits ou légumes",
-      "category": "Produits Naturels"
-    },
-    {
-      "name": "Les Ruchers de Vernon",
-      "description": "Miels - Produits de la ruche",
-      "category": "Produits Naturels"
-    },
-    {
-      "name": "Cave Lajon",
-      "description": "Blancs de fruits - Rhums - Jus de fruits",
-      "category": "Produits Naturels"
+      "name": "Food'Andelle",
+      "description": "Crêperie",
+      "category": "Restauration"
     }
   ]
 }
